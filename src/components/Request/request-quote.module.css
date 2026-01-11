@@ -1,0 +1,435 @@
+/* Quote Section */
+.quoteSection {
+  margin-top: 4rem;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.quoteSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--cream-accent), transparent);
+}
+
+.quoteContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.quoteHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--steel-gray);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.quoteTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--deep-forest);
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.quoteSubtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--steel-gray);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Main Layout */
+.quoteLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* Contact Info */
+.contactInfo {
+  background: var(--deep-forest);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cream-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.contactDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--light-steel);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(201, 184, 149, 0.1);
+  border-left: 4px solid var(--cream-accent);
+  transition: all 0.3s ease;
+}
+
+.contactMethod:hover {
+  background: rgba(201, 184, 149, 0.15);
+  transform: translateX(5px);
+}
+
+.contactIcon {
+  width: 50px;
+  height: 50px;
+  background: var(--cream-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.contactDetails {
+  flex: 1;
+}
+
+.contactLabel {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--light-steel);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contactValue {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--cream-accent);
+}
+
+.contactValue a {
+  color: var(--cream-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactValue a:hover {
+  color: #d4c4a8;
+}
+
+.contactAction {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--light-steel);
+  margin-top: 0.5rem;
+}
+
+/* Form Section */
+.formSection {
+  background: var(--pure-white);
+  padding: 3rem;
+  border: 2px solid var(--cream-accent);
+}
+
+.formTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--deep-forest);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.quoteForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--deep-forest);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.formLabel .required {
+  color: var(--cream-accent);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--deep-forest);
+  background: var(--off-white);
+  border: 2px solid transparent;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--cream-accent);
+  background: var(--pure-white);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.formSubmit {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--deep-forest);
+  background: var(--cream-accent);
+  border: none;
+  padding: 1.25rem 3rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formSubmit:hover {
+  background: #d4c4a8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(201, 184, 149, 0.4);
+}
+
+.formSubmit svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.formSubmit:hover svg {
+  transform: translateX(5px);
+}
+
+.formNote {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--steel-gray);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Additional Info */
+.additionalInfo {
+  margin-top: 4rem;
+  background: var(--pure-white);
+  padding: 3rem;
+  text-align: center;
+  border: 2px solid var(--cream-accent);
+}
+
+.infoTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-forest);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.infoDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--steel-gray);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.infoFeatures {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.infoFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--deep-forest);
+  color: var(--cream-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.infoText {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--deep-forest);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quoteTitle {
+    font-size: 3rem;
+  }
+
+  .quoteLayout {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .quoteSection {
+    padding: 4rem 2rem;
+  }
+
+  .quoteTitle {
+    font-size: 2.5rem;
+  }
+
+  .quoteLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactInfo {
+    padding: 2.5rem;
+  }
+
+  .formSection {
+    padding: 2.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .quoteSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .quoteTitle {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .quoteSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .contactInfo {
+    padding: 2rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactMethod {
+    padding: 1.25rem;
+  }
+
+  .contactIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .contactValue {
+    font-size: 1.1rem;
+  }
+
+  .formSection {
+    padding: 2rem;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+
+  .additionalInfo {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .infoFeatures {
+    flex-direction: column;
+    align-items: center;
+  }
+}

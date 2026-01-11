@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-forest: #1a3a2e;
+  --steel-gray: #4a5859;
+  --light-steel: #a8b3b5;
+  --cream-accent: #c9b895;
+  --off-white: #f4f4f2;
+  --pure-white: #ffffff;
+  --dark-overlay: rgba(26, 58, 46, 0.85);
+  --dark-bg: #0a0a0a;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: var(--off-white);
+}

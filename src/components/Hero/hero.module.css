@@ -1,0 +1,536 @@
+.heroImageSlider {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    min-height: 600px;
+    overflow: hidden;
+    background: var(--deep-forest);
+}
+
+/* Slide Container */
+.slideContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Background Image */
+.slideBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) .slideBackground {
+    transform: scale(1.08);
+}
+
+/* Fallback gradient for slides without images */
+.slideBackground:global(.noImage) {
+    background: linear-gradient(135deg, #1a3a2e 0%, #2d4a3e 50%, #1a2e2e 100%);
+}
+
+.slideBackground:global(.noImage)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 40px,
+            rgba(201, 184, 149, 0.03) 40px,
+            rgba(201, 184, 149, 0.03) 80px);
+}
+
+/* Overlay */
+.slideOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(26, 58, 46, 0.92) 0%,
+            rgba(26, 58, 46, 0.85) 40%,
+            rgba(26, 58, 46, 0.75) 100%);
+    z-index: 1;
+}
+
+/* Content */
+.slideContentWrapper {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.slideContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+.slideContentInner {
+    padding-top: 4rem;
+    max-width: 700px;
+}
+
+.slideTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--cream-accent);
+    letter-spacing: 3px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) .slideTitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.slideSubtitle {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--light-steel);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) .slideSubtitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.slideDescription {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--off-white);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) .slideDescription {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+/* Features */
+.slideFeatures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide:global(.active) .slideFeatures {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.featureBadge {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--deep-forest);
+    background: var(--cream-accent);
+    padding: 0.6rem 1.25rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(201, 184, 149, 0.3);
+}
+
+/* CTA Button */
+.slideCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--deep-forest);
+    background: var(--cream-accent);
+    border: none;
+    padding: 1.25rem 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 24px rgba(201, 184, 149, 0.4);
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.slide:global(.active) .slideCta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+.slideCta:hover {
+    background: #d4c4a8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(201, 184, 149, 0.5);
+}
+
+.slideCta:active {
+    transform: translateY(-1px);
+}
+
+.slideCta svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.slideCta:hover svg {
+    transform: translateX(5px);
+}
+
+/* Navigation Controls */
+.sliderControls {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.navIndicator {
+    position: relative;
+    width: 70px;
+    height: 4px;
+    background: rgba(168, 179, 181, 0.25);
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.navIndicator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cream-accent);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navIndicator:global(.active)::before {
+    width: 100%;
+    animation: progressBar 6s linear;
+}
+
+.navIndicator:hover {
+    background: rgba(168, 179, 181, 0.4);
+}
+
+@keyframes progressBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Arrow Controls */
+.sliderArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 58, 46, 0.25);
+    border: 2px solid var(--cream-accent);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    /* backdrop-filter: blur(10px); */
+}
+
+.sliderArrow:hover {
+    background: var(--cream-accent);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sliderArrow svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--cream-accent);
+    stroke-width: 2.5;
+    transition: stroke 0.3s ease;
+}
+
+.sliderArrow:hover svg {
+    stroke: var(--deep-forest);
+}
+
+.sliderArrow.prev {
+    left: 2rem;
+}
+
+.sliderArrow.next {
+    right: 2rem;
+}
+
+/* Loading State */
+.imageLoading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--deep-forest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.loadingSpinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(201, 184, 149, 0.2);
+    border-top-color: var(--cream-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .slideTitle {
+        font-size: 3.5rem;
+    }
+
+    .slideSubtitle {
+        font-size: 1.2rem;
+    }
+
+    .slideDescription {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .heroImageSlider {
+        height: 80vh;
+        min-height: 550px;
+    }
+
+    .slideContent {
+        padding: 0 2rem;
+    }
+
+    .slideTitle {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+
+    .slideSubtitle {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    .slideDescription {
+        font-size: 1rem;
+    }
+
+    .slideCta {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .sliderArrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sliderArrow.prev {
+        left: 1rem;
+    }
+
+    .sliderArrow.next {
+        right: 1rem;
+    }
+
+    .sliderControls {
+        bottom: 2rem;
+    }
+
+    .navIndicator {
+        width: 50px;
+    }
+
+    .featureBadge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroImageSlider {
+        height: 75vh;
+        min-height: 500px;
+    }
+
+    .slideContent {
+        padding: 0 1.5rem;
+    }
+
+    .slideTitle {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.75rem;
+    }
+
+    .slideSubtitle {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+
+    .slideDescription {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .slideFeatures {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .featureBadge {
+        font-size: 0.7rem;
+        padding: 0.45rem 0.85rem;
+    }
+
+    .slideCta {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.95rem;
+        letter-spacing: 1.5px;
+    }
+
+    .sliderArrow {
+        width: 45px;
+        height: 45px;
+    }
+
+    .sliderArrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sliderControls {
+        bottom: 1.5rem;
+        gap: 0.75rem;
+    }
+
+    .navIndicator {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideTitle {
+        font-size: 1.8rem;
+    }
+
+    .slideSubtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .slideDescription {
+        font-size: 0.9rem;
+    }
+
+    .sliderArrow.prev {
+        left: 0.5rem;
+    }
+
+    .sliderArrow.next {
+        right: 0.5rem;
+    }
+
+    .sliderControls {
+        bottom: 1rem;
+    }
+
+    .slideFeatures {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
