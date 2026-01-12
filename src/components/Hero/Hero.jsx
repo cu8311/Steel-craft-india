@@ -10,7 +10,7 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      image: '/1.png',
+      image: '/4.png',
       title: "Precision Hydraulic Fittings",
       subtitle: "Industrial Grade Components",
       description: "Comprehensive range of hydraulic nuts, nipples, and male fittings manufactured with precision machining for superior performance",
@@ -28,7 +28,28 @@ export default function Hero() {
       cta: "Quality Standards",
       ctaLink: "#quality"
     },
+    {
+      id: 3,
+      image: '/3.jpeg',
+      title: "Versatile Hydraulic Solutions",
+      subtitle: "Wide Range of Fittings",
+      description: "Extensive collection of straight, elbow, and threaded hydraulic fittings designed for flexible system integration",
+      features: ["Multiple Configurations", "Precision Threads", "Long Service Life"],
+      cta: "Explore Range",
+      ctaLink: "#solutions"
+    },
+    {
+      id: 4,
+      image: '/1.png',
+      title: "Engineered for Performance",
+      subtitle: "Heavy-Duty Applications",
+      description: "Robust hydraulic connectors engineered to withstand extreme pressure and harsh operating environments",
+      features: ["Heavy-Duty Build", "High Load Capacity", "Industrial Proven"],
+      cta: "Learn More",
+      ctaLink: "#applications"
+    }
   ];
+  
 
   useEffect(() => {
     if (!isAutoPlaying) {
