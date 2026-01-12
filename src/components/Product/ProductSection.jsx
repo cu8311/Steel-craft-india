@@ -169,6 +169,35 @@ export default function ProductsSection() {
       },
       applications: ["Port Protection", "System Storage", "Transport Safety", "Equipment Maintenance"],
       availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+    },
+    {
+      id: 7,
+      name: "Hydraulic Fitting Assortment",
+      material: "MS Steel",
+      size: "Multiple Sizes",
+      shortDescription: "Assorted hydraulic fittings including adapters, elbows, and connectors",
+      description: "A premium assortment of MS steel hydraulic fittings including adapters, elbows, nipples, and connectors. Designed for high-pressure hydraulic systems requiring flexibility, durability, and leak-proof performance.",
+      image: "/nuts.jpeg",
+      features: [
+        "Multiple fitting types in one set",
+        "Precision machined threads",
+        "High-pressure compatible",
+        "Corrosion resistant finish"
+      ],
+      specifications: {
+        "Material": "MS Steel",
+        "Pressure Rating": "Up to 12,000 PSI",
+        "Thread Type": "NPT / BSP / Metric",
+        "Finish": "Zinc Plated / Polished",
+        "Included Parts": "Adapters, Elbows, Nipples, Nuts"
+      },
+      applications: [
+        "Hydraulic Systems",
+        "Industrial Machinery",
+        "Fluid Transfer Lines",
+        "Equipment Maintenance"
+      ],
+      availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
     }
   ];
 
@@ -223,7 +252,7 @@ export default function ProductsSection() {
               <div className={styles.filterHeader}>
                 <div className={styles.filterLabel}>
                   <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                   </svg>
                   Material:
                 </div>
@@ -247,7 +276,7 @@ export default function ProductsSection() {
               <div className={styles.filterHeader}>
                 <div className={styles.filterLabel}>
                   <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                   </svg>
                   Size:
                 </div>
