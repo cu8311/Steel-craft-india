@@ -5,7 +5,7 @@
 /* Hero About */
 .aboutHero {
   position: relative;
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 6rem 2rem 4rem;
   overflow: hidden;
 }
@@ -22,8 +22,8 @@
       45deg,
       transparent,
       transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
+      rgba(255, 255, 255, 0.01) 50px,
+      rgba(255, 255, 255, 0.01) 100px
     );
   pointer-events: none;
 }
@@ -57,7 +57,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 3px;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -214,7 +214,7 @@
 }
 
 .founderCard {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 3rem;
   border: 2px solid var(--primary-color);
   position: relative;
@@ -236,7 +236,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
@@ -333,7 +333,7 @@
 .valueCard:hover {
   border-color: var(--primary-color);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(26, 58, 46, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .valueIcon {
@@ -492,7 +492,7 @@
 
 /* CTA Section */
 .aboutCta {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -535,7 +535,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -565,14 +565,14 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 24px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
 .ctaButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(201, 184, 149, 0.5);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
 }
 
 .ctaButton svg {

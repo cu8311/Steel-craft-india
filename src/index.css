@@ -7,15 +7,16 @@
 }
 
 :root {
-  --primary-color: #42D0F0;
-  --secondary-color: #34495e;
-  --accent-color: #c9b895;
-  --text-color: #4a5859;
-  --text-light: #a8b3b5;
-  --background-primary: #f4f4f2;
-  --background-secondary: #ffffff;
-  --background-dark: #0a0a0a;
-  --overlay-dark: rgba(52, 73, 94, 0.85);
+  --primary-color: #000000;        /* Pure black */
+  --secondary-color: #1f1f1f;      /* Deep charcoal */
+  --accent-color: #bfbfbf;         /* Soft metallic gray */
+  --text-primary: #ffffff;         /* Primary text for headings on dark backgrounds */
+  --text-color: #a2a2a2;           /* Main text */
+  --text-light: #b5b5b5;            /* Muted text */
+  --background-primary: #f5f5f5;   /* Light gray bg */
+  --background-secondary: #ffffff; /* White */
+  --background-dark: #000000;      /* True black */
+  --overlay-dark: rgba(0, 0, 0, 0.85);
 }
 
 body {

@@ -127,7 +127,7 @@
 .contactButton:hover {
   background: var(--cream-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 184, 149, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .contactButton svg {
@@ -217,7 +217,7 @@
 }
 
 .copyrightText a:hover {
-  color: #d4c4a8;
+  color: var(--accent-color);
 }
 
 /* Responsive */

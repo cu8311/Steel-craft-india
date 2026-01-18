@@ -92,7 +92,7 @@
 .industryCard:hover {
   border-color: var(--primary-color);
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(26, 58, 46, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Icon */
@@ -206,14 +206,14 @@
   transition: all 0.4s ease;
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 6px 20px rgba(201, 184, 149, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
 
 .ctaButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .ctaButton svg {

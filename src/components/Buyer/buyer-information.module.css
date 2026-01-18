@@ -24,8 +24,8 @@
       90deg,
       transparent,
       transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
+      rgba(255, 255, 255, 0.01) 50px,
+      rgba(255, 255, 255, 0.01) 100px
     );
 }
 
@@ -51,7 +51,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 3px;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -81,7 +81,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -140,7 +140,7 @@
 }
 
 .contactValue a:hover {
-  color: #d4c4a8;
+  color: var(--accent-color);
 }
 
 /* Features Section */
@@ -219,7 +219,7 @@
 .featureCard:hover {
   border-color: var(--primary-color);
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(26, 58, 46, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .featureIcon {
@@ -328,7 +328,7 @@
 
 /* Distributor CTA */
 .distributorCta {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -347,8 +347,8 @@
       -45deg,
       transparent,
       transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
+      rgba(255, 255, 255, 0.01) 50px,
+      rgba(255, 255, 255, 0.01) 100px
     );
 }
 
@@ -363,7 +363,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.8rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -407,9 +407,9 @@
 }
 
 .ctaButton.primary:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .ctaButton.secondary {
