@@ -135,7 +135,7 @@
   top: 1.5rem;
   right: 1.5rem;
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
   font-family: 'Oswald', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
@@ -240,6 +240,7 @@
 
 .viewCertificateBtn:hover {
   background: var(--primary-color);
+  color: var(--text-primary);
   transform: translateX(5px);
 }
 
@@ -316,12 +317,12 @@
 .modalClose svg {
   width: 24px;
   height: 24px;
-  stroke: var(--primary-color);
+  stroke: var(--text-color);
   transition: stroke 0.3s ease;
 }
 
 .modalClose:hover svg {
-  stroke: var(--secondary-color);
+  stroke: var(--text-primary);
 }
 
 .modalImage {

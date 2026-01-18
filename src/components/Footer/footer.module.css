@@ -37,7 +37,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cream-accent);
+  color: var(--accent-color);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -54,7 +54,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -63,11 +63,11 @@
 }
 
 .footerNavLink:hover {
-  color: var(--cream-accent);
+  color: var(--text-primary);
 }
 
 .footerNav a:hover {
-  color: var(--cream-accent);
+  color: var(--text-primary);
 }
 
 .footerCertification {
@@ -80,8 +80,8 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--deep-forest);
-  background: var(--cream-accent);
+  color: var(--primary-color);
+  background: var(--accent-color);
   padding: 0.4rem 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -125,7 +125,8 @@
 }
 
 .contactButton:hover {
-  background: var(--cream-accent);
+  background: var(--primary-color);
+  color: var(--text-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -192,7 +193,7 @@
 }
 
 .footerPrivacy:hover {
-  color: var(--cream-accent);
+  color: var(--accent-color);
 }
 
 /* Copyright */
@@ -206,18 +207,18 @@
 .copyrightText {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.85rem;
-  color: var(--light-steel);
+  color: var(--text-light);
 }
 
 .copyrightText a {
-  color: var(--cream-accent);
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .copyrightText a:hover {
-  color: var(--accent-color);
+  color: var(--text-primary);
 }
 
 /* Responsive */

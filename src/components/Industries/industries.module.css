@@ -198,7 +198,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--text-color);
   background: var(--primary-color);
   border: none;
   padding: 1.25rem 3rem;
@@ -212,6 +212,7 @@
 
 .ctaButton:hover {
   background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }

@@ -160,7 +160,7 @@
 
 .filterOption.active {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--text-primary);
   border-color: var(--secondary-color);
 }
 
@@ -203,6 +203,7 @@
 .productsSection:global(.visible) .productCard:nth-child(4) { transition-delay: 0.6s; }
 .productsSection:global(.visible) .productCard:nth-child(5) { transition-delay: 0.7s; }
 .productsSection:global(.visible) .productCard:nth-child(6) { transition-delay: 0.8s; }
+.productsSection:global(.visible) .productCard:nth-child(6) { transition-delay: 0.9s; }
 
 .productCard:hover {
   border-color: var(--primary-color);
@@ -251,7 +252,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--text-color);
   background: var(--primary-color);
   border: none;
   padding: 0.75rem 1.5rem;
@@ -264,6 +265,7 @@
 
 .overlayButton:hover {
   background: var(--accent-color);
+  color: var(--text-primary);
 }
 
 .productInfo {
@@ -423,12 +425,12 @@
 .modalClose svg {
   width: 28px;
   height: 28px;
-  stroke: var(--primary-color);
+  stroke: var(--text-color);
   transition: stroke 0.3s ease;
 }
 
 .modalClose:hover svg {
-  stroke: var(--secondary-color);
+  stroke: var(--text-primary);
 }
 
 .modalLayout {
@@ -579,11 +581,12 @@
 
 .modalButton.primary {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .modalButton.primary:hover {
   background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -596,7 +599,7 @@
 
 .modalButton.secondary:hover {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 /* Responsive */

@@ -39,7 +39,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--text-light);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -125,7 +125,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-primary);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -187,7 +187,7 @@
 
 .storyHighlight {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
   padding: 2rem;
   margin-top: 2rem;
   border-left: 4px solid var(--secondary-color);
@@ -464,7 +464,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
@@ -557,7 +557,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--text-color);
   background: var(--primary-color);
   border: none;
   padding: 1.25rem 3rem;
@@ -571,6 +571,7 @@
 
 .ctaButton:hover {
   background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-3px);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
 }

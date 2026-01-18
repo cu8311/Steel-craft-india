@@ -186,7 +186,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--text-color);
     background: var(--primary-color);
     padding: 0.6rem 1.25rem;
     letter-spacing: 1.5px;
@@ -272,7 +272,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--primary-color);
+    background: var(--text-color);
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

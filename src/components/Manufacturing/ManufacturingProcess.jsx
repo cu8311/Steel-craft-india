@@ -270,38 +270,6 @@ export default function ManufacturingProcess() {
 						View Full Documentary
 					</button>
 				</div>
-
-				{/* CTA Section */}
-				<div className={styles.manufacturingCta}>
-					<div className={styles.ctaContent}>
-						<h2 className={styles.ctaTitle}>Need Custom Hydraulic Fittings?</h2>
-						<p className={styles.ctaSubtitle}>
-							Our engineering team can develop custom-machined solutions tailored to your specific requirements.
-						</p>
-						<div className={styles.ctaButtons}>
-							<a
-								href="#contact"
-								className={`${styles.ctaButton} primary`}
-								onClick={(e) => {
-									e.preventDefault();
-									document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-								}}
-							>
-								Request Quote
-							</a>
-							<a
-								href="#contact"
-								className={`${styles.ctaButton} secondary`}
-								onClick={(e) => {
-									e.preventDefault();
-									document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-								}}
-							>
-								Contact Engineering
-							</a>
-						</div>
-					</div>
-				</div>
 			</section>
 		</>
 	);
