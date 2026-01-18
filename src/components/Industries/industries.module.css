@@ -1,6 +1,6 @@
 /* Industries Section */
 .industriesSection {
-  background: var(--off-white);
+  background: var(--background-primary);
   padding: 6rem 2rem;
   position: relative;
 }
@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--cream-accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 .industriesContainer {
@@ -30,7 +30,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -40,7 +40,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -51,7 +51,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--steel-gray);
+  color: var(--text-color);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
@@ -66,7 +66,7 @@
 
 /* Card */
 .industryCard {
-  background: var(--pure-white);
+  background: var(--background-secondary);
   border: 2px solid transparent;
   border-radius: 4px;
   padding: 3rem 2rem;
@@ -90,7 +90,7 @@
 .industryCard:nth-child(6) { transition-delay: 0.6s; }
 
 .industryCard:hover {
-  border-color: var(--cream-accent);
+  border-color: var(--primary-color);
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(26, 58, 46, 0.15);
 }
@@ -100,7 +100,7 @@
   width: 80px;
   height: 80px;
   margin: 0 auto 2rem;
-  background: var(--off-white);
+  background: var(--background-primary);
   border-radius: 50%;
   font-size: 2.5rem;
   display: flex;
@@ -111,8 +111,8 @@
 }
 
 .industryCard:hover .iconBox {
-  background: var(--deep-forest);
-  border-color: var(--cream-accent);
+  background: var(--secondary-color);
+  border-color: var(--primary-color);
   transform: scale(1.1);
 }
 
@@ -125,7 +125,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -137,7 +137,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -154,11 +154,11 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--steel-gray);
-  background: var(--off-white);
+  color: var(--text-color);
+  background: var(--background-primary);
   padding: 0.4rem 0.85rem;
   border-radius: 2px;
-  border-left: 3px solid var(--cream-accent);
+  border-left: 3px solid var(--primary-color);
 }
 
 /* CTA Section */
@@ -166,16 +166,16 @@
   text-align: center;
   margin-top: 5rem;
   padding: 4rem 2rem;
-  background: var(--pure-white);
+  background: var(--background-secondary);
   border-radius: 4px;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
 }
 
 .ctaTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -185,7 +185,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto 2.5rem;
@@ -198,8 +198,8 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--deep-forest);
-  background: var(--cream-accent);
+  color: var(--secondary-color);
+  background: var(--primary-color);
   border: none;
   padding: 1.25rem 3rem;
   cursor: pointer;

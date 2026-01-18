@@ -4,7 +4,7 @@
     height: 100dvh;
     min-height: 600px;
     overflow: hidden;
-    background: var(--deep-forest);
+    background: var(--secondary-color);
 }
 
 /* Slide Container */
@@ -54,7 +54,7 @@
 
 /* Fallback gradient for slides without images */
 .slideBackground:global(.noImage) {
-    background: linear-gradient(135deg, #1a3a2e 0%, #2d4a3e 50%, #1a2e2e 100%);
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 50%, #1a252f 100%);
 }
 
 .slideBackground:global(.noImage)::before {
@@ -111,7 +111,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 4.5rem;
     font-weight: 600;
-    color: var(--cream-accent);
+    color: var(--primary-color);
     letter-spacing: 3px;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -132,7 +132,7 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 300;
-    color: var(--light-steel);
+    color: var(--text-light);
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -151,7 +151,7 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--off-white);
+    color: var(--background-secondary);
     line-height: 1.8;
     margin-bottom: 2rem;
     opacity: 0;
@@ -186,13 +186,13 @@
     font-family: 'Oswald', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--deep-forest);
-    background: var(--cream-accent);
+    color: var(--secondary-color);
+    background: var(--primary-color);
     padding: 0.6rem 1.25rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(201, 184, 149, 0.3);
+    box-shadow: 0 2px 8px rgba(66, 208, 240, 0.3);
 }
 
 /* CTA Button */
@@ -203,15 +203,15 @@
     font-family: 'Oswald', sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--deep-forest);
-    background: var(--cream-accent);
+    color: var(--background-secondary);
+    background: var(--primary-color);
     border: none;
     padding: 1.25rem 3rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 6px 24px rgba(201, 184, 149, 0.4);
+    box-shadow: 0 6px 24px rgba(66, 208, 240, 0.4);
     text-decoration: none;
     opacity: 0;
     transform: translateY(40px);
@@ -224,9 +224,9 @@
 }
 
 .slideCta:hover {
-    background: #d4c4a8;
+    background: #5bd9f5;
     transform: translateY(-3px);
-    box-shadow: 0 10px 32px rgba(201, 184, 149, 0.5);
+    box-shadow: 0 10px 32px rgba(66, 208, 240, 0.5);
 }
 
 .slideCta:active {
@@ -272,7 +272,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--cream-accent);
+    background: var(--primary-color);
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -301,7 +301,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: rgba(26, 58, 46, 0.25);
-    border: 2px solid var(--cream-accent);
+    border: 2px solid var(--primary-color);
     width: 60px;
     height: 60px;
     display: flex;
@@ -314,20 +314,20 @@
 }
 
 .sliderArrow:hover {
-    background: var(--cream-accent);
+    background: var(--primary-color);
     transform: translateY(-50%) scale(1.1);
 }
 
 .sliderArrow svg {
     width: 24px;
     height: 24px;
-    stroke: var(--cream-accent);
+    stroke: var(--primary-color);
     stroke-width: 2.5;
     transition: stroke 0.3s ease;
 }
 
 .sliderArrow:hover svg {
-    stroke: var(--deep-forest);
+    stroke: var(--background-secondary);
 }
 
 .sliderArrow.prev {
@@ -345,7 +345,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--deep-forest);
+    background: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,8 +355,8 @@
 .loadingSpinner {
     width: 50px;
     height: 50px;
-    border: 3px solid rgba(201, 184, 149, 0.2);
-    border-top-color: var(--cream-accent);
+    border: 3px solid rgba(66, 208, 240, 0.2);
+    border-top-color: var(--primary-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }

@@ -75,7 +75,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className={styles.navDesktop}>
-            {navItems.slice(0, -1).map((item, index) =>
+            {navItems.map((item, index) =>
               item.type === 'route' ? (
                 <Link
                   key={index}

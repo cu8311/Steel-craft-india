@@ -6,7 +6,7 @@
 
 /* Hero Section */
 .buyerHero {
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a1a 100%);
   padding: 6rem 2rem 4rem;
   position: relative;
   overflow: hidden;
@@ -41,7 +41,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--cream-accent);
+  color: var(--primary-color);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -51,7 +51,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--primary-color);
   letter-spacing: 3px;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -62,7 +62,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   max-width: 900px;
   margin: 0 auto 3rem;
   line-height: 1.8;
@@ -70,18 +70,18 @@
 
 /* Contact Box */
 .contactBox {
-  background: var(--deep-forest);
+  background: var(--secondary-color);
   padding: 2.5rem 3rem;
   max-width: 700px;
   margin: 0 auto;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
 }
 
 .contactTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--primary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -103,7 +103,7 @@
 .contactIcon {
   width: 50px;
   height: 50px;
-  background: var(--cream-accent);
+  background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--light-steel);
+  color: var(--text-light);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
@@ -130,11 +130,11 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--cream-accent);
+  color: var(--primary-color);
 }
 
 .contactValue a {
-  color: var(--cream-accent);
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -168,7 +168,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -178,7 +178,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -188,7 +188,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
@@ -201,7 +201,7 @@
 }
 
 .featureCard {
-  background: var(--pure-white);
+  background: var(--background-secondary);
   padding: 2.5rem 2rem;
   border: 2px solid transparent;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -217,7 +217,7 @@
 .featuresSection:global(.visible) .featureCard:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
 
 .featureCard:hover {
-  border-color: var(--cream-accent);
+  border-color: var(--primary-color);
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(26, 58, 46, 0.15);
 }
@@ -232,7 +232,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -242,13 +242,13 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.7;
 }
 
 /* Process Section */
 .processSection {
-  background: var(--pure-white);
+  background: var(--background-secondary);
   padding: 6rem 2rem;
 }
 
@@ -283,8 +283,8 @@
 .stepNumber {
   width: 80px;
   height: 80px;
-  background: var(--deep-forest);
-  color: var(--cream-accent);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -293,7 +293,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  border: 3px solid var(--cream-accent);
+  border: 3px solid var(--primary-color);
   position: relative;
 }
 
@@ -304,7 +304,7 @@
   left: 100%;
   width: 100%;
   height: 2px;
-  background: var(--cream-accent);
+  background: var(--primary-color);
   transform: translateY(-50%);
 }
 
@@ -312,7 +312,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -322,13 +322,13 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.7;
 }
 
 /* Distributor CTA */
 .distributorCta {
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #2d4a3e 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #2c3e50 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -363,7 +363,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.8rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--primary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -373,7 +373,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   line-height: 1.8;
   margin-bottom: 3rem;
 }
@@ -402,8 +402,8 @@
 }
 
 .ctaButton.primary {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ctaButton.primary:hover {
@@ -414,13 +414,13 @@
 
 .ctaButton.secondary {
   background: transparent;
-  color: var(--cream-accent);
-  border: 2px solid var(--cream-accent);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .ctaButton.secondary:hover {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ctaButton svg {
