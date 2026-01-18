@@ -80,96 +80,137 @@ export default function ProductsSection() {
     },
     {
       id: 3,
-      name: "Hydraulic Fitting Sets",
-      material: "MS Steel",
-      size: "Varies",
-      shortDescription: "Complete fitting solutions for comprehensive hydraulic installations",
-      description: "Comprehensive hydraulic fitting sets designed for complete system installations. Each set includes carefully selected components to ensure compatibility and optimal performance.",
-      image: "/hydraulic-fitting-set.JPG",
-      features: [
-        "Complete system solution",
-        "Pre-tested compatibility",
-        "Multiple configurations",
-        "Quality assurance certified"
-      ],
-      specifications: {
-        "Material": "MS Steel",
-        "Set Contents": "Varies by Configuration",
-        "Standards": "ISO Compliant",
-        "Packaging": "Industrial Grade Cases"
-      },
-      applications: ["OEM Assembly", "System Overhauls", "Bulk Installations", "Service Centers"],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"']
-    },
-    {
-      id: 4,
-      name: "Hydraulic Nipples",
-      material: "MS Steel",
-      size: "1/8\" to 2\"",
-      shortDescription: "Durable nipple connectors for secure hydraulic line connections",
-      description: "Premium hydraulic nipples manufactured with precision threading for reliable, leak-proof connections. Built to withstand demanding industrial environments.",
-      image: "/hydraulic-nipple.JPG",
-      features: [
-        "Precision threading",
-        "Zinc-plated finish",
-        "Multiple size options",
-        "High tensile strength"
-      ],
-      specifications: {
-        "Material": "MS Steel, Zinc Plated",
-        "Pressure Rating": "Up to 8,000 PSI",
-        "Thread Standard": "NPT/BSP/Metric",
-        "Finish": "Zinc Plated/Galvanized"
-      },
-      applications: ["Pipe Connections", "Hose Assemblies", "Hydraulic Lines", "Pressure Systems"],
-      availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
-    },
-    {
-      id: 5,
-      name: "Hydraulic Nuts",
+      name: "Hydraulic Hose Nipple",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Heavy-duty nuts for secure hydraulic component assembly",
-      description: "Engineered hydraulic nuts designed for high-torque applications in hydraulic systems. These fasteners provide secure, vibration-resistant connections.",
-      image: "/hydraulic-nut.JPG",
+      shortDescription: "Precision hydraulic hose nipple for secure hose connections",
+      description: "Hydraulic hose nipples designed for strong, leak-proof hose connections in high-pressure systems. Compatible with multiple international thread standards.",
+      image: "/hydraulic-hose-nipple.jpeg",
       features: [
-        "High torque capacity",
-        "Vibration resistant",
-        "Hexagonal precision",
-        "Anti-corrosion coating"
+        "Multiple thread options",
+        "High-pressure rated",
+        "Precision machined",
+        "Corrosion resistant"
       ],
       specifications: {
         "Material": "MS Steel",
-        "Hardness": "Grade 8 or Higher",
-        "Coating": "Zinc/Nickel Plated",
-        "Thread Type": "Standard/Fine Available"
+        "Thread Types": "UNF / BSP / NPT / ORFS",
+        "Pressure Rating": "Up to 10,000 PSI",
+        "Size Range": "1/4\" to 2\""
       },
-      applications: ["Assembly Fastening", "Hydraulic Joints", "Equipment Mounting", "System Connections"],
+      applications: [
+        "Hydraulic Hose Assemblies",
+        "Industrial Machinery",
+        "Fluid Transfer Systems"
+      ],
       availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
     },
     {
-      id: 6,
-      name: "SCI Branded Hydraulic Caps",
+      id: 4,
+      name: "Hydraulic Male Nipple with Hose Tail",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Premium protective caps with SCI branding for system sealing",
-      description: "High-quality hydraulic caps featuring the Steel Craft India brand emblem. These caps provide essential protection for hydraulic ports and fittings.",
-      image: "/hydraulic.jpeg",
+      shortDescription: "Male threaded nipple with hose tail for flexible hose connections",
+      description: "Male hydraulic nipple with integrated hose tail, engineered for secure and durable hose fittings in high-pressure hydraulic applications.",
+      image: "/hydraulic-male-nipple.jpeg",
       features: [
-        "SCI branded design",
-        "Knurled grip surface",
-        "Dust and moisture protection",
-        "Reusable construction"
+        "Integrated hose tail",
+        "Strong grip design",
+        "High tensile strength",
+        "Leak-proof connection"
       ],
       specifications: {
-        "Material": "Stainless Steel/Aluminum",
-        "Thread Type": "Universal Fit Options",
-        "Finish": "Brushed/Polished",
-        "Branding": "Laser Engraved Logo"
+        "Material": "MS Steel",
+        "Thread Type": "BSP / NPT / UNF",
+        "Pressure Rating": "Up to 10,000 PSI",
+        "Finish": "Zinc Plated"
       },
-      applications: ["Port Protection", "System Storage", "Transport Safety", "Equipment Maintenance"],
+      applications: [
+        "Hydraulic Hoses",
+        "Oil & Gas Systems",
+        "Industrial Equipment"
+      ],
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+    },
+    {
+      id: 5,
+      name: "Hydraulic Cap",
+      material: "MS Steel",
+      size: "1/4\" to 2\"",
+      shortDescription: "Protective hydraulic caps for sealing open ports",
+      description: "Durable hydraulic caps designed to protect open hydraulic ports from dust, moisture, and damage during storage or transport.",
+      image: "/hydraulic-cap.jpeg",
+      features: [
+        "Port protection",
+        "Reusable design",
+        "Easy installation",
+        "Corrosion resistant"
+      ],
+      specifications: {
+        "Material": "MS Steel",
+        "Thread Type": "BSP / NPT / Metric",
+        "Finish": "Zinc Plated"
+      },
+      applications: [
+        "Port Protection",
+        "System Maintenance",
+        "Transport Safety"
+      ],
       availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
     },
+    {
+      id: 6,
+      name: "Hydraulic Hose Pipe",
+      material: "Rubber with Steel Reinforcement",
+      size: "1/4\" to 2\"",
+      shortDescription: "High-pressure hydraulic hose pipe for fluid transfer",
+      description: "Heavy-duty hydraulic hose pipes designed for high-pressure fluid transfer applications with excellent flexibility and durability.",
+      image: "/hydraulic-hose-pipe.png",
+      features: [
+        "Steel wire reinforced",
+        "High flexibility",
+        "Abrasion resistant",
+        "High-pressure compatible"
+      ],
+      specifications: {
+        "Working Pressure": "Up to 6,000 PSI",
+        "Temperature Range": "-40°C to +100°C",
+        "Standards": "SAE / EN Compliant"
+      },
+      applications: [
+        "Hydraulic Systems",
+        "Construction Equipment",
+        "Industrial Machinery"
+      ],
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+    },
+    {
+      id: 7,
+      name: "Banjo Tee Fitting",
+      material: "MS Steel",
+      size: "1/4\" to 2\"",
+      shortDescription: "Compact banjo tee fitting for multi-line hydraulic connections",
+      description: "Banjo tee fittings designed for compact hydraulic installations where space is limited, allowing multiple fluid paths from a single point.",
+      image: "/banjo-tee.jpeg",
+      features: [
+        "Compact design",
+        "Multi-directional flow",
+        "High-pressure rated",
+        "Precision machined"
+      ],
+      specifications: {
+        "Material": "MS Steel",
+        "Thread Type": "BSP / NPT",
+        "Pressure Rating": "Up to 8,000 PSI"
+      },
+      applications: [
+        "Compact Hydraulic Systems",
+        "Automotive Hydraulics",
+        "Industrial Equipment"
+      ],
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+    }
+
   ];
 
   // Filter products

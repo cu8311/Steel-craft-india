@@ -110,9 +110,6 @@ export default function Slider() {
                     className={styles.cardImage}
                   />
                 </div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{product.title}</h3>
-                </div>
               </div>
             ))}
           </div>
