@@ -106,11 +106,24 @@
   background: rgba(201, 184, 149, 0.1);
   border-left: 4px solid var(--primary-color);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .contactMethod:hover {
   background: rgba(201, 184, 149, 0.15);
   transform: translateX(5px);
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  .contactMethod:hover {
+    transform: none;
+  }
+
+  .contactMethod:active {
+    background: rgba(201, 184, 149, 0.2);
+    transform: scale(0.98);
+  }
 }
 
 .contactIcon {
@@ -161,6 +174,34 @@
   font-size: 0.95rem;
   color: var(--text-light);
   margin-top: 0.5rem;
+}
+
+.contactAction a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactAction a:hover {
+  color: var(--accent-color);
+}
+
+/* Map Container */
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 6px;
 }
 
 /* Form Section */
@@ -380,18 +421,17 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .quoteSection {
     padding: 3rem 1.5rem;
   }
 
   .quoteTitle {
-    font-size: 2rem;
-    letter-spacing: 1px;
+    font-size: 2.2rem;
   }
 
-  .quoteSubtitle {
-    font-size: 1.1rem;
+  .quoteLayout {
+    gap: 2.5rem;
   }
 
   .contactInfo {
@@ -399,21 +439,15 @@
   }
 
   .contactTitle {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+  }
+
+  .contactMethods {
+    gap: 1.5rem;
   }
 
   .contactMethod {
-    padding: 1.25rem;
-  }
-
-  .contactIcon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
-
-  .contactValue {
-    font-size: 1.1rem;
+    padding: 1.5rem;
   }
 
   .formSection {
@@ -421,16 +455,150 @@
   }
 
   .formTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 1rem;
   }
 
   .additionalInfo {
-    padding: 2rem;
+    padding: 2.5rem;
     margin-top: 3rem;
+  }
+
+  .mapContainer {
+    height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .quoteSection {
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .quoteHeader {
+    margin-bottom: 2rem;
+  }
+
+  .quoteTitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+  }
+
+  .quoteSubtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .quoteLayout {
+    gap: 1.5rem;
+  }
+
+  .contactInfo {
+    padding: 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contactDescription {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactMethods {
+    gap: 1.5rem;
+  }
+
+  .contactMethod {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .contactIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .contactValue {
+    font-size: 1rem;
+  }
+
+  .contactAction {
+    font-size: 0.85rem;
+  }
+
+  .formSection {
+    padding: 1.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quoteForm {
+    gap: 1.25rem;
+  }
+
+  .formRow {
+    gap: 1rem;
+  }
+
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 0.875rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .formTextarea {
+    min-height: 120px;
+  }
+
+  .formSubmit {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .additionalInfo {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .infoTitle {
+    font-size: 1.3rem;
+  }
+
+  .infoDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
 
   .infoFeatures {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+
+  .mapContainer {
+    height: 200px;
+    margin: 0.75rem 0;
   }
 }

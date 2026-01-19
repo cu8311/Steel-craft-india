@@ -97,9 +97,9 @@ const Navbar = () => {
             )}
             <button
               className={styles.ctaButton}
-              onClick={() => navigate('/request')}
+              onClick={() => navigate('/contact')}
             >
-              Request Quote
+              Contact Us
             </button>
           </nav>
 
@@ -153,14 +153,9 @@ const Navbar = () => {
           ))}
           <button
             className={`${styles.ctaButton} ${styles.mobileCta}`}
-            onClick={() => {
-              setMobileMenuOpen(false);
-              setTimeout(() => {
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }, 300);
-            }}
+            onClick={() => navigate('/contact')}
           >
-            Request Quote
+            Contact Us
           </button>
         </div>
       </nav>

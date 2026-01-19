@@ -33,7 +33,7 @@ export default function RequestQuote() {
           {/* Header */}
           <div className={styles.quoteHeader}>
             <div className={styles.sectionLabel}>Get Started Today</div>
-            <h2 className={styles.quoteTitle}>Request a Quote</h2>
+            <h2 className={styles.quoteTitle}>Contact Us</h2>
             <p className={styles.quoteSubtitle}>
               Fill out the form below or contact us directly for custom hydraulic fitting solutions
               tailored to your specific requirements.
@@ -51,6 +51,19 @@ export default function RequestQuote() {
               </p>
 
               <div className={styles.contactMethods}>
+                {/* Address */}
+                <div className={styles.contactMethod}>
+                  <div className={styles.contactIcon}>📍</div>
+                  <div className={styles.contactDetails}>
+                    <div className={styles.contactLabel}>Address</div>
+                    <div className={styles.contactValue}>
+                      <a>B-21, Janta Nagar (Shimlapuri / Street No-4, Guru Nanak Street), Gill Road,
+                        Ludhiana, Punjab 141003, India</a>
+                    </div>
+                    <div className={styles.contactAction}>Monday to Saturday: 8:00 AM – 9:00 PM</div>
+                  </div>
+                </div>
+
                 {/* Phone */}
                 <div className={styles.contactMethod}>
                   <div className={styles.contactIcon}>📞</div>
@@ -72,6 +85,28 @@ export default function RequestQuote() {
                       <a href="mailto:steelcraft80@gmail.com">steelcraft80@gmail.com</a>
                     </div>
                     <div className={styles.contactAction}>Send your requirements or drawings</div>
+                  </div>
+                </div>
+
+                {/* Map */}
+                <div className={styles.contactMethod}>
+                  <div className={styles.contactIcon}>🗺️</div>
+                  <div className={styles.contactDetails}>
+                    <div className={styles.contactLabel}>Location Map</div>
+                    <div className={styles.mapContainer}>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.642669927318!2d75.85912817542416!3d30.868677874518998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83a05dcccb9f%3A0xab6c488f6112b51e!2sSteel%20crafts(India)%7C%7CHydraulic%20hose%20Supplier(Hose%20fittings)!5e0!3m2!1sen!2sin!4v1768815926038!5m2!1sen!2sin"
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className={styles.mapIframe}
+                      ></iframe>
+                    </div>
+                    <div className={styles.contactAction}>
+                      <a href="https://maps.app.goo.gl/eBuTXTggj1efAEL77?g_st=ic" target="_blank" rel="noopener noreferrer">
+                        View on Google Maps
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
