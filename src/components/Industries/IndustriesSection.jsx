@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './industries.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function IndustriesSection() {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState({});
 
   useEffect(() => {
@@ -111,10 +113,7 @@ export default function IndustriesSection() {
             <a
               href="#contact"
               className={styles.ctaButton}
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => navigate("/contact")}
             >
               Get Industry Solutions
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

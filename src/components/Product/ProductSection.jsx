@@ -209,6 +209,32 @@ export default function ProductsSection() {
         "Industrial Equipment"
       ],
       availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+    },
+    {
+      id: 8,
+      name: "Hydraulic Nut",
+      material: "Mild Steel (MS)",
+      size: "1/8\" to 1\"",
+      shortDescription: "High-strength hydraulic nut for secure pipe and fitting connections",
+      description: "Hydraulic nuts manufactured from mild steel, suitable for low, high, and extra high pressure hydraulic applications. Designed for precise threading and long service life.",
+      image: "/hydraulic-nut.jpeg",
+      features: [
+        "Precision threaded",
+        "High torque capacity",
+        "Vibration resistant",
+        "Corrosion resistant finish"
+      ],
+      specifications: {
+        "Material": "Mild Steel (MS)",
+        "Thread Type": "BSP / NPT / UNF",
+        "Pressure Rating": "Low / High / Extra High Pressure"
+      },
+      applications: [
+        "Hydraulic Pipe Connections",
+        "Industrial Machinery",
+        "High-Pressure Systems"
+      ],
+      availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', 'Custom Size']
     }
 
   ];
