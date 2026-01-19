@@ -57,20 +57,18 @@
   line-height: 1.8;
 }
 
-/* Main Layout */
-.quoteLayout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-/* Contact Info */
+/* Centered Contact Layout */
 .contactInfo {
   background: var(--secondary-color);
-  padding: 3rem;
+  padding: 4rem 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .contactTitle {
@@ -204,122 +202,6 @@
   border-radius: 6px;
 }
 
-/* Form Section */
-.formSection {
-  background: var(--background-secondary);
-  padding: 3rem;
-  border: 2px solid var(--primary-color);
-}
-
-.formTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.quoteForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.formLabel {
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.formLabel .required {
-  color: var(--primary-color);
-}
-
-.formInput,
-.formSelect,
-.formTextarea {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
-  color: var(--secondary-color);
-  background: var(--background-primary);
-  border: 2px solid transparent;
-  padding: 1rem;
-  transition: all 0.3s ease;
-}
-
-.formInput:focus,
-.formSelect:focus,
-.formTextarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  background: var(--background-secondary);
-}
-
-.formTextarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-.formSubmit {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  background: var(--primary-color);
-  border: none;
-  padding: 1.25rem 3rem;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-}
-
-.formSubmit:hover {
-  background: var(--accent-color);
-  color: var(--text-primary);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.formSubmit svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-
-.formSubmit:hover svg {
-  transform: translateX(5px);
-}
-
-.formNote {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  font-style: italic;
-  margin-top: 1rem;
-}
 
 /* Additional Info */
 .additionalInfo {
@@ -385,39 +267,17 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .quoteTitle {
-    font-size: 3rem;
-  }
-
-  .quoteLayout {
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 900px) {
   .quoteSection {
     padding: 4rem 2rem;
   }
 
   .quoteTitle {
-    font-size: 2.5rem;
-  }
-
-  .quoteLayout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    font-size: 3rem;
   }
 
   .contactInfo {
-    padding: 2.5rem;
-  }
-
-  .formSection {
-    padding: 2.5rem;
-  }
-
-  .formRow {
-    grid-template-columns: 1fr;
+    padding: 3.5rem 2.5rem;
+    max-width: 1000px;
   }
 }
 
@@ -427,19 +287,20 @@
   }
 
   .quoteTitle {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
-  .quoteLayout {
-    gap: 2.5rem;
+  .quoteSubtitle {
+    font-size: 1rem;
   }
 
   .contactInfo {
-    padding: 2rem;
+    padding: 2.5rem 2rem;
+    max-width: 100%;
   }
 
   .contactTitle {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .contactMethods {
@@ -448,25 +309,6 @@
 
   .contactMethod {
     padding: 1.5rem;
-  }
-
-  .formSection {
-    padding: 2rem;
-  }
-
-  .formTitle {
-    font-size: 1.6rem;
-  }
-
-  .formRow {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .formInput,
-  .formSelect,
-  .formTextarea {
-    padding: 1rem;
   }
 
   .additionalInfo {
@@ -490,7 +332,7 @@
   }
 
   .quoteTitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
   }
@@ -500,16 +342,13 @@
     line-height: 1.6;
   }
 
-  .quoteLayout {
-    gap: 1.5rem;
-  }
-
   .contactInfo {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
   }
 
   .contactTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
   }
 
@@ -544,39 +383,6 @@
     font-size: 0.85rem;
   }
 
-  .formSection {
-    padding: 1.5rem;
-  }
-
-  .formTitle {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .quoteForm {
-    gap: 1.25rem;
-  }
-
-  .formRow {
-    gap: 1rem;
-  }
-
-  .formInput,
-  .formSelect,
-  .formTextarea {
-    padding: 0.875rem;
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
-
-  .formTextarea {
-    min-height: 120px;
-  }
-
-  .formSubmit {
-    padding: 1rem 2rem;
-    font-size: 0.9rem;
-  }
-
   .additionalInfo {
     padding: 1.5rem;
     margin-top: 2rem;
@@ -600,5 +406,23 @@
   .mapContainer {
     height: 200px;
     margin: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .quoteSection {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .contactInfo {
+    padding: 1.5rem 1rem;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactMethod {
+    padding: 0.8rem;
   }
 }

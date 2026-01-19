@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './product-section.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductsSection() {
+  const navigate = useNavigate();
   const [selectedMaterial, setSelectedMaterial] = useState('all');
   const [selectedSize, setSelectedSize] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -449,21 +451,15 @@ export default function ProductsSection() {
                   </div>
 
                   <div className={styles.modalCta}>
-                    <button
-                      className={`${styles.modalButton} ${styles.primary}`}
-                      onClick={() => {
-                        closeProductModal();
-                        document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Request Quote
-                    </button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true" target='_blank'>
+                      <button
+                        className={`${styles.modalButton} ${styles.primary}`}>
+                        Request Quote
+                      </button>
+                    </a>
                     <button
                       className={`${styles.modalButton} ${styles.secondary}`}
-                      onClick={() => {
-                        closeProductModal();
-                        document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                      onClick={() => navigate("/contact")}
                     >
                       Contact Us
                     </button>
