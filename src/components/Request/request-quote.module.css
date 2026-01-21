@@ -1,8 +1,11 @@
 /* Quote Section */
 .quoteSection {
   margin-top: 4rem;
-  padding: 6rem 2rem;
+  padding: 2rem 1rem;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .quoteSection::before {
@@ -18,143 +21,137 @@
 .quoteContainer {
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* Header */
 .quoteHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .sectionLabel {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-color);
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .quoteTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--secondary-color);
   letter-spacing: 2px;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
 }
 
 .quoteSubtitle {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 300;
   color: var(--text-color);
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
-/* Centered Contact Layout */
-.contactInfo {
+/* Compact Layout Grid */
+.compactLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Contact Column */
+.contactColumn {
   background: var(--secondary-color);
-  padding: 4rem 3rem;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contactTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .contactDescription {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 3rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-.contactMethods {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.contactMethod {
+.contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background: rgba(201, 184, 149, 0.1);
-  border-left: 4px solid var(--primary-color);
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(201, 184, 149, 0.08);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.contactMethod:hover {
-  background: rgba(201, 184, 149, 0.15);
-  transform: translateX(5px);
-}
-
-/* Touch device improvements */
-@media (hover: none) and (pointer: coarse) {
-  .contactMethod:hover {
-    transform: none;
-  }
-
-  .contactMethod:active {
-    background: rgba(201, 184, 149, 0.2);
-    transform: scale(0.98);
-  }
+.contactItem:hover {
+  background: rgba(201, 184, 149, 0.12);
+  transform: translateX(3px);
 }
 
 .contactIcon {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .contactDetails {
   flex: 1;
+  min-width: 0;
 }
 
 .contactLabel {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-light);
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .contactValue {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-primary);
+  line-height: 1.3;
+  word-wrap: break-word;
 }
 
 .contactValue a {
@@ -169,27 +166,42 @@
 
 .contactAction {
   font-family: 'Work Sans', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: var(--text-light);
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  line-height: 1.3;
 }
 
 .contactAction a {
-  color: var(--primary-color);
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contactAction a:hover {
-  color: var(--accent-color);
+  color: var(--text-primary);
 }
 
-/* Map Container */
+/* Map Column */
+.mapColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Map Section */
+.mapSection {
+  background: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
 .mapContainer {
   position: relative;
   width: 100%;
-  height: 300px;
-  margin: 1rem 0;
+  height: 200px;
+  margin: 0.5rem 0;
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid var(--primary-color);
@@ -202,63 +214,62 @@
   border-radius: 6px;
 }
 
-
-/* Additional Info */
-.additionalInfo {
-  margin-top: 4rem;
+/* Info Section */
+.infoSection {
   background: var(--background-secondary);
-  padding: 3rem;
-  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
   border: 2px solid var(--primary-color);
+  text-align: center;
 }
 
 .infoTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .infoDescription {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: var(--text-color);
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 .infoFeatures {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
 }
 
 .infoFeature {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .infoIcon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: var(--secondary-color);
   color: var(--text-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .infoText {
   font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--secondary-color);
   letter-spacing: 1px;
@@ -268,161 +279,246 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .quoteSection {
-    padding: 4rem 2rem;
+    padding: 1.5rem;
   }
 
-  .quoteTitle {
-    font-size: 3rem;
+  .compactLayout {
+    gap: 1.5rem;
   }
 
-  .contactInfo {
-    padding: 3.5rem 2.5rem;
-    max-width: 1000px;
+  .mapContainer {
+    height: 180px;
   }
 }
 
 @media (max-width: 768px) {
   .quoteSection {
-    padding: 3rem 1.5rem;
+    padding: 1rem;
+    min-height: auto;
   }
 
-  .quoteTitle {
-    font-size: 2.4rem;
-  }
-
-  .quoteSubtitle {
-    font-size: 1rem;
-  }
-
-  .contactInfo {
-    padding: 2.5rem 2rem;
-    max-width: 100%;
-  }
-
-  .contactTitle {
-    font-size: 1.8rem;
-  }
-
-  .contactMethods {
+  .compactLayout {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .contactMethod {
-    padding: 1.5rem;
+  .quoteTitle {
+    font-size: 1.8rem;
   }
 
-  .additionalInfo {
-    padding: 2.5rem;
-    margin-top: 3rem;
+  .quoteSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .contactColumn,
+  .mapSection,
+  .infoSection {
+    padding: 1.25rem;
+  }
+
+  .contactTitle {
+    font-size: 1.1rem;
+  }
+
+  .contactDescription {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contactItem {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .contactIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .contactValue {
+    font-size: 0.85rem;
+  }
+
+  .contactAction {
+    font-size: 0.7rem;
   }
 
   .mapContainer {
-    height: 280px;
+    height: 160px;
+  }
+
+  .infoTitle {
+    font-size: 1rem;
+  }
+
+  .infoDescription {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .infoFeatures {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .infoText {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 640px) {
   .quoteSection {
-    margin-top: 2rem;
-    padding: 2rem 1rem;
+    margin-top: 5rem;
+    padding: 0.75rem;
   }
 
   .quoteHeader {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .quoteTitle {
-    font-size: 2rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .quoteSubtitle {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
-  .contactInfo {
-    padding: 2rem 1.5rem;
-    border-radius: 12px;
+  .contactColumn,
+  .mapSection,
+  .infoSection {
+    padding: 1rem;
+    border-radius: 8px;
   }
 
   .contactTitle {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .contactDescription {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
   }
 
-  .contactMethods {
-    gap: 1.5rem;
-  }
-
-  .contactMethod {
+  .contactItem {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0.75rem;
+    gap: 0.5rem;
   }
 
   .contactIcon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
   }
 
   .contactValue {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .contactAction {
-    font-size: 0.85rem;
-  }
-
-  .additionalInfo {
-    padding: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .infoTitle {
-    font-size: 1.3rem;
-  }
-
-  .infoDescription {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .infoFeatures {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    font-size: 0.65rem;
   }
 
   .mapContainer {
-    height: 200px;
-    margin: 0.75rem 0;
+    height: 140px;
+    margin: 0.5rem 0;
+  }
+
+  .infoTitle {
+    font-size: 0.95rem;
+  }
+
+  .infoDescription {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .infoIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .infoText {
+    font-size: 0.65rem;
   }
 }
 
 @media (max-width: 480px) {
   .quoteSection {
-    padding: 1.5rem 0.75rem;
+    padding: 0.5rem;
   }
 
-  .contactInfo {
-    padding: 1.5rem 1rem;
+  .compactLayout {
+    gap: 1rem;
   }
 
-  .contactTitle {
+  .contactColumn,
+  .mapSection,
+  .infoSection {
+    padding: 0.75rem;
+  }
+
+  .quoteTitle {
     font-size: 1.4rem;
   }
 
-  .contactMethod {
-    padding: 0.8rem;
+  .quoteSubtitle {
+    font-size: 0.75rem;
+  }
+
+  .contactTitle {
+    font-size: 0.9rem;
+  }
+
+  .contactDescription {
+    font-size: 0.7rem;
+  }
+
+  .contactItem {
+    padding: 0.5rem;
+  }
+
+  .contactIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .contactValue {
+    font-size: 0.75rem;
+  }
+
+  .contactAction {
+    font-size: 0.6rem;
+  }
+
+  .mapContainer {
+    height: 120px;
+  }
+
+  .infoTitle {
+    font-size: 0.85rem;
+  }
+
+  .infoDescription {
+    font-size: 0.7rem;
+  }
+
+  .infoIcon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+
+  .infoText {
+    font-size: 0.6rem;
   }
 }

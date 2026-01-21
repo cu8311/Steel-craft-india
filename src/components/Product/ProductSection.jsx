@@ -512,7 +512,10 @@ export default function ProductsSection() {
                     </a>
                     <button
                       className={`${styles.modalButton} ${styles.secondary}`}
-                      onClick={() => navigate("/contact")}
+                      onClick={() => {
+                        navigate("/contact");
+                        closeProductModal()
+                      }}
                     >
                       Contact Us
                     </button>

@@ -14,9 +14,8 @@
 }
 
 .headerContent {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1rem 1rem;
+    margin: 0 2rem;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -309,6 +308,7 @@
 @media (max-width: 900px) {
 
     .headerContent {
+        margin: 0 1rem;
         padding: 1rem 1.5rem;
     }
 

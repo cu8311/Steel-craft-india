@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero'
 import ProductsSection from '../Product/ProductSection'
 import IndustriesSection from '../Industries/IndustriesSection'
 import Slider from '../Slider/Slider'
+import Background from '../Background/Background'
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         <Hero />
         <Slider />
         <ProductsSection />
-        <IndustriesSection />
+        <Background />
     </main>
   )
 }
