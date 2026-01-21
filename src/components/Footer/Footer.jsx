@@ -82,13 +82,6 @@ export default function Footer() {
                 )
               )}
             </nav>
-
-            {/* Certifications */}
-            <div className={styles.footerCertification}>
-              <span className={styles.certBadge}>ISO</span>
-              <span className={styles.certBadge}>MSME</span>
-              <span className={styles.certBadge}>ZED</span>
-            </div>
           </div>
         </div>
 
