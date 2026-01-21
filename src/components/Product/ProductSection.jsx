@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 export default function ProductsSection() {
   const navigate = useNavigate();
   const [selectedMaterial, setSelectedMaterial] = useState('all');
+  const [selectedThread, setSelectedThread] = useState('all');
+  const [selectedPressure, setSelectedPressure] = useState('all');
   const [selectedSize, setSelectedSize] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -30,6 +32,8 @@ export default function ProductsSection() {
   // Filter options
   const materials = ['All Materials', 'MS Steel'];
   const sizes = ['All Sizes', '1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"'];
+  const threads = ['All Threads' ,'BSP', 'NPT', 'UNF'];
+  const pressures = ['All Pressures', 'Low Pressure', 'High Pressure', 'Extra High Pressure'];
 
   // Products data
   const products = [
@@ -38,8 +42,9 @@ export default function ProductsSection() {
       name: "Hydraulic Adapter",
       material: "MS Steel",
       size: "Multiple Sizes",
-      shortDescription: "High-precision hydraulic adapter with dual threading for secure connections",
-      description: "Premium hydraulic adapter manufactured from 316L stainless steel, featuring precision-machined dual threading for reliable, leak-proof connections. Designed for high-pressure applications with superior corrosion resistance and long service life.",
+      shortDescription: "High-precision hydraulic adapter with dual threading",
+      description:
+        "Premium hydraulic adapter featuring precision-machined threading for reliable, leak-proof connections.",
       image: "/hydraulic-adapter.png",
       features: [
         "MS Steel Construction",
@@ -48,204 +53,209 @@ export default function ProductsSection() {
         "Corrosion Resistant"
       ],
       specifications: {
-        "Material": "MS Steel",
-        "Pressure Rating": "Up to 12,000 PSI",
-        "Thread Type": "NPT/BSP/Metric Available",
-        "Size Range": "1/8\" to 2\"",
-        "Finish": "Polished/Zinc Plated"
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT"],
+        "Pressure Rating": ["High Pressure", "Extra High Pressure"]
       },
-      applications: ["Industrial Hydraulics", "Marine Systems", "Chemical Processing", "High-Pressure Lines"],
-      availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+      applications: [
+        "Industrial Hydraulics",
+        "Marine Systems",
+        "High-Pressure Lines"
+      ],
+      availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 2,
       name: "Hydraulic Bend Fittings",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Precision-engineered bend fittings for optimal fluid flow direction",
-      description: "Our hydraulic bend fittings are designed for applications requiring precise directional changes in hydraulic lines. Manufactured with premium materials and featuring brass inserts for enhanced durability.",
+      shortDescription: "Precision-engineered bend fittings",
+      description:
+        "Designed for applications requiring precise directional changes in hydraulic lines.",
       image: "/hydraulic-bend.jpeg",
       features: [
         "90-degree precision angles",
-        "Brass reinforced design",
-        "High-pressure rated",
-        "Corrosion resistant finish"
+        "Brass reinforced",
+        "High-pressure rated"
       ],
       specifications: {
-        "Material": "MS Steel with Brass Insert",
-        "Pressure Rating": "Up to 10,000 PSI",
-        "Thread Type": "NPT/BSP Available",
-        "Size Range": "1/4\" to 2\""
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT"],
+        "Pressure Rating": ["High Pressure"]
       },
-      applications: ["Industrial Machinery", "Construction Equipment", "Hydraulic Systems", "Transport Vehicles"],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+      applications: [
+        "Industrial Machinery",
+        "Construction Equipment"
+      ],
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 3,
       name: "Hydraulic Hose Nipple",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Precision hydraulic hose nipple for secure hose connections",
-      description: "Hydraulic hose nipples designed for strong, leak-proof hose connections in high-pressure systems. Compatible with multiple international thread standards.",
+      shortDescription: "Precision hydraulic hose nipple",
+      description:
+        "Designed for strong, leak-proof hose connections in high-pressure systems.",
       image: "/hydraulic-hose-nipple.jpeg",
       features: [
         "Multiple thread options",
         "High-pressure rated",
-        "Precision machined",
-        "Corrosion resistant"
+        "Precision machined"
       ],
       specifications: {
-        "Material": "MS Steel",
-        "Thread Types": "UNF / BSP / NPT / ORFS",
-        "Pressure Rating": "Up to 10,000 PSI",
-        "Size Range": "1/4\" to 2\""
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT", "UNF"],
+        "Pressure Rating": ["High Pressure"]
       },
       applications: [
         "Hydraulic Hose Assemblies",
-        "Industrial Machinery",
         "Fluid Transfer Systems"
       ],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 4,
       name: "Hydraulic Male Nipple with Hose Tail",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Male threaded nipple with hose tail for flexible hose connections",
-      description: "Male hydraulic nipple with integrated hose tail, engineered for secure and durable hose fittings in high-pressure hydraulic applications.",
+      shortDescription: "Male threaded nipple with hose tail",
+      description:
+        "Engineered for secure hose fittings in high-pressure hydraulic applications.",
       image: "/hydraulic-male-nipple.jpeg",
       features: [
         "Integrated hose tail",
         "Strong grip design",
-        "High tensile strength",
         "Leak-proof connection"
       ],
       specifications: {
-        "Material": "MS Steel",
-        "Thread Type": "BSP / NPT / UNF",
-        "Pressure Rating": "Up to 10,000 PSI",
-        "Finish": "Zinc Plated"
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT", "UNF"],
+        "Pressure Rating": ["High Pressure"]
       },
       applications: [
         "Hydraulic Hoses",
-        "Oil & Gas Systems",
-        "Industrial Equipment"
+        "Oil & Gas Systems"
       ],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 5,
       name: "Hydraulic Cap",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Protective hydraulic caps for sealing open ports",
-      description: "Durable hydraulic caps designed to protect open hydraulic ports from dust, moisture, and damage during storage or transport.",
+      shortDescription: "Protective hydraulic caps",
+      description:
+        "Designed to protect open hydraulic ports during storage and transport.",
       image: "/hydraulic-cap.jpeg",
       features: [
         "Port protection",
-        "Reusable design",
-        "Easy installation",
+        "Reusable",
         "Corrosion resistant"
       ],
       specifications: {
-        "Material": "MS Steel",
-        "Thread Type": "BSP / NPT / Metric",
-        "Finish": "Zinc Plated"
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT"],
+        "Pressure Rating": ["Low Pressure"]
       },
       applications: [
         "Port Protection",
-        "System Maintenance",
-        "Transport Safety"
+        "System Maintenance"
       ],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 6,
       name: "Hydraulic Hose Pipe",
       material: "Rubber with Steel Reinforcement",
       size: "1/4\" to 2\"",
-      shortDescription: "High-pressure hydraulic hose pipe for fluid transfer",
-      description: "Heavy-duty hydraulic hose pipes designed for high-pressure fluid transfer applications with excellent flexibility and durability.",
+      shortDescription: "High-pressure hydraulic hose pipe",
+      description:
+        "Heavy-duty hose pipes designed for high-pressure fluid transfer.",
       image: "/hydraulic-hose-pipe.png",
       features: [
         "Steel wire reinforced",
         "High flexibility",
-        "Abrasion resistant",
-        "High-pressure compatible"
+        "Abrasion resistant"
       ],
       specifications: {
-        "Working Pressure": "Up to 6,000 PSI",
-        "Temperature Range": "-40°C to +100°C",
-        "Standards": "SAE / EN Compliant"
+        Material: "Rubber with Steel Reinforcement",
+        "Thread Type": [],
+        "Pressure Rating": ["High Pressure"]
       },
       applications: [
         "Hydraulic Systems",
-        "Construction Equipment",
-        "Industrial Machinery"
+        "Construction Equipment"
       ],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/4"', '1 1/2"', '2"']
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 7,
       name: "Banjo Tee Fitting",
       material: "MS Steel",
       size: "1/4\" to 2\"",
-      shortDescription: "Compact banjo tee fitting for multi-line hydraulic connections",
-      description: "Banjo tee fittings designed for compact hydraulic installations where space is limited, allowing multiple fluid paths from a single point.",
+      shortDescription: "Compact banjo tee fitting",
+      description:
+        "Designed for compact hydraulic installations where space is limited.",
       image: "/banjo-tee.jpeg",
       features: [
         "Compact design",
         "Multi-directional flow",
-        "High-pressure rated",
-        "Precision machined"
+        "High-pressure rated"
       ],
       specifications: {
-        "Material": "MS Steel",
-        "Thread Type": "BSP / NPT",
-        "Pressure Rating": "Up to 8,000 PSI"
+        Material: "MS Steel",
+        "Thread Type": ["BSP", "NPT"],
+        "Pressure Rating": ["High Pressure"]
       },
       applications: [
-        "Compact Hydraulic Systems",
         "Automotive Hydraulics",
         "Industrial Equipment"
       ],
-      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '1 1/2"', '2"']
+      availableSizes: ['1/4"', '3/8"', '1/2"', '3/4"', '1"', '2"']
     },
+  
     {
       id: 8,
       name: "Hydraulic Nut",
       material: "Mild Steel (MS)",
       size: "1/8\" to 1\"",
-      shortDescription: "High-strength hydraulic nut for secure pipe and fitting connections",
-      description: "Hydraulic nuts manufactured from mild steel, suitable for low, high, and extra high pressure hydraulic applications. Designed for precise threading and long service life.",
+      shortDescription: "High-strength hydraulic nut",
+      description:
+        "Suitable for low, high, and extra high pressure hydraulic applications.",
       image: "/hydraulic-nut.jpeg",
       features: [
         "Precision threaded",
         "High torque capacity",
-        "Vibration resistant",
-        "Corrosion resistant finish"
+        "Vibration resistant"
       ],
       specifications: {
-        "Material": "Mild Steel (MS)",
-        "Thread Type": "BSP / NPT / UNF",
-        "Pressure Rating": "Low / High / Extra High Pressure"
+        Material: "Mild Steel (MS)",
+        "Thread Type": ["BSP", "NPT", "UNF"],
+        "Pressure Rating": ["Low Pressure", "High Pressure", "Extra High Pressure"]
       },
       applications: [
         "Hydraulic Pipe Connections",
-        "Industrial Machinery",
-        "High-Pressure Systems"
+        "Industrial Machinery"
       ],
       availableSizes: ['1/8"', '1/4"', '3/8"', '1/2"', '3/4"', '1"', 'Custom Size']
     }
-
   ];
+  
 
   // Filter products
   const filteredProducts = products.filter(product => {
     const materialMatch = selectedMaterial === 'all' || selectedMaterial === 'All Materials' || product.material === selectedMaterial;
     const sizeMatch = selectedSize === 'all' || selectedSize === 'All Sizes' || product.availableSizes?.includes(selectedSize);
-    return materialMatch && sizeMatch;
+    const threadType = selectedThread === 'all' || selectedThread === 'All Threads' || product.specifications['Thread Type']?.includes(selectedThread);
+    const pressureMatch = selectedPressure === 'all' || selectedPressure === 'All Threads' || product.specifications['Pressure Rating']?.includes(selectedPressure);
+    return materialMatch && sizeMatch && threadType && pressureMatch;
   });
 
   const clearFilters = () => {
@@ -265,9 +275,6 @@ export default function ProductsSection() {
 
   return (
     <>
-      <style>{`
-
-      `}</style>
 
       <section
         className={`${styles.productsSection} ${isVisible ? 'visible' : ''}`}
@@ -306,6 +313,52 @@ export default function ProductsSection() {
                     onClick={() => setSelectedMaterial(material === 'All Materials' ? 'all' : material)}
                   >
                     {material}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Thread */}
+            <div className={styles.filterGroup}>
+              <div className={styles.filterHeader}>
+                <div className={styles.filterLabel}>
+                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                  Thread Type:
+                </div>
+              </div>
+              <div className={styles.filterOptions}>
+                {threads.map((thread) => (
+                  <button
+                    key={thread}
+                    className={`${styles.filterOption} ${(selectedThread === thread || (thread === 'All Threads' && selectedThread === 'all')) ? styles.active : ''}`}
+                    onClick={() => setSelectedThread(thread === 'All Threads' ? 'all' : thread)}
+                  >
+                    {thread}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Pressure */}
+            <div className={styles.filterGroup}>
+              <div className={styles.filterHeader}>
+                <div className={styles.filterLabel}>
+                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                  Pressure:
+                </div>
+              </div>
+              <div className={styles.filterOptions}>
+                {pressures.map((pressure) => (
+                  <button
+                    key={pressure}
+                    className={`${styles.filterOption} ${(selectedPressure === pressure || (pressure === 'All Pressures' && selectedPressure === 'all')) ? styles.active : ''}`}
+                    onClick={() => setSelectedPressure(pressure === 'All Pressures' ? 'all' : pressure)}
+                  >
+                    {pressure}
                   </button>
                 ))}
               </div>
