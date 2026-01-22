@@ -15,7 +15,7 @@
 .aboutCard {
   background: var(--background-secondary);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: hidden;
@@ -24,7 +24,7 @@
 
 /* Content Section - LEFT */
 .aboutContent {
-  padding: 4rem;
+  padding: 1rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@
   color: var(--primary-color);
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: block;
 }
 
@@ -48,7 +48,7 @@
   font-weight: 500;
   color: var(--secondary-color);
   line-height: 1.3;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .aboutTitle span {
@@ -60,7 +60,7 @@
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   border-radius: 2px;
 }
 
@@ -70,7 +70,7 @@
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.8;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .aboutText strong {
@@ -119,7 +119,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 300px;
   overflow: hidden;
 }
 
@@ -154,24 +153,6 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .aboutSection {
-    padding: 5rem 2rem;
-  }
-
-  .aboutContent {
-    padding: 3.5rem;
-  }
-
-  .aboutTitle {
-    font-size: 2.5rem;
-  }
-
-  .aboutImage {
-    min-height: 450px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .aboutSection {
     padding: 4rem 2rem;
   }
 
@@ -180,21 +161,33 @@
   }
 
   .aboutTitle {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .aboutSection {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .aboutContent {
+    padding: 2.5rem;
+  }
+
+  .aboutTitle {
+    font-size: 2.1rem;
   }
 
   .aboutText {
     font-size: 1rem;
   }
 
-  .aboutImage {
-    min-height: 420px;
-  }
 }
 
 @media (max-width: 900px) {
   .aboutSection {
-    padding: 3.5rem 1.5rem;
+    padding: 3rem 1rem;
   }
 
   .aboutCard {
@@ -203,84 +196,107 @@
   }
 
   .aboutContent {
-    padding: 2.5rem;
+    padding: 2rem 1.5rem;
     order: 2;
   }
 
   .aboutImage {
     order: 1;
-    min-height: 350px;
+    max-height: 300px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .aboutImage img {
+    border-radius: 12px 12px 0 0;
   }
 
   .aboutTitle {
-    font-size: 2.1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .aboutTag {
+    text-align: center;
+  }
+
+  .aboutBtn {
+    align-self: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 640px) {
   .aboutSection {
-    padding: 3rem 1rem;
-  }
-
-  .aboutContent {
-    padding: 2rem 1.5rem;
-  }
-
-  .aboutTag {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-  }
-
-  .aboutTitle {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
-
-  .aboutDivider {
-    width: 60px;
-    height: 3px;
-    margin-bottom: 2rem;
-  }
-
-  .aboutText {
-    font-size: 0.95rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-  }
-
-  .aboutBtn {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    padding: 1.1rem 2rem;
-    font-size: 0.9rem;
-  }
-
-  .aboutImage {
-    min-height: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .aboutSection {
-    padding: 2.5rem 0.75rem;
+    padding: 2rem 0.75rem;
   }
 
   .aboutContent {
     padding: 1.5rem 1rem;
   }
 
+  .aboutTag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+  }
+
   .aboutTitle {
     font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .aboutDivider {
+    width: 50px;
+    height: 3px;
+    margin-bottom: 1.5rem;
   }
 
   .aboutText {
     font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .aboutBtn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
   }
 
   .aboutImage {
-    min-height: 240px;
+    max-height: 250px;
   }
+
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .aboutContent {
+    padding: 1rem 0.75rem;
+  }
+
+  .aboutTitle {
+    font-size: 1.4rem;
+  }
+
+  .aboutText {
+    font-size: 0.85rem;
+  }
+
+  .aboutBtn {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .aboutImage {
+    max-height: 200px;
+  }
+
 }
