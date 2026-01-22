@@ -168,6 +168,30 @@ export default function RequestQuote() {
               </div>
             </div>
           </div>
+
+          {/* Google Form Link */}
+          <div className={styles.googleFormSection}>
+            <h3 className={styles.formTitle}>Product Enquiry Form</h3>
+            <p className={styles.formDescription}>
+              Click the link below to fill out our product enquiry form for immediate assistance with your requirements.
+            </p>
+            <div className={styles.formLinkContainer}>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.formLink}
+              >
+                Open Product Enquiry Form
+                <svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15,3 21,3 21,9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
     </>

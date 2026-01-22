@@ -1,7 +1,6 @@
 /* Slider/Showcase Section */
 .showcaseSection {
   background: var(--background-primary);
-  padding: 1rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -14,7 +13,7 @@
   display: flex;
   gap: 2rem;
   overflow-x: hidden;
-  padding: 2rem 0;
+  padding: 1rem 0;
   user-select: none;
 }
 

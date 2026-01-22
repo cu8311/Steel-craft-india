@@ -134,11 +134,11 @@ export default function Hero() {
                 <div className={styles.slideContent}>
                   <div className={styles.slideContentInner}>
                     <h1 className={styles.slideTitle}>{slide.title}</h1>
-                    <p className={styles.slideSubtitle}>{slide.subtitle}</p>
+                    {/* <p className={styles.slideSubtitle}>{slide.subtitle}</p>
                     <p className={styles.slideDescription}>{slide.description}</p>
                     
                     {/* Features */}
-                    {slide.features && slide.features.length > 0 && (
+                    {/* {slide.features && slide.features.length > 0 && (
                       <div className={styles.slideFeatures}>
                         {slide.features.map((feature, idx) => (
                           <span key={idx} className={styles.featureBadge}>
@@ -146,10 +146,10 @@ export default function Hero() {
                           </span>
                         ))}
                       </div>
-                    )}
+                    )} */}
 
                     {/* CTA */}
-                    <a 
+                    {/* <a 
                       href={slide.ctaLink}
                       className={styles.slideCta}
                       onClick={(e) => {
@@ -164,7 +164,7 @@ export default function Hero() {
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

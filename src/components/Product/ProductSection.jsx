@@ -261,6 +261,8 @@ export default function ProductsSection() {
   const clearFilters = () => {
     setSelectedMaterial('all');
     setSelectedSize('all');
+    setSelectedPressure('all');
+    setSelectedThread('all');
   };
 
   const openProductModal = (product) => {

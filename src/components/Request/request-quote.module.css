@@ -1,6 +1,6 @@
 /* Quote Section */
 .quoteSection {
-  margin-top: 4rem;
+  margin-top: 5rem;
   padding: 2rem 1rem;
   position: relative;
   min-height: 100vh;
@@ -59,6 +59,80 @@
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.5;
+}
+
+/* Google Form Section */
+.googleFormSection {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--background-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.formDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formLinkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--background-secondary);
+  background: var(--primary-color);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.formLink:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.linkIcon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--background-secondary);
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.formLink:hover .linkIcon {
+  transform: translateX(3px);
 }
 
 /* Compact Layout Grid */
@@ -310,6 +384,25 @@
     font-size: 0.85rem;
   }
 
+  .googleFormSection {
+    margin: 2rem 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+
+  .formDescription {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .formLink {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+
   .contactColumn,
   .mapSection,
   .infoSection {
@@ -472,6 +565,25 @@
 
   .quoteSubtitle {
     font-size: 0.75rem;
+  }
+
+  .googleFormSection {
+    margin: 1.5rem 0;
+    padding: 1rem 0.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+  }
+
+  .formDescription {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .formLink {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
   }
 
   .contactTitle {
