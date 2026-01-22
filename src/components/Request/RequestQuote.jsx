@@ -87,7 +87,7 @@ export default function RequestQuote() {
                       <a>B-21, Janta Nagar (Shimlapuri / Street No-4, Guru Nanak Street), Gill Road,
                         Ludhiana, Punjab 141003, India</a>
                     </div>
-                    <div className={styles.contactAction}>Mon-Sat: 8:00 AM – 9:00 PM</div>
+                    <div className={styles.contactAction}>Mon-Sat: 8:00 AM - 9:00 PM</div>
                   </div>
                 </div>
 

@@ -1,6 +1,6 @@
 /* Quote Section */
 .quoteSection {
-  margin-top: 5rem;
+  margin-top: 8rem;
   padding: 2rem 1rem;
   position: relative;
   min-height: 100vh;
@@ -145,7 +145,8 @@
 
 /* Contact Column */
 .contactColumn {
-  background: var(--secondary-color);
+  background: var(--background-secondary);
+  border: 2px solid var(--primary-color);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -155,7 +156,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -165,7 +166,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 300;
-  color: var(--text-light);
+  color: var(--text-color);
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -181,14 +182,14 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: 0.75rem;
-  background: rgba(201, 184, 149, 0.08);
+  background: rgba(45, 80, 22, 0.05);
   border-left: 3px solid var(--primary-color);
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .contactItem:hover {
-  background: rgba(201, 184, 149, 0.12);
+  background: rgba(45, 80, 22, 0.08);
   transform: translateX(3px);
 }
 
@@ -213,7 +214,8 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: var(--secondary-color);
+  font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
@@ -223,37 +225,37 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-color);
   line-height: 1.3;
   word-wrap: break-word;
 }
 
 .contactValue a {
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contactValue a:hover {
-  color: var(--accent-color);
-}
-
-.contactAction {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--text-light);
-  margin-top: 0.25rem;
-  line-height: 1.3;
-}
-
-.contactAction a {
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
+.contactValue a:hover {
+  color: var(--primary-color);
+}
+
+.contactAction {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  margin-top: 0.25rem;
+  line-height: 1.3;
+}
+
+.contactAction a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
 .contactAction a:hover {
-  color: var(--text-primary);
+  color: var(--accent-color);
 }
 
 /* Map Column */
