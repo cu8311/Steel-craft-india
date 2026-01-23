@@ -1,55 +1,31 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './footer.module.css';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const pathname = location.pathname;
 
-  const navigationLinks = [
-    { name: 'Home', type: 'route', to: '/' },
-    { name: 'Products', type: 'hash', href: '#products' },
-    { name: 'Industries', type: 'hash', href: '#industries' },
-    { name: 'Buyer Information', type: 'route', to: '/buyer' },
-    { name: 'Manufacturing Process', type: 'route', to: '/manufacturing' },
-    { name: 'About Us', type: 'route', to: '/about' },
-    { name: 'Certificates', type: 'route', to: '/certificates' }
+  const quickLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Products', href: '#products' },
+    { name: 'Manufacturing', href: '#manufacturing' },
+    { name: 'Industries', href: '#industries' },
+    { name: 'Quality Assurance', href: '#quality' },
+    { name: 'Buyer Information', href: '#buyer-information' },
+    { name: 'Request Quote', href: '#request-quote' }
   ];
 
-  const scrollToHash = (hash) => {
-    const target = document.querySelector(hash);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleHashClick = (href, e) => {
-    e.preventDefault();
-
-    const hash = href.includes('#') ? href.substring(href.indexOf('#')) : href;
-
-    // If we're already on the home page, just scroll
-    if (pathname === '/' && href.startsWith('#')) {
-      scrollToHash(hash);
-    } else {
-      // Navigate to the home page first, then scroll
-      navigate('/');
-      // Use setTimeout to ensure navigation completes before scrolling
-      setTimeout(() => {
-        scrollToHash(hash);
-      }, 150);
-    }
-  };
-
   return (
-    <>
-      <footer className={styles.footer}>
-        {/* Top Bar - Logo, Navigation & Certifications */}
-        <div className={styles.footerTop}>
-          <div className={styles.footerTopContainer}>
-            {/* Logo */}
+    <footer className={styles.footer}>
+      <div className={styles.footerBg}></div>
+      <div className={styles.footerOverlay}></div>
+
+      <div className={styles.footerMain}>
+        <div className={styles.footerGrid}>
+
+          {/* Company Info */}
+          <div className={styles.footerCompany}>
             <div className={styles.footerLogo}>
               <img
                 src="/logo.jpeg"
@@ -59,88 +35,96 @@ export default function Footer() {
               <div className={styles.logoText}>Steel Craft</div>
             </div>
 
-            {/* Navigation */}
-            <nav className={styles.footerNav}>
-              {navigationLinks.map((link, index) =>
-                link.type === 'route' ? (
-                  <Link
-                    key={index}
-                    to={link.to}
-                    className={styles.footerNavLink}
-                  >
-                    {link.name}
-                  </Link>
-                ) : (
+            <p className={styles.footerDescription}>
+              Steel Craft India is a leading manufacturer of precision hydraulic hose fittings
+              established in 2001. We specialize in producing high-quality hydraulic end fittings
+              that deliver reliable performance in demanding industrial conditions.
+            </p>
+
+            <div className={styles.footerTagline}>
+              Precision Engineering Since 2001
+            </div>
+
+            {/* Social Links */}
+            <div className={styles.socialLinks}>
+              <a href="#" className={styles.socialLink}><Facebook /></a>
+              <a href="#" className={styles.socialLink}><Linkedin /></a>
+              <a href="#" className={styles.socialLink}><Instagram /></a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className={styles.footerColumn}>
+            <h3 className={styles.footerTitle}>Quick Links</h3>
+            <ul className={styles.footerLinks}>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
                   <a
-                    key={index}
                     href={link.href}
-                    className={styles.footerNavLink}
-                    onClick={(e) => handleHashClick(link.href, e)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .querySelector(link.href)
+                        ?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                   >
                     {link.name}
                   </a>
-                )
-              )}
-            </nav>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          {/* Contact */}
+          <div className={styles.footerContact}>
+            <h3 className={styles.footerTitle}>Manufacturing Unit</h3>
+            <ul className={styles.contactList}>
+              <li className={styles.contactItem}>
+                <div className={styles.contactLabel}>Address</div>
+                <div className={styles.contactValue}>
+                  Steel Craft India<br />
+                  Ludhiana, Punjab, India
+                </div>
+              </li>
+
+              <li className={styles.contactItem}>
+                <div className={styles.contactLabel}>Phone</div>
+                <div className={styles.contactValue}>
+                  <a href="tel:+919356854656">+91 9356854656</a>
+                </div>
+              </li>
+
+              <li className={styles.contactItem}>
+                <div className={styles.contactLabel}>Email</div>
+                <div className={styles.contactValue}>
+                  <a href="mailto:steelcraft80@gmail.com">
+                    steelcraft80@gmail.com
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        {/* Bottom Bar - Contact Buttons, Social Links & Privacy */}
+        {/* Divider */}
+        <div className={styles.footerDivider}></div>
+
+        {/* Bottom */}
         <div className={styles.footerBottom}>
-          <div className={styles.footerBottomContainer}>
-            {/* Contact Buttons */}
-            <div className={styles.footerContactButtons}>
-              <a href="tel:+919368654656" className={styles.contactButton}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                Call Us
-              </a>
-              <a href="https://wa.me/919368654656" className={styles.contactButton} target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                Whatsapp
-              </a>
-            </div>
+          <div className={styles.footerCopyright}>
+            © {currentYear}{' '}
+            <span>Steel Craft India</span>. All rights reserved.
+          </div>
 
-            {/* Social Links & Privacy */}
-            <div className={styles.footerSocialSection}>
-              <div className={styles.socialLinks}>
-                <a href="#" className={`${styles.socialLink} ${styles.facebook}`} title="Facebook">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-                <a href="#" className={`${styles.socialLink} ${styles.linkedin}`} title="LinkedIn">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-                <a href="#" className={`${styles.socialLink} ${styles.twitter}`} title="X (Twitter)">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-                <a href="#" className={`${styles.socialLink} ${styles.youtube}`} title="YouTube">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-              </div>
-
-              <a href="#privacy" className={styles.footerPrivacy}>Privacy Policy</a>
-            </div>
+          <div className={styles.footerCertifications}>
+            <span className={styles.certBadge}>ISO Certified</span>
+            <span className={styles.certBadge}>MSME Registered</span>
+            <span className={styles.certBadge}>ZED Bronze</span>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className={styles.footerCopyright}>
-          <p className={styles.copyrightText}>
-            © {currentYear} <a href="#home">Steel Craft India</a>. All rights reserved. | Manufacturer of Precision Hydraulic Fittings
-          </p>
-        </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

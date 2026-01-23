@@ -1,7 +1,7 @@
 .buyerSection {
-  margin-top: 2rem;
+  margin-top: 6rem;
   background: var(--background-primary);
-  padding: 8rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .buyerContainer {
@@ -50,7 +50,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .processStep {
@@ -131,7 +131,7 @@
   padding: 4rem 3rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .distributorTitle {

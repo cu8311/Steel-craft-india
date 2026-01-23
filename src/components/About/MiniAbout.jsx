@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './mini-about.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const MiniAbout = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className={styles.aboutSection}>
       <div className={styles.aboutContainer}>
@@ -18,7 +21,7 @@ const MiniAbout = () => {
               <br/><br/>
               Through hard work and continuous improvement, we expanded our production capabilities and product range. Today, SCI supplies multiple hydraulic fitting products across <strong>India</strong> and to global markets, trusted for durability, fitment accuracy, and long service life.
             </p>
-            <a className={styles.aboutBtn} href="#about">READ MORE</a>
+            <button className={styles.aboutBtn} onClick={() => navigate('/about')}>READ MORE</button>
           </div>
 
           {/* RIGHT: IMAGE */}
