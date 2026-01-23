@@ -11,8 +11,8 @@
   --secondary-color: #1a4d2e;      /* Dark pine green - reliability */
   --accent-color: #8ce24a;         /* Professional blue accent - security */
   --text-primary: #ffffff;         /* Primary text for headings on dark backgrounds */
-  --text-color: #929792;           /* Dark green text - trust */
-  --text-light: #c1dcc7;            /* Muted green text */
+  --text-color: #000000;           /* Dark green text - trust */
+  --text-light: #bfbfbf;            /* Muted green text */
   --background-primary: #f0f8f0;   /* Very light green bg - freshness */
   --background-secondary: #ffffff; /* White */
   --background-dark: #0f2814;      /* Very dark green - security */

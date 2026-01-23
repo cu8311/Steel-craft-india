@@ -1,192 +1,43 @@
-/* Buyer Information Section */
 .buyerSection {
-	margin-top: 4rem;
-  position: relative;
+  margin-top: 2rem;
+  background: var(--background-primary);
+  padding: 8rem 2rem;
 }
 
-/* Hero Section */
-.buyerHero {
-  background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a1a 100%);
-  padding: 6rem 2rem 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.buyerHero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 255, 255, 0.01) 50px,
-      rgba(255, 255, 255, 0.01) 100px
-    );
-}
-
-.heroContent {
-  max-width: 1400px;
+.buyerContainer {
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Header */
+.buyerHeader {
   text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.heroLabel {
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.heroTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: 3px;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-}
-
-.heroSubtitle {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: var(--text-light);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  line-height: 1.8;
-}
-
-/* Contact Box */
-.contactBox {
-  background: var(--secondary-color);
-  padding: 2.5rem 3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  border: 2px solid var(--primary-color);
-}
-
-.contactTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: 2px;
-  text-transform: uppercase;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
-.contactItems {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.contactIcon {
-  width: 50px;
-  height: 50px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 1.5rem;
-}
-
-.contactDetails {
-  flex: 1;
-}
-
-.contactLabel {
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-light);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-}
-
-.contactValue {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--primary-color);
-}
-
-.contactValue a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contactValue a:hover {
-  color: var(--accent-color);
-}
-
-/* Features Section */
-.featuresSection {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
-}
-
-.sectionHeader {
-  text-align: center;
-  margin-bottom: 4rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.featuresSection:global(.visible) .sectionHeader,
-.processSection:global(.visible) .sectionHeader {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sectionLabel {
+.buyerTag {
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-color);
-  letter-spacing: 4px;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.sectionTitle {
+.buyerTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.sectionDescription {
+.buyerSubtitle {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--text-color);
   max-width: 800px;
@@ -194,124 +45,48 @@
   line-height: 1.8;
 }
 
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-}
-
-.featureCard {
-  background: var(--background-secondary);
-  padding: 2.5rem 2rem;
-  border: 2px solid transparent;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.featuresSection:global(.visible) .featureCard:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.featuresSection:global(.visible) .featureCard:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.featuresSection:global(.visible) .featureCard:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
-.featuresSection:global(.visible) .featureCard:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
-.featuresSection:global(.visible) .featureCard:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
-.featuresSection:global(.visible) .featureCard:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
-
-.featureCard:hover {
-  border-color: var(--primary-color);
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.featureIcon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.featureTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.featureDescription {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--text-color);
-  line-height: 1.7;
-}
-
-/* Process Section */
-.processSection {
-  padding: 6rem 2rem;
-}
-
-.processContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.processSection .sectionHeader {
-  margin-bottom: 4rem;
-}
-
+/* Process Steps */
 .processSteps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 6rem;
 }
 
 .processStep {
+  background: var(--background-secondary);
+  padding: 3rem 2rem;
   text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(45, 80, 22, 0.1);
 }
 
-.processSection:global(.visible) .processStep:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.processSection:global(.visible) .processStep:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.processSection:global(.visible) .processStep:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
-.processSection:global(.visible) .processStep:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.processStep:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(45, 80, 22, 0.15);
+}
 
 .stepNumber {
-  width: 80px;
-  height: 80px;
-  background: var(--secondary-color);
-  color: var(--text-color);
+  width: 70px;
+  height: 70px;
+  background: var(--primary-color);
+  color: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  border: 3px solid var(--primary-color);
-  position: relative;
-}
-
-.processStep:not(:last-child) .stepNumber::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 100%;
-  height: 2px;
-  background: var(--primary-color);
-  transform: translateY(-50%);
+  border: 3px solid var(--accent-color);
 }
 
 .stepTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -319,50 +94,51 @@
 
 .stepDescription {
   font-family: 'Work Sans', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.7;
 }
 
+.stepFeatures {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepFeature {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepFeature::before {
+  content: '✓';
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 /* Distributor CTA */
 .distributorCta {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
-  padding: 5rem 2rem;
+  background: var(--background-secondary);
+  padding: 4rem 3rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.distributorCta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 255, 255, 0.01) 50px,
-      rgba(255, 255, 255, 0.01) 100px
-    );
-}
-
-.distributorContent {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+  margin-bottom: 6rem;
 }
 
 .distributorTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--primary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -370,179 +146,220 @@
 
 .distributorDescription {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
   line-height: 1.8;
-  margin-bottom: 3rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
 }
 
-.ctaButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.ctaButton {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 1.25rem 3rem;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  border: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
+.distributorButton {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-}
-
-.ctaButton.primary {
-  background: var(--primary-color);
-  color: var(--text-color);
-}
-
-.ctaButton.primary:hover {
-  background: var(--accent-color);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
+  background: var(--primary-color);
+  border: none;
+  padding: 1.25rem 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.distributorButton:hover {
+  background: var(--secondary-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(45, 80, 22, 0.3);
 }
 
-.ctaButton.secondary {
-  background: transparent;
+.distributorButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Product Enquiry */
+.enquirySection {
+  background: var(--background-secondary);
+  padding: 4rem 3rem;
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+}
+
+.enquiryHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.enquiryTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.enquirySubtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
   color: var(--text-color);
-  border: 2px solid var(--text-primary);
 }
 
-.ctaButton.secondary:hover {
-  background: var(--primary-color);
+.enquiryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
+  background: var(--accent-color);
+  border: none;
+  padding: 1.25rem 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
-.ctaButton svg {
+.enquiryButton:hover {
+  background: #7dd13a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(140, 226, 74, 0.3);
+}
+
+.enquiryButton svg {
   width: 20px;
   height: 20px;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .heroTitle {
-    font-size: 3.5rem;
+  .buyerSection {
+    padding: 6rem 2rem;
   }
 
-  .featuresGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .buyerTitle {
+    font-size: 2.5rem;
   }
 
   .processSteps {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .processStep:nth-child(2) .stepNumber::after,
-  .processStep:nth-child(4) .stepNumber::after {
-    display: none;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .buyerHero {
-    padding: 4rem 2rem 3rem;
+  .buyerSection {
+    padding: 5rem 2rem;
   }
 
-  .heroTitle {
-    font-size: 2.5rem;
+  .buyerHeader {
+    margin-bottom: 4rem;
   }
 
-  .heroSubtitle {
+  .buyerTitle {
+    font-size: 2.2rem;
+  }
+
+  .buyerSubtitle {
     font-size: 1.1rem;
-  }
-
-  .contactBox {
-    padding: 2rem 1.5rem;
-  }
-
-  .featuresSection {
-    padding: 4rem 2rem;
-  }
-
-  .sectionTitle {
-    font-size: 2.5rem;
-  }
-
-  .featuresGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .processSection {
-    padding: 4rem 2rem;
   }
 
   .processSteps {
     grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .processStep .stepNumber::after {
-    display: none;
+    gap: 2rem;
+    margin-bottom: 4rem;
   }
 
   .distributorCta {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
   }
 
   .distributorTitle {
     font-size: 2rem;
   }
 
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
+  .enquirySection {
+    padding: 3rem 2rem;
   }
 
-  .ctaButton {
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
+  .enquiryTitle {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 640px) {
-  .heroTitle {
+  .buyerSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .buyerTag {
+    font-size: 0.85rem;
+  }
+
+  .buyerTitle {
     font-size: 2rem;
-    letter-spacing: 2px;
   }
 
-  .contactItem {
-    flex-direction: column;
-    text-align: center;
+  .buyerSubtitle {
+    font-size: 1rem;
   }
 
-  .contactIcon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
-
-  .contactValue {
-    font-size: 1.1rem;
-  }
-
-  .sectionTitle {
-    font-size: 2rem;
+  .processStep {
+    padding: 2.5rem 1.5rem;
   }
 
   .stepNumber {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     font-size: 1.8rem;
   }
 
   .stepTitle {
     font-size: 1.2rem;
+  }
+
+  .stepDescription {
+    font-size: 0.95rem;
+  }
+
+  .distributorCta {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .distributorTitle {
+    font-size: 1.8rem;
+  }
+
+  .distributorDescription {
+    font-size: 1rem;
+  }
+
+  .distributorButton,
+  .enquiryButton {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.1rem 2rem;
+  }
+
+  .enquirySection {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .enquiryTitle {
+    font-size: 1.8rem;
   }
 }
