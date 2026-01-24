@@ -1,0 +1,375 @@
+/* Banner */
+.constructionBanner {
+	background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+	padding: 5rem 2rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	margin-top: 6rem;
+}
+
+.constructionBanner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/footer-bg.jpeg') center/cover;
+	opacity: 0.75;
+}
+
+.bannerContent {
+	position: relative;
+	z-index: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.bannerBreadcrumb {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.9rem;
+	color: var(--text-light);
+	margin-bottom: 1rem;
+}
+
+.bannerBreadcrumb a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+.bannerTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+.bannerDescription {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--text-light);
+	max-width: 900px;
+	margin: 0 auto;
+	line-height: 1.8;
+}
+
+/* Introduction Section */
+.introSection {
+	background: var(--background-secondary);
+	padding: 2rem 2rem;
+}
+
+.introContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.introText {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.15rem;
+	color: var(--text-color);
+	line-height: 1.9;
+}
+
+.introText strong {
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+/* Equipment Section */
+.equipmentSection {
+	background: var(--background-primary);
+	padding: 2rem 2rem;
+}
+
+.equipmentContainer {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.sectionHeader {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.sectionTag {
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--accent-color);
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.sectionTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.equipmentGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.5rem;
+}
+
+.equipmentCard {
+	background: var(--background-secondary);
+	padding: 3rem;
+	box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+	transition: all 0.3s ease;
+}
+
+.equipmentCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 30px rgba(45, 80, 22, 0.15);
+}
+
+.equipmentHeader {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.equipmentIcon {
+	font-size: 3rem;
+}
+
+.equipmentInfo h3 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+
+.equipmentQuantity {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.95rem;
+	color: var(--accent-color);
+	font-weight: 600;
+}
+
+.equipmentSubsection {
+	margin-bottom: 2rem;
+}
+
+.subsectionTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.equipmentList {
+	list-style: none;
+	margin-bottom: 1.5rem;
+}
+
+.equipmentList li {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	color: var(--text-color);
+	line-height: 1.7;
+	padding-left: 1.5rem;
+	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+.equipmentList li::before {
+	content: '✓';
+	position: absolute;
+	left: 0;
+	color: var(--accent-color);
+	font-weight: bold;
+}
+
+.equipmentUsage {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	color: var(--text-color);
+	line-height: 1.8;
+	font-style: italic;
+	margin-bottom: 1.5rem;
+}
+
+.efficiencyList {
+	background: var(--background-primary);
+	padding: 1.5rem;
+	border-left: 4px solid var(--accent-color);
+}
+
+.efficiencyList li {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	color: var(--primary-color);
+	line-height: 1.7;
+	padding-left: 1.5rem;
+	position: relative;
+	margin-bottom: 0.75rem;
+	font-weight: 500;
+}
+
+.efficiencyList li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--accent-color);
+}
+
+/* Benefits Section */
+.benefitsSection {
+	background: var(--background-secondary);
+	padding: 2rem 2rem;
+}
+
+.benefitsContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.benefitsGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.5rem;
+	margin-top: 3rem;
+}
+
+.benefitCard {
+	background: var(--background-primary);
+	padding: 2.5rem;
+	border-left: 4px solid var(--accent-color);
+}
+
+.benefitTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.benefitDescription {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	color: var(--text-color);
+	line-height: 1.8;
+}
+
+/* CTA Section */
+.ctaSection {
+	background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+	padding: 2rem 2rem;
+	text-align: center;
+}
+
+.ctaContent {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.ctaTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+.ctaText {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.1rem;
+	color: var(--text-light);
+	line-height: 1.8;
+	margin-bottom: 2.5rem;
+}
+
+.ctaButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--background-dark);
+	background: var(--accent-color);
+	border: none;
+	padding: 1.25rem 3rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+	background: #7dd13a;
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(140, 226, 74, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+	.equipmentGrid,
+	.benefitsGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.constructionBanner {
+		padding: 4rem 2rem;
+	}
+
+	.bannerTitle {
+		font-size: 2.5rem;
+	}
+
+	.introSection,
+	.equipmentSection,
+	.benefitsSection {
+		padding: 5rem 2rem;
+	}
+
+	.equipmentCard {
+		padding: 2.5rem;
+	}
+
+	.sectionTitle {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.bannerTitle {
+		font-size: 2rem;
+	}
+
+	.equipmentHeader {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.equipmentCard {
+		padding: 2rem;
+	}
+}

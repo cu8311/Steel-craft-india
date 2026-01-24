@@ -12,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', type: 'route', to: '/' },
     { name: 'Products', type: 'hash', href: '#products' },
-    { name: 'Industries', type: 'hash', href: '#industries' },
+    { name: 'Industries', type: 'route', to: '/industries' },
     { name: 'Buyer Information', type: 'route', to: '/buyer' },
     { name: 'Manufacturing Process', type: 'route', to: '/manufacturing' },
     { name: 'About Us', type: 'route', to: '/about' },

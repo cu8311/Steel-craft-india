@@ -1,0 +1,234 @@
+/* Banner */
+.industriesBanner {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+.industriesBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/footer-bg.jpeg') center / cover no-repeat;
+  opacity: 0.75;
+}
+
+/* Banner Content */
+.bannerContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bannerTag {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.bannerTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.bannerDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.bannerDescription strong {
+  color: var(--accent-color);
+}
+
+/* Main Section */
+.industriesSection {
+  background: var(--background-primary);
+  padding: 2rem 2rem;
+}
+
+.industriesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTag {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Grid */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.industryCard {
+  background: var(--background-secondary);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+}
+
+.industryCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(45, 80, 22, 0.15);
+}
+
+.industryIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.industryName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.industryDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.industryEquipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.equipmentTag {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  background: var(--background-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+}
+
+.industryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--primary-color);
+  border: none;
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.industryLink:hover {
+  background: var(--secondary-color);
+}
+
+.industryLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 1024px) {
+  .bannerTitle {
+    font-size: 3rem;
+  }
+
+  .industriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerTitle {
+    font-size: 2.5rem;
+  }
+
+  .bannerDescription {
+    font-size: 1.1rem;
+  }
+
+  .industriesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerTitle {
+    font-size: 2rem;
+  }
+
+  .industryCard {
+    padding: 2.5rem 2rem;
+  }
+
+  .industryIcon {
+    font-size: 3rem;
+  }
+
+  .industryName {
+    font-size: 1.4rem;
+  }
+}
