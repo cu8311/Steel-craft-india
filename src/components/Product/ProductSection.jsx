@@ -416,7 +416,7 @@ export default function ProductsSection() {
 
                 <div className={styles.productInfo}>
                   <h3 className={styles.productName}>{product.name}</h3>
-                  <p className={styles.productShortDescription}>{product.shortDescription}</p>
+                  {/* <p className={styles.productShortDescription}>{product.shortDescription}</p> */}
 
                   <div className={styles.productMeta}>
                     <div className={styles.metaItem}>
@@ -429,11 +429,11 @@ export default function ProductsSection() {
                     </div>
                   </div>
 
-                  <div className={styles.productFeaturesPreview}>
+                  {/* <div className={styles.productFeaturesPreview}>
                     {product.features.slice(0, 2).map((feature, idx) => (
                       <span key={idx} className={styles.featureTag}>{feature}</span>
                     ))}
-                  </div>
+                  </div> */}
 
                   <button className={styles.viewDetailsBtn}>
                     Learn More

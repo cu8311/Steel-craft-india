@@ -3,6 +3,7 @@
   background: var(--background-primary);
   position: relative;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .scrollWrapper {
@@ -13,7 +14,6 @@
   display: flex;
   gap: 2rem;
   overflow-x: hidden;
-  padding: 1rem 0;
   user-select: none;
 }
 
