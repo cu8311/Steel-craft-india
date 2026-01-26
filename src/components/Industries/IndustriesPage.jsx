@@ -61,7 +61,7 @@ export default function IndustriesPage() {
   ];
 
   return (
-    <>
+    <article>
       {/* Banner */}
       <div className={styles.industriesBanner}>
         <div className={styles.bannerContent}>
@@ -120,6 +120,6 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-    </>
+    </article>
   );
 }

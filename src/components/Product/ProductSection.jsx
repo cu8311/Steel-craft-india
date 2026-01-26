@@ -276,258 +276,255 @@ export default function ProductsSection() {
   };
 
   return (
-    <>
+    <section
+      className={`${styles.productsSection} ${isVisible ? 'visible' : ''}`}
+      data-products-section
+      id="products"
+    >
+      <div className={styles.productsContainer}>
+        {/* Header */}
+        <div className={styles.productsHeader}>
+          <div className={styles.sectionLabel}>Our Product Range</div>
+          <h2 className={styles.productsTitle}>Hydraulic Components</h2>
+          <p className={styles.productsSubtitle}>
+            Precision-engineered hydraulic fittings, connectors, and accessories designed
+            for high-pressure applications and built to deliver reliable, leak-proof performance.
+          </p>
+        </div>
 
-      <section
-        className={`${styles.productsSection} ${isVisible ? 'visible' : ''}`}
-        data-products-section
-        id="products"
-      >
-        <div className={styles.productsContainer}>
-          {/* Header */}
-          <div className={styles.productsHeader}>
-            <div className={styles.sectionLabel}>Our Product Range</div>
-            <h2 className={styles.productsTitle}>Hydraulic Components</h2>
-            <p className={styles.productsSubtitle}>
-              Precision-engineered hydraulic fittings, connectors, and accessories designed
-              for high-pressure applications and built to deliver reliable, leak-proof performance.
-            </p>
+        {/* Filters */}
+        <div className={styles.filtersContainer}>
+          {/* Material */}
+          <div className={styles.filterGroup}>
+            <div className={styles.filterHeader}>
+              <div className={styles.filterLabel}>
+                <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Material:
+              </div>
+              <button className={styles.clearButton} onClick={clearFilters}>clear all</button>
+            </div>
+            <div className={styles.filterOptions}>
+              {materials.map((material) => (
+                <button
+                  key={material}
+                  className={`${styles.filterOption} ${(selectedMaterial === material || (material === 'All Materials' && selectedMaterial === 'all')) ? styles.active : ''}`}
+                  onClick={() => setSelectedMaterial(material === 'All Materials' ? 'all' : material)}
+                >
+                  {material}
+                </button>
+              ))}
+            </div>
           </div>
-
-          {/* Filters */}
-          <div className={styles.filtersContainer}>
-            {/* Material */}
-            <div className={styles.filterGroup}>
-              <div className={styles.filterHeader}>
-                <div className={styles.filterLabel}>
-                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  Material:
-                </div>
-                <button className={styles.clearButton} onClick={clearFilters}>clear all</button>
-              </div>
-              <div className={styles.filterOptions}>
-                {materials.map((material) => (
-                  <button
-                    key={material}
-                    className={`${styles.filterOption} ${(selectedMaterial === material || (material === 'All Materials' && selectedMaterial === 'all')) ? styles.active : ''}`}
-                    onClick={() => setSelectedMaterial(material === 'All Materials' ? 'all' : material)}
-                  >
-                    {material}
-                  </button>
-                ))}
+          
+          {/* Thread */}
+          <div className={styles.filterGroup}>
+            <div className={styles.filterHeader}>
+              <div className={styles.filterLabel}>
+                <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Thread Type:
               </div>
             </div>
-            
-            {/* Thread */}
-            <div className={styles.filterGroup}>
-              <div className={styles.filterHeader}>
-                <div className={styles.filterLabel}>
-                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  Thread Type:
-                </div>
-              </div>
-              <div className={styles.filterOptions}>
-                {threads.map((thread) => (
-                  <button
-                    key={thread}
-                    className={`${styles.filterOption} ${(selectedThread === thread || (thread === 'All Threads' && selectedThread === 'all')) ? styles.active : ''}`}
-                    onClick={() => setSelectedThread(thread === 'All Threads' ? 'all' : thread)}
-                  >
-                    {thread}
-                  </button>
-                ))}
+            <div className={styles.filterOptions}>
+              {threads.map((thread) => (
+                <button
+                  key={thread}
+                  className={`${styles.filterOption} ${(selectedThread === thread || (thread === 'All Threads' && selectedThread === 'all')) ? styles.active : ''}`}
+                  onClick={() => setSelectedThread(thread === 'All Threads' ? 'all' : thread)}
+                >
+                  {thread}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          {/* Pressure */}
+          <div className={styles.filterGroup}>
+            <div className={styles.filterHeader}>
+              <div className={styles.filterLabel}>
+                <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Pressure:
               </div>
             </div>
-            
-            {/* Pressure */}
-            <div className={styles.filterGroup}>
-              <div className={styles.filterHeader}>
-                <div className={styles.filterLabel}>
-                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  Pressure:
-                </div>
-              </div>
-              <div className={styles.filterOptions}>
-                {pressures.map((pressure) => (
-                  <button
-                    key={pressure}
-                    className={`${styles.filterOption} ${(selectedPressure === pressure || (pressure === 'All Pressures' && selectedPressure === 'all')) ? styles.active : ''}`}
-                    onClick={() => setSelectedPressure(pressure === 'All Pressures' ? 'all' : pressure)}
-                  >
-                    {pressure}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Size */}
-            <div className={styles.filterGroup}>
-              <div className={styles.filterHeader}>
-                <div className={styles.filterLabel}>
-                  <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  Size:
-                </div>
-              </div>
-              <div className={styles.filterOptions}>
-                {sizes.map((size) => (
-                  <button
-                    key={size}
-                    className={`${styles.filterOption} ${(selectedSize === size || (size === 'All Sizes' && selectedSize === 'all')) ? styles.active : ''}`}
-                    onClick={() => setSelectedSize(size === 'All Sizes' ? 'all' : size)}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
+            <div className={styles.filterOptions}>
+              {pressures.map((pressure) => (
+                <button
+                  key={pressure}
+                  className={`${styles.filterOption} ${(selectedPressure === pressure || (pressure === 'All Pressures' && selectedPressure === 'all')) ? styles.active : ''}`}
+                  onClick={() => setSelectedPressure(pressure === 'All Pressures' ? 'all' : pressure)}
+                >
+                  {pressure}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Results */}
-          <div className={styles.resultsInfo}>
-            Showing {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'}
-          </div>
-
-          {/* Grid */}
-          <div className={styles.productsGrid}>
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className={styles.productCard}
-                onClick={() => openProductModal(product)}
-              >
-                <div className={styles.productImageWrapper}>
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className={styles.productImage}
-                  />
-                  <div className={styles.productOverlay}>
-                    <button className={styles.overlayButton}>View Details</button>
-                  </div>
-                </div>
-
-                <div className={styles.productInfo}>
-                  <h3 className={styles.productName}>{product.name}</h3>
-                  {/* <p className={styles.productShortDescription}>{product.shortDescription}</p> */}
-
-                  <div className={styles.productMeta}>
-                    <div className={styles.metaItem}>
-                      <span className={styles.metaLabel}>Material:</span>
-                      <span>{product.material}</span>
-                    </div>
-                    <div className={styles.metaItem}>
-                      <span className={styles.metaLabel}>Size:</span>
-                      <span>{product.size}</span>
-                    </div>
-                  </div>
-
-                  {/* <div className={styles.productFeaturesPreview}>
-                    {product.features.slice(0, 2).map((feature, idx) => (
-                      <span key={idx} className={styles.featureTag}>{feature}</span>
-                    ))}
-                  </div> */}
-
-                  <button className={styles.viewDetailsBtn}>
-                    Learn More
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </button>
-                </div>
+          {/* Size */}
+          <div className={styles.filterGroup}>
+            <div className={styles.filterHeader}>
+              <div className={styles.filterLabel}>
+                <svg className={styles.filterIcon} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Size:
               </div>
-            ))}
+            </div>
+            <div className={styles.filterOptions}>
+              {sizes.map((size) => (
+                <button
+                  key={size}
+                  className={`${styles.filterOption} ${(selectedSize === size || (size === 'All Sizes' && selectedSize === 'all')) ? styles.active : ''}`}
+                  onClick={() => setSelectedSize(size === 'All Sizes' ? 'all' : size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Modal */}
-        {selectedProduct && (
-          <div
-            className={`${styles.productModal} ${selectedProduct ? styles.productModalOpen : ''}`}
-            onClick={closeProductModal}
-          >
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <button className={styles.modalClose} onClick={closeProductModal}>
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
+        {/* Results */}
+        <div className={styles.resultsInfo}>
+          Showing {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'}
+        </div>
 
-              <div className={styles.modalLayout}>
-                <div className={styles.modalImageSection}>
-                  <img
-                    src={selectedProduct.image}
-                    alt={selectedProduct.name}
-                    className={styles.modalImage}
-                  />
+        {/* Grid */}
+        <div className={styles.productsGrid}>
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              className={styles.productCard}
+              onClick={() => openProductModal(product)}
+            >
+              <div className={styles.productImageWrapper}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className={styles.productImage}
+                />
+                <div className={styles.productOverlay}>
+                  <button className={styles.overlayButton}>View Details</button>
+                </div>
+              </div>
+
+              <div className={styles.productInfo}>
+                <h3 className={styles.productName}>{product.name}</h3>
+                {/* <p className={styles.productShortDescription}>{product.shortDescription}</p> */}
+
+                <div className={styles.productMeta}>
+                  <div className={styles.metaItem}>
+                    <span className={styles.metaLabel}>Material:</span>
+                    <span>{product.material}</span>
+                  </div>
+                  <div className={styles.metaItem}>
+                    <span className={styles.metaLabel}>Size:</span>
+                    <span>{product.size}</span>
+                  </div>
                 </div>
 
-                <div className={styles.modalDetailsSection}>
-                  <h3 className={styles.modalTitle}>{selectedProduct.name}</h3>
-                  <p className={styles.modalDescription}>{selectedProduct.description}</p>
+                {/* <div className={styles.productFeaturesPreview}>
+                  {product.features.slice(0, 2).map((feature, idx) => (
+                    <span key={idx} className={styles.featureTag}>{feature}</span>
+                  ))}
+                </div> */}
 
-                  <div className={styles.modalSection}>
-                    <h4 className={styles.modalSectionTitle}>Key Features</h4>
-                    <ul className={styles.featuresList}>
-                      {selectedProduct.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
+                <button className={styles.viewDetailsBtn}>
+                  Learn More
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      {selectedProduct && (
+        <div
+          className={`${styles.productModal} ${selectedProduct ? styles.productModalOpen : ''}`}
+          onClick={closeProductModal}
+        >
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.modalClose} onClick={closeProductModal}>
+              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            <div className={styles.modalLayout}>
+              <div className={styles.modalImageSection}>
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className={styles.modalImage}
+                />
+              </div>
+
+              <div className={styles.modalDetailsSection}>
+                <h3 className={styles.modalTitle}>{selectedProduct.name}</h3>
+                <p className={styles.modalDescription}>{selectedProduct.description}</p>
+
+                <div className={styles.modalSection}>
+                  <h4 className={styles.modalSectionTitle}>Key Features</h4>
+                  <ul className={styles.featuresList}>
+                    {selectedProduct.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.modalSection}>
+                  <h4 className={styles.modalSectionTitle}>Specifications</h4>
+                  <div className={styles.specificationsGrid}>
+                    {Object.entries(selectedProduct.specifications).map(([key, value]) => (
+                      <div key={key} className={styles.specItem}>
+                        <div className={styles.specLabel}>{key}</div>
+                        <div className={styles.specValue}>{value}</div>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
-                  <div className={styles.modalSection}>
-                    <h4 className={styles.modalSectionTitle}>Specifications</h4>
-                    <div className={styles.specificationsGrid}>
-                      {Object.entries(selectedProduct.specifications).map(([key, value]) => (
-                        <div key={key} className={styles.specItem}>
-                          <div className={styles.specLabel}>{key}</div>
-                          <div className={styles.specValue}>{value}</div>
-                        </div>
-                      ))}
-                    </div>
+                <div className={styles.modalSection}>
+                  <h4 className={styles.modalSectionTitle}>Applications</h4>
+                  <div className={styles.applicationsTags}>
+                    {selectedProduct.applications.map((app, idx) => (
+                      <span key={idx} className={styles.applicationTag}>{app}</span>
+                    ))}
                   </div>
+                </div>
 
-                  <div className={styles.modalSection}>
-                    <h4 className={styles.modalSectionTitle}>Applications</h4>
-                    <div className={styles.applicationsTags}>
-                      {selectedProduct.applications.map((app, idx) => (
-                        <span key={idx} className={styles.applicationTag}>{app}</span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className={styles.modalCta}>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true" target='_blank'>
-                      <button
-                        className={`${styles.modalButton} ${styles.primary}`}>
-                        Request Quote
-                      </button>
-                    </a>
+                <div className={styles.modalCta}>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true" target='_blank'>
                     <button
-                      className={`${styles.modalButton} ${styles.secondary}`}
-                      onClick={() => {
-                        navigate("/contact");
-                        closeProductModal()
-                      }}
-                    >
-                      Contact Us
+                      className={`${styles.modalButton} ${styles.primary}`}>
+                      Request Quote
                     </button>
-                  </div>
+                  </a>
+                  <button
+                    className={`${styles.modalButton} ${styles.secondary}`}
+                    onClick={() => {
+                      navigate("/contact");
+                      closeProductModal()
+                    }}
+                  >
+                    Contact Us
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        )}
-      </section>
-    </>
+        </div>
+      )}
+    </section>
   );
 }

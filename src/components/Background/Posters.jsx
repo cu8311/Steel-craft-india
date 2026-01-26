@@ -19,7 +19,7 @@ const Posters = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.imageRow}>
         {posters.map((poster) => (
           <div key={poster.id} className={styles.imageWrapper}>
@@ -31,7 +31,7 @@ const Posters = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

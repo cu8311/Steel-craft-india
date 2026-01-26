@@ -7,11 +7,11 @@ import Home from './components/Home/Home'
 import ManufacturingProcess from './components/Manufacturing/ManufacturingProcess'
 import BuyerInformation from './components/Buyer/BuyerInformation'
 import ScrollToTop from './components/hooks/ScrollToTop'
-import RequestQuote from './components/Request/RequestQuote'
 import Footer from './components/Footer/Footer'
 import IndustriesPage from './components/Industries/IndustriesPage'
 import SubIndustriesPage from './components/Industries/SubIndustiresPage'
 import NotFoundPage from './components/NotFound/NotFoundPAge'
+import ContactUsPage from './components/Request/ContactUsPage'
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/certificates" element={<CertificatesSection />} />
         <Route path="/manufacturing" element={<ManufacturingProcess />} />
         <Route path="/buyer" element={<BuyerInformation />} />
-        <Route path="/contact" element={<RequestQuote />} />
+        <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/industries/:id" element={<SubIndustriesPage />} />
         <Route path="/*" element={<NotFoundPage />} />

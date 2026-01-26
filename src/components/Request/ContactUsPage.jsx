@@ -1,57 +1,7 @@
 import React, { useState } from 'react';
-import styles from './request-quote.module.css';
+import styles from './contact-us.module.css';
 
-export default function RequestQuote() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    product: '',
-    quantity: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch('https://steelcraft80.getform.com/xgnl2', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '', email: '', phone: '', company: '',
-          product: '', quantity: '', message: ''
-        });
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-      console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+export default function ContactUsPage() {
 
   return (
     <>

@@ -28,7 +28,7 @@ export default function SubIndustriesPage() {
   );
 
   return (
-    <>
+    <article>
       {/* Banner */}
       <div className={styles.industryBanner}>
         <div className={styles.bannerContent}>
@@ -213,6 +213,6 @@ export default function SubIndustriesPage() {
           </Link>
         </div>
       </section>
-    </>
+    </article>
   );
 }

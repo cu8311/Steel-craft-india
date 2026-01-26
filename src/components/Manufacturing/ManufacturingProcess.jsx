@@ -148,137 +148,135 @@ export default function ManufacturingProcess() {
 	};
 
 	return (
-		<>
-			<section className={styles.manufacturingSection} id="manufacturing">
-				{/* Header */}
-				<div className={styles.manufacturingHeader}>
-					<div className={styles.headerContent}>
-						<h1 className={styles.headerTitle}>Manufacturing Process</h1>
-						<p className={styles.headerSubtitle}>Precision Engineering for Hydraulic Fittings</p>
-					</div>
+		<section className={styles.manufacturingSection} id="manufacturing">
+			{/* Header */}
+			<div className={styles.manufacturingHeader}>
+				<div className={styles.headerContent}>
+					<h1 className={styles.headerTitle}>Manufacturing Process</h1>
+					<p className={styles.headerSubtitle}>Precision Engineering for Hydraulic Fittings</p>
+				</div>
+			</div>
+
+			{/* Main Content - Two Columns */}
+			<div className={styles.processMainContainer}>
+				{/* Left Column - 8 Steps */}
+				<div
+					className={`${styles.stepsColumn} ${isVisible['steps'] ? 'visible' : ''}`}
+					data-section="steps"
+				>
+					<h2 className={styles.columnTitle}>Our Process</h2>
+					{processSteps.map((step) => (
+						<div
+							key={step.id}
+							className={`${styles.stepItem} ${isVisible['steps'] ? 'visible' : ''}`}
+						>
+							<div className={styles.stepHeader}>
+								<div className={styles.stepNumber}>{step.number}</div>
+								<h3 className={styles.stepTitle}>{step.title}</h3>
+							</div>
+							<p className={styles.stepDescription}>{step.description}</p>
+							<div className={styles.stepTags}>
+								{step.tags.map((tag, idx) => (
+									<span key={idx} className={styles.stepTag}>{tag}</span>
+								))}
+							</div>
+						</div>
+					))}
 				</div>
 
-				{/* Main Content - Two Columns */}
-				<div className={styles.processMainContainer}>
-					{/* Left Column - 8 Steps */}
-					<div
-						className={`${styles.stepsColumn} ${isVisible['steps'] ? 'visible' : ''}`}
-						data-section="steps"
-					>
-						<h2 className={styles.columnTitle}>Our Process</h2>
-						{processSteps.map((step) => (
+				{/* Right Column - Flexible Videos (Equal Height Distribution) */}
+				<div
+					className={`${styles.videosColumn} ${isVisible['videos'] ? 'visible' : ''}`}
+					data-section="videos"
+				>
+					<h2 className={styles.columnTitle}>Watch Process</h2>
+					<div className={styles.videosWrapper}>
+						{processVideos.map((video) => (
 							<div
-								key={step.id}
-								className={`${styles.stepItem} ${isVisible['steps'] ? 'visible' : ''}`}
+								key={video.id}
+								className={`${styles.videoItem} ${isVisible['videos'] ? 'visible' : ''}`}
 							>
-								<div className={styles.stepHeader}>
-									<div className={styles.stepNumber}>{step.number}</div>
-									<h3 className={styles.stepTitle}>{step.title}</h3>
-								</div>
-								<p className={styles.stepDescription}>{step.description}</p>
-								<div className={styles.stepTags}>
-									{step.tags.map((tag, idx) => (
-										<span key={idx} className={styles.stepTag}>{tag}</span>
-									))}
+								<div className={styles.videoContainer}>
+									<video
+										className={styles.videoElement}
+										src={video.videoUrl}
+										onClick={(e) => {
+											const videoEl = e.currentTarget;
+											handleVideoPlay(video.id, videoEl);
+										}}
+										onEnded={handleVideoEnded}
+										onPlay={() => setPlayingVideo(video.id)}
+										onPause={() => {
+											if (playingVideo === video.id) {
+												setPlayingVideo(null);
+											}
+										}}
+										playsInline
+									/>
+									<div className={`${styles.videoOverlay} ${playingVideo === video.id ? styles.hidden : ''}`}>
+										<button
+											className={styles.playButton}
+											onClick={(e) => {
+												e.stopPropagation();
+												const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
+												handleVideoPlay(video.id, videoEl);
+											}}
+										>
+											<div className={styles.playIcon}></div>
+										</button>
+									</div>
+									<div className={styles.videoControls}>
+										<button
+											className={styles.videoControlBtn}
+											title={playingVideo === video.id ? "Pause" : "Play"}
+											onClick={(e) => {
+												e.stopPropagation();
+												const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
+												handleVideoPlay(video.id, videoEl);
+											}}
+										>
+											<svg className={styles.videoControlIcon} viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="currentColor">
+												{playingVideo === video.id ? (
+													<>
+														<rect x="6" y="4" width="4" height="16" />
+														<rect x="14" y="4" width="4" height="16" />
+													</>
+												) : (
+													<polygon points="5 3 19 12 5 21" />
+												)}
+											</svg>
+										</button>
+										<button
+											className={styles.videoControlBtn}
+											title="Fullscreen"
+											onClick={(e) => {
+												e.stopPropagation();
+												const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
+												handleFullscreen(videoEl);
+											}}
+										>
+											<svg className={styles.videoControlIcon} viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="currentColor">
+												<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 						))}
 					</div>
-
-					{/* Right Column - Flexible Videos (Equal Height Distribution) */}
-					<div
-						className={`${styles.videosColumn} ${isVisible['videos'] ? 'visible' : ''}`}
-						data-section="videos"
-					>
-						<h2 className={styles.columnTitle}>Watch Process</h2>
-						<div className={styles.videosWrapper}>
-							{processVideos.map((video) => (
-								<div
-									key={video.id}
-									className={`${styles.videoItem} ${isVisible['videos'] ? 'visible' : ''}`}
-								>
-									<div className={styles.videoContainer}>
-										<video
-											className={styles.videoElement}
-											src={video.videoUrl}
-											onClick={(e) => {
-												const videoEl = e.currentTarget;
-												handleVideoPlay(video.id, videoEl);
-											}}
-											onEnded={handleVideoEnded}
-											onPlay={() => setPlayingVideo(video.id)}
-											onPause={() => {
-												if (playingVideo === video.id) {
-													setPlayingVideo(null);
-												}
-											}}
-											playsInline
-										/>
-										<div className={`${styles.videoOverlay} ${playingVideo === video.id ? styles.hidden : ''}`}>
-											<button
-												className={styles.playButton}
-												onClick={(e) => {
-													e.stopPropagation();
-													const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
-													handleVideoPlay(video.id, videoEl);
-												}}
-											>
-												<div className={styles.playIcon}></div>
-											</button>
-										</div>
-										<div className={styles.videoControls}>
-											<button
-												className={styles.videoControlBtn}
-												title={playingVideo === video.id ? "Pause" : "Play"}
-												onClick={(e) => {
-													e.stopPropagation();
-													const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
-													handleVideoPlay(video.id, videoEl);
-												}}
-											>
-												<svg className={styles.videoControlIcon} viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="currentColor">
-													{playingVideo === video.id ? (
-														<>
-															<rect x="6" y="4" width="4" height="16" />
-															<rect x="14" y="4" width="4" height="16" />
-														</>
-													) : (
-														<polygon points="5 3 19 12 5 21" />
-													)}
-												</svg>
-											</button>
-											<button
-												className={styles.videoControlBtn}
-												title="Fullscreen"
-												onClick={(e) => {
-													e.stopPropagation();
-													const videoEl = e.currentTarget.closest(`.${styles.videoContainer}`).querySelector('video');
-													handleFullscreen(videoEl);
-												}}
-											>
-												<svg className={styles.videoControlIcon} viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="currentColor">
-													<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
-					</div>
 				</div>
+			</div>
 
-				{/* Documentary Section */}
-				<div className={styles.documentarySection}>
-					<h2 className={styles.documentaryTitle}>Watch Complete Process</h2>
-					<button className={styles.documentaryButton}>
-						<svg viewBox="0 0 24 24">
-							<path d="M8 5v14l11-7z" />
-						</svg>
-						View Full Documentary
-					</button>
-				</div>
-			</section>
-		</>
+			{/* Documentary Section */}
+			<div className={styles.documentarySection}>
+				<h2 className={styles.documentaryTitle}>Watch Complete Process</h2>
+				<button className={styles.documentaryButton}>
+					<svg viewBox="0 0 24 24">
+						<path d="M8 5v14l11-7z" />
+					</svg>
+					View Full Documentary
+				</button>
+			</div>
+		</section>
 	);
 }

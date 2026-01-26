@@ -79,34 +79,31 @@ export default function Slider() {
   }, []); // Empty dependency array - animation loop runs continuously
 
   return (
-    <>
+    <section className={styles.showcaseSection}>
+      {/* Scrolling Container */}
+      <div className={styles.scrollWrapper} style={{ position: 'relative' }}>
+        <div className={styles.gradientLeft}></div>
+        <div className={styles.gradientRight}></div>
 
-      <section className={styles.showcaseSection}>
-        {/* Scrolling Container */}
-        <div className={styles.scrollWrapper} style={{ position: 'relative' }}>
-          <div className={styles.gradientLeft}></div>
-          <div className={styles.gradientRight}></div>
-
-          <div
-            ref={scrollRef}
-            className={styles.scrollContainer}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            {duplicatedProducts.map((product, index) => (
-              <div key={`${product.id}-${index}`} className={styles.productCard}>
-                <div className={styles.cardImageWrapper}>
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className={styles.cardImage}
-                  />
-                </div>
+        <div
+          ref={scrollRef}
+          className={styles.scrollContainer}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {duplicatedProducts.map((product, index) => (
+            <div key={`${product.id}-${index}`} className={styles.productCard}>
+              <div className={styles.cardImageWrapper}>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className={styles.cardImage}
+                />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
