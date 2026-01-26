@@ -84,6 +84,10 @@
     gap: 0.5rem;
 }
 
+.navItem {
+    position: relative;
+}
+
 .navLink {
     font-family: 'Oswald', sans-serif;
     font-size: 0.75rem;
@@ -117,6 +121,44 @@
 
 .navLink:hover::before {
     width: 60%;
+}
+
+.dropdown {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    min-width: 220px;
+    background: var(--background-primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+.navItem:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdownItem {
+    display: block;
+    padding: 0.9rem 1.25rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 12px;
+    transition: all 200ms ease-in-out;
+}
+
+.dropdownItem:hover {
+    background: var(--background-dark);
+    color: var(--accent-color);
 }
 
 .ctaButton {
@@ -269,7 +311,7 @@
     .mobileOverlay {
         display: block;
     }
-    
+
     .navLink {
         font-size: 0.85rem;
         padding: 0.65rem 1rem;

@@ -9,15 +9,15 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 
 .industriesBanner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/footer-bg.jpeg') center / cover no-repeat;
-  opacity: 0.75;
+  background: url('/industry-bg.jpg') bottom / cover no-repeat;
+  opacity: 0.35;
 }
 
 /* Banner Content */

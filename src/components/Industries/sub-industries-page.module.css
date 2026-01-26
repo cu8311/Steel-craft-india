@@ -1,22 +1,19 @@
 /* Banner */
-.constructionBanner {
+.industryBanner {
 	background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 	padding: 5rem 2rem;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
-	margin-top: 6rem;
+	margin-top: 5rem;
 }
 
-.constructionBanner::before {
+.industryBanner::before {
 	content: '';
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url('/footer-bg.jpeg') center/cover;
-	opacity: 0.75;
+	inset: 0;
+	background: url('/industry-bg.jpg') bottom / cover no-repeat;
+	opacity: 0.5;
 }
 
 .bannerContent {
@@ -51,14 +48,13 @@
 .bannerDescription {
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1.2rem;
-	font-weight: 400;
 	color: var(--text-light);
 	max-width: 900px;
 	margin: 0 auto;
 	line-height: 1.8;
 }
 
-/* Introduction Section */
+/* Introduction */
 .introSection {
 	background: var(--background-secondary);
 	padding: 2rem 2rem;
@@ -81,20 +77,26 @@
 	font-weight: 600;
 }
 
-/* Equipment Section */
-.equipmentSection {
+/* Top Content */
+.topContentSection {
 	background: var(--background-primary);
 	padding: 2rem 2rem;
 }
 
-.equipmentContainer {
+.topContentContainer {
 	max-width: 1400px;
 	margin: 0 auto;
 }
 
+.topContentLayout {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	gap: 5rem;
+	align-items: start;
+}
+
 .sectionHeader {
-	text-align: center;
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 .sectionTag {
@@ -114,45 +116,34 @@
 	color: var(--primary-color);
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	margin-bottom: 1rem;
 }
 
-.equipmentGrid {
+.sectionDescription {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.05rem;
+	color: var(--text-color);
+	line-height: 1.8;
+}
+
+.equipmentList {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2.5rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
 }
 
-.equipmentCard {
-	background: var(--background-secondary);
-	padding: 3rem;
-	box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
-	transition: all 0.3s ease;
-}
+/* .equipmentItem {
+	margin-bottom: 3rem;
+} */
 
-.equipmentCard:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 8px 30px rgba(45, 80, 22, 0.15);
-}
-
-.equipmentHeader {
-	display: flex;
-	align-items: center;
-	gap: 1.5rem;
-	margin-bottom: 2rem;
-}
-
-.equipmentIcon {
-	font-size: 3rem;
-}
-
-.equipmentInfo h3 {
+.equipmentName {
 	font-family: 'Oswald', sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: 600;
 	color: var(--primary-color);
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.75rem;
 }
 
 .equipmentQuantity {
@@ -160,39 +151,40 @@
 	font-size: 0.95rem;
 	color: var(--accent-color);
 	font-weight: 600;
+	margin-bottom: 1rem;
 }
 
 .equipmentSubsection {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 .subsectionTitle {
 	font-family: 'Oswald', sans-serif;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	font-weight: 600;
 	color: var(--primary-color);
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	margin-bottom: 0.75rem;
+}
+
+.applicationsList {
+	list-style: none;
 	margin-bottom: 1rem;
 }
 
-.equipmentList {
-	list-style: none;
-	margin-bottom: 1.5rem;
-}
-
-.equipmentList li {
+.applicationsList li {
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1rem;
 	color: var(--text-color);
 	line-height: 1.7;
 	padding-left: 1.5rem;
 	position: relative;
-	margin-bottom: 0.75rem;
+	margin-bottom: 0.5rem;
 }
 
-.equipmentList li::before {
-	content: '✓';
+.applicationsList li::before {
+	content: '•';
 	position: absolute;
 	left: 0;
 	color: var(--accent-color);
@@ -203,38 +195,68 @@
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1rem;
 	color: var(--text-color);
-	line-height: 1.8;
-	font-style: italic;
-	margin-bottom: 1.5rem;
+	line-height: 1.7;
+	margin-bottom: 1rem;
 }
 
 .efficiencyList {
-	background: var(--background-primary);
-	padding: 1.5rem;
-	border-left: 4px solid var(--accent-color);
+	list-style: none;
 }
 
 .efficiencyList li {
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1rem;
-	color: var(--primary-color);
+	color: var(--text-color);
 	line-height: 1.7;
 	padding-left: 1.5rem;
 	position: relative;
-	margin-bottom: 0.75rem;
-	font-weight: 500;
+	margin-bottom: 0.5rem;
 }
 
 .efficiencyList li::before {
-	content: '▸';
+	content: '✓';
 	position: absolute;
 	left: 0;
 	color: var(--accent-color);
+	font-weight: bold;
 }
 
-/* Benefits Section */
-.benefitsSection {
+/* Right Image */
+.rightImage {
+	position: sticky;
+	top: 8rem;
+}
+
+.industryImage {
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	box-shadow: 0 10px 40px rgba(45, 80, 22, 0.5);
+}
+
+.imageCaption {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.9rem;
+	color: var(--text-color);
+	text-align: center;
+	margin-top: 1rem;
+	font-style: italic;
+}
+
+/* Bottom Content */
+.bottomContentSection {
 	background: var(--background-secondary);
+	padding: 2rem 2rem;
+}
+
+.bottomContentContainer {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+/* Benefits */
+.benefitsSection {
+	background: var(--background-primary);
 	padding: 2rem 2rem;
 }
 
@@ -243,40 +265,43 @@
 	margin: 0 auto;
 }
 
-.benefitsGrid {
+.benefitsText {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.05rem;
+	color: var(--text-color);
+	line-height: 1.9;
+	margin-bottom: 2rem;
+}
+
+.benefitsList {
+	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 2.5rem;
-	margin-top: 3rem;
+	gap: 1.5rem;
 }
 
-.benefitCard {
-	background: var(--background-primary);
-	padding: 2.5rem;
-	border-left: 4px solid var(--accent-color);
-}
-
-.benefitTitle {
-	font-family: 'Oswald', sans-serif;
-	font-size: 1.4rem;
-	font-weight: 600;
-	color: var(--primary-color);
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-bottom: 1rem;
-}
-
-.benefitDescription {
+.benefitsList li {
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1rem;
 	color: var(--text-color);
-	line-height: 1.8;
+	line-height: 1.7;
+	padding-left: 2rem;
+	position: relative;
 }
 
-/* CTA Section */
+.benefitsList li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--accent-color);
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+/* CTA */
 .ctaSection {
 	background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-	padding: 2rem 2rem;
+	padding: 5rem 2rem;
 	text-align: center;
 }
 
@@ -310,13 +335,13 @@
 	font-family: 'Oswald', sans-serif;
 	font-size: 1rem;
 	font-weight: 600;
+	text-decoration: none;
 	color: var(--background-dark);
 	background: var(--accent-color);
 	border: none;
 	padding: 1.25rem 3rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	text-decoration: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -329,14 +354,17 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-	.equipmentGrid,
-	.benefitsGrid {
+	.topContentLayout {
+		gap: 4rem;
+	}
+
+	.benefitsList {
 		grid-template-columns: 1fr;
 	}
 }
 
-@media (max-width: 768px) {
-	.constructionBanner {
+@media (max-width: 900px) {
+	.industryBanner {
 		padding: 4rem 2rem;
 	}
 
@@ -345,17 +373,26 @@
 	}
 
 	.introSection,
-	.equipmentSection,
+	.topContentSection,
+	.bottomContentSection,
 	.benefitsSection {
-		padding: 5rem 2rem;
+		padding: 1rem 2rem;
 	}
 
-	.equipmentCard {
-		padding: 2.5rem;
+	.equipmentList {
+		grid-template-columns: 1fr;
+		gap: 1rem;
 	}
 
-	.sectionTitle {
-		font-size: 2rem;
+	.topContentLayout {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+
+	.rightImage {
+		position: relative;
+		top: 0;
+		order: -1;
 	}
 }
 
@@ -364,12 +401,21 @@
 		font-size: 2rem;
 	}
 
-	.equipmentHeader {
-		flex-direction: column;
-		text-align: center;
+	.bannerDescription {
+		font-size: 1rem;
 	}
 
-	.equipmentCard {
-		padding: 2rem;
+	.introText,
+	.sectionDescription,
+	.benefitsText {
+		font-size: 1rem;
+	}
+
+	.sectionTitle {
+		font-size: 2rem;
+	}
+
+	.equipmentName {
+		font-size: 1.2rem;
 	}
 }

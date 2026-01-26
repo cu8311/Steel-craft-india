@@ -83,7 +83,7 @@ export default function Footer() {
                 <div className={styles.contactLabel}>Address</div>
                 <div className={styles.contactValue}>
                   Steel Craft India<br />
-                  Ludhiana, Punjab, India
+                  B-21, Janta Nagar (Shimlapuri / Street No-4, Guru Nanak Street), Gill Road, Ludhiana, Punjab 141003, India
                 </div>
               </li>
 

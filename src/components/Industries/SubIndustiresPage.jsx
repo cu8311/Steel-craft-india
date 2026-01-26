@@ -1,93 +1,173 @@
-import { useEffect, useState } from "react";
-import styles from "./sub-industries-page.module.css";
-import { useNavigate, useParams } from "react-router-dom";
-import { IndustryData } from "./industryData";
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { IndustryData } from './industryData';
+import styles from './sub-industries-page.module.css';
 
 export default function SubIndustriesPage() {
-  const {id} = useParams();
-  const navigate = useNavigate()
-  const [equipment, setEquipment] = useState([]);
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [industry, setIndustry] = useState(null);
 
   useEffect(() => {
-    const industry = IndustryData.find(industry => industry.id === id)
-    if(industry) {
-      setEquipment(industry.equipment);
+    const foundIndustry = IndustryData.find(ind => ind.id === id);
+    if (foundIndustry) {
+      setIndustry(foundIndustry);
     } else {
-      setEquipment(null)
+      navigate('/not-found');
     }
-  }, [id])
-  
-  if (equipment === null) {
-    navigate("/not-found")
-  }
+  }, [id, navigate]);
+
+  if (!industry) return null;
+
+  const firstHalfEquipment = industry.equipment.slice(
+    0,
+    Math.ceil(industry.equipment.length / 2)
+  );
+  const secondHalfEquipment = industry.equipment.slice(
+    Math.ceil(industry.equipment.length / 2)
+  );
 
   return (
     <>
       {/* Banner */}
-      <div className={styles.constructionBanner}>
+      <div className={styles.industryBanner}>
         <div className={styles.bannerContent}>
           <div className={styles.bannerBreadcrumb}>
-            <a href="/industries">Industries</a> / Construction Industry
+            <a href="/industries">Industries</a> / {industry.name}
           </div>
-          <h1 className={styles.bannerTitle}>Construction Industry</h1>
-          <p className={styles.bannerDescription}>
-            Mission-critical hydraulic solutions for heavy construction equipment
-            operating under extreme loads, vibration, dust, heat, and continuous motion.
-          </p>
+          <h1 className={styles.bannerTitle}>{industry.name}</h1>
+          <p className={styles.bannerDescription}>{industry.description}</p>
         </div>
       </div>
 
       {/* Introduction */}
       <section className={styles.introSection}>
         <div className={styles.introContainer}>
-          <p className={styles.introText}>
-            Hydraulic hoses play a <strong>mission-critical role</strong> in the
-            construction industry, acting as the lifeline of heavy machinery by
-            transmitting high-pressure hydraulic fluid between components.
-          </p>
+          <p className={styles.introText}>{industry.introText}</p>
         </div>
       </section>
 
-      {/* Equipment */}
-      <section className={styles.equipmentSection}>
-        <div className={styles.equipmentContainer}>
-          <div className={styles.sectionHeader}>
-            <div className={styles.sectionTag}>Applications</div>
-            <h2 className={styles.sectionTitle}>
-              Where Hydraulic Hoses Are Used
-            </h2>
-          </div>
+      {/* Top Section */}
+      <section className={styles.topContentSection}>
+        <div className={styles.topContentContainer}>
+          <div className={styles.topContentLayout}>
+            {/* Left Content */}
+            <div className={styles.leftContent}>
+              <div className={styles.sectionHeader}>
+                <div className={styles.sectionTag}>{industry.sectionTag}</div>
+                <h2 className={styles.sectionTitle}>{industry.sectionTitle}</h2>
+                {industry.sectionDescription && (
+                  <p className={styles.sectionDescription}>
+                    {industry.sectionDescription}
+                  </p>
+                )}
+              </div>
 
-          <div className={styles.equipmentGrid}>
-            {equipment.map((item) => (
-              <div key={item.id} className={styles.equipmentCard}>
-                <div className={styles.equipmentHeader}>
-                  <div className={styles.equipmentIcon}>{item.icon}</div>
-                  <div className={styles.equipmentInfo}>
-                    <h3>{item.name}</h3>
-                    <div className={styles.equipmentQuantity}>
-                      {item.hosesUsed}
-                    </div>
+              <div className={styles.equipmentList}>
+                {firstHalfEquipment.map(item => (
+                  <div key={item.id} className={styles.equipmentItem}>
+                    <h3 className={styles.equipmentName}>{item.name}</h3>
+
+                    {item.hosesUsed && (
+                      <div className={styles.equipmentQuantity}>
+                        {item.hosesUsed}
+                      </div>
+                    )}
+
+                    {item.applications && (
+                      <div className={styles.equipmentSubsection}>
+                        <div className={styles.subsectionTitle}>
+                          Applications:
+                        </div>
+                        <ul className={styles.applicationsList}>
+                          {item.applications.map((app, idx) => (
+                            <li key={idx}>{app}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.usage && (
+                      <p className={styles.equipmentUsage}>{item.usage}</p>
+                    )}
+
+                    {item.efficiency && (
+                      <>
+                        <div className={styles.subsectionTitle}>
+                          Efficiency Impact:
+                        </div>
+                        <ul className={styles.efficiencyList}>
+                          {item.efficiency.map((eff, idx) => (
+                            <li key={idx}>{eff}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div className={styles.equipmentSubsection}>
-                  <div className={styles.subsectionTitle}>Applications:</div>
-                  <ul className={styles.equipmentList}>
-                    {item.applications.map((app, idx) => (
-                      <li key={idx}>{app}</li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Right Image */}
+            <div className={styles.rightImage}>
+              <img
+                src={industry.image}
+                alt={industry.name}
+                className={styles.industryImage}
+              />
+              {industry.imageCaption && (
+                <p className={styles.imageCaption}>
+                  {industry.imageCaption}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div className={styles.equipmentUsage}>{item.usage}</div>
+      {/* Bottom Section */}
+      <section className={styles.bottomContentSection}>
+        <div className={styles.bottomContentContainer}>
+          <div className={styles.equipmentList}>
+            {secondHalfEquipment.map(item => (
+              <div key={item.id} className={styles.equipmentItem}>
+                <h3 className={styles.equipmentName}>{item.name}</h3>
 
-                <div className={styles.subsectionTitle}>Efficiency Impact:</div>
-                <ul className={styles.efficiencyList}>
-                  {item.efficiency.map((eff, idx) => (
-                    <li key={idx}>{eff}</li>
-                  ))}
-                </ul>
+                {item.hosesUsed && (
+                  <div className={styles.equipmentQuantity}>
+                    {item.hosesUsed}
+                  </div>
+                )}
+
+                {item.applications && (
+                  <div className={styles.equipmentSubsection}>
+                    <div className={styles.subsectionTitle}>
+                      Applications:
+                    </div>
+                    <ul className={styles.applicationsList}>
+                      {item.applications.map((app, idx) => (
+                        <li key={idx}>{app}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {item.usage && (
+                  <p className={styles.equipmentUsage}>{item.usage}</p>
+                )}
+
+                {item.efficiency && (
+                  <>
+                    <div className={styles.subsectionTitle}>
+                      Efficiency Impact:
+                    </div>
+                    <ul className={styles.efficiencyList}>
+                      {item.efficiency.map((eff, idx) => (
+                        <li key={idx}>{eff}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -95,58 +175,42 @@ export default function SubIndustriesPage() {
       </section>
 
       {/* Benefits */}
-      <section className={styles.benefitsSection}>
-        <div className={styles.benefitsContainer}>
-          <div className={styles.sectionHeader}>
-            <div className={styles.sectionTag}>Performance</div>
-            <h2 className={styles.sectionTitle}>
-              How Quality Improves Efficiency
-            </h2>
+      {industry.benefits && (
+        <section className={styles.benefitsSection}>
+          <div className={styles.benefitsContainer}>
+            <div className={styles.sectionHeader}>
+              <div className={styles.sectionTag}>{industry.benefits.tag}</div>
+              <h2 className={styles.sectionTitle}>
+                {industry.benefits.title}
+              </h2>
+            </div>
+
+            {industry.benefits.description && (
+              <p className={styles.benefitsText}>
+                {industry.benefits.description}
+              </p>
+            )}
+
+            <ul className={styles.benefitsList}>
+              {industry.benefits.items.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
           </div>
-
-          <div className={styles.benefitsGrid}>
-            <div className={styles.benefitCard}>
-              <div className={styles.benefitTitle}>Higher Pressure Handling</div>
-              <div className={styles.benefitDescription}>
-                Premium hoses withstand extreme hydraulic pressure without failure.
-              </div>
-            </div>
-
-            <div className={styles.benefitCard}>
-              <div className={styles.benefitTitle}>Reduced Downtime</div>
-              <div className={styles.benefitDescription}>
-                Durable construction minimizes failures and machine idle time.
-              </div>
-            </div>
-
-            <div className={styles.benefitCard}>
-              <div className={styles.benefitTitle}>Improved Fuel Efficiency</div>
-              <div className={styles.benefitDescription}>
-                Reduced pressure loss lowers pump load and fuel consumption.
-              </div>
-            </div>
-
-            <div className={styles.benefitCard}>
-              <div className={styles.benefitTitle}>Longer Service Life</div>
-              <div className={styles.benefitDescription}>
-                Resistance to heat, oil, and abrasion lowers maintenance costs.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>Need Hydraulic Solutions?</h2>
           <p className={styles.ctaText}>
-            Choosing the right hydraulic hose solutions ensures maximum output and
-            long-term reliability.
+            {industry.ctaText ||
+              'Choosing the right hydraulic solutions ensures maximum output, reduced downtime, and long-term reliability.'}
           </p>
-          <a href="#request-quote" className={styles.ctaButton}>
+          <Link to="/request" className={styles.ctaButton}>
             Request a Quote
-          </a>
+          </Link>
         </div>
       </section>
     </>
