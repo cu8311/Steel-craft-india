@@ -7,7 +7,7 @@
     position: relative;
     overflow: hidden;
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .notFoundPage::before {
