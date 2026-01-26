@@ -15,7 +15,7 @@ const Navbar = () => {
     {
       name: 'Industries', type: 'route', to: '/industries', sub: [
         { name: "Construction Industry", to: "/industries/construction" },
-        { name: "Manufactoring Industry", to: "/industries/manufacturing" },
+        { name: "Manufacturing Industry", to: "/industries/manufacturing" },
         { name: "Automotive Industry", to: "/industries/automotive" },
         { name: "Agriculture Industry", to: "/industries/agriculture" },
         { name: "Hose Pipes Industry", to: "/industries/hose-pipes" },
@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className={styles.logoSection} onClick={() => navigate('/')}>
             <img
               src="/logo.jpeg"
-              alt="Steel Craft India Logo"
+              alt="Steel Craft India hydraulic fittings manufacturer logo"
               className={styles.logoImage}
             />
             <div className={styles.companyInfo}>
