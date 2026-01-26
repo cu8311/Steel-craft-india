@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './about-us.module.css';
+import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
   const [isVisible, setIsVisible] = useState({});
@@ -184,13 +185,13 @@ export default function AboutUs() {
           <p className={styles.ctaDescription}>
             As a rapidly growing company, we are continuously expanding our manufacturing capacity and market reach. Our long-term vision is to establish a strong global presence, taking Indian-manufactured hydraulic hose fittings to international markets.
           </p>
-          <a href="#contact" className={styles.ctaButton}>
+          <Link to="/contact" className={styles.ctaButton}>
             Partner With Us
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

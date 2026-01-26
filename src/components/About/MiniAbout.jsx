@@ -28,7 +28,7 @@ const MiniAbout = () => {
           <div className={styles.aboutImage}>
             <img
               src="/poster1.jpeg"
-              alt="Steel Craft India - Manufacturing Facility"
+              alt="Hydraulic fittings manufacturing facility of Steel Craft India in Ludhiana"
               loading="lazy"
             />
             <div className={styles.imageOverlay}></div>

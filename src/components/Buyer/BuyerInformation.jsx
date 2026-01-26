@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './buyer-information.module.css';
+import { Link } from 'react-router-dom';
+import BuyerFAQ from './BuyerFAQ';
 
 export default function BuyerInformation() {
+
   return (
     <section className={styles.buyerSection} id="buyer-information">
       <div className={styles.buyerContainer}>
@@ -59,6 +62,8 @@ export default function BuyerInformation() {
           </div>
         </div>
 
+        <BuyerFAQ />
+
         {/* Distributor CTA */}
         <div className={styles.distributorCta}>
           <h3 className={styles.distributorTitle}>Become a Distributor</h3>
@@ -66,10 +71,8 @@ export default function BuyerInformation() {
             Steel Craft India invites serious partners to become authorized distributors of hydraulic hose fittings.
           </p>
 
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={"/contact"}
             className={styles.distributorButton}
           >
             Apply Now
@@ -77,7 +80,27 @@ export default function BuyerInformation() {
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
+          </Link>
+        </div>
+
+        {/* Manufactoring CTA */}
+        <div className={styles.distributorCta}>
+          <h3 className={styles.distributorTitle}>Learn about our Manufactoring Process</h3>
+          <p className={styles.distributorDescription}>
+            Discover how Steel Craft India manufactures precision-engineered hydraulic hose fittings through advanced machining, strict quality control, and industry-certified processes.
+          </p>
+
+
+          <Link
+            to={"/manufacturing"}
+            className={styles.distributorButton}
+          >
+            Manufactoring Process
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
         </div>
 
         {/* Product Enquiry */}
@@ -90,7 +113,7 @@ export default function BuyerInformation() {
           </div>
 
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.enquiryButton}

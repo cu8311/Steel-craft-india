@@ -33,6 +33,7 @@ export default function CertificatesSection() {
       year: "2024",
       description: "Commitment to environmentally sound and socially responsible processes with safe and high-quality products.",
       image: "/certificate1.jpg",
+      alt: "ISO certification for hydraulic fittings manufacturer",
       badge: "MCLS"
     },
     {
@@ -43,6 +44,7 @@ export default function CertificatesSection() {
       year: "2025",
       description: "Awarded under MSME Sustainable (ZED) Certification Scheme for excellence in manufacturing and sustainability.",
       image: "/certificate2.jpg",
+      alt: "ZED",
       badge: "ZED Bronze"
     }
   ];
@@ -86,7 +88,7 @@ export default function CertificatesSection() {
                 <div className={styles.certificateBadge}>{certificate.badge}</div>
                 <img
                   src={certificate.image}
-                  alt={certificate.title}
+                  alt={certificate.alt}
                   className={styles.certificateImage}
                 />
                 <div className={styles.certificateOverlay}>

@@ -10,8 +10,8 @@ import ScrollToTop from './components/hooks/ScrollToTop'
 import Footer from './components/Footer/Footer'
 import IndustriesPage from './components/Industries/IndustriesPage'
 import SubIndustriesPage from './components/Industries/SubIndustiresPage'
-import ContactUsPage from './components/Request/ContactUsPage'
 import NotFoundPage from './components/NotFound/NotFoundPage'
+import ContactUsPage from './components/Contact/ContactUsPage'
 
 const App = () => {
   return (

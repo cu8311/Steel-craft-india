@@ -112,7 +112,7 @@ export default function SubIndustriesPage() {
             <div className={styles.rightImage}>
               <img
                 src={industry.image}
-                alt={industry.name}
+                alt={industry.alt}
                 className={styles.industryImage}
               />
               {industry.imageCaption && (

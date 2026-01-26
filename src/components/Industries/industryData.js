@@ -10,6 +10,7 @@ export const IndustryData = [
       sectionTitle: 'Where Hydraulic Hoses Are Used',
       sectionDescription: null,
       image: '/construction.jpeg',
+      alt: "Hydraulic fittings used in construction equipment",
       imageCaption: 'Heavy construction equipment in operation',
       equipment: [
         {
@@ -118,6 +119,7 @@ export const IndustryData = [
       sectionTitle: 'Manufacturing Applications',
       sectionDescription: 'Steel Craft India provides components that ensure safe and efficient fluid transfer across a wide range of industrial applications.',
       image: '/manufacturing.jpeg',
+      alt: "Manufacturing",
       imageCaption: 'Industrial manufacturing equipment',
       equipment: [
         {
