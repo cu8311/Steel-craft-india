@@ -67,7 +67,25 @@
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
+.aboutHeroSubTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; 
+}
+
 .aboutHero[data-section].visible .aboutHeroTitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+.aboutHero[data-section].visible .aboutHeroSubTitle {
   opacity: 1;
   transform: translateY(0);
 }
