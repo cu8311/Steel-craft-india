@@ -219,5 +219,117 @@ export const IndustryData = [
         ]
       },
       ctaText: 'Steel Craft India delivers dependable hydraulic solutions that help manufacturing industries operate efficiently, safely, and competitively.'
+    },
+
+    {
+      id: 'automotive',
+      name: 'Automotive Industry',
+      description: 'Precision-engineered hydraulic fittings and components designed for high-pressure, high-cycle automotive manufacturing environments.',
+      introText: 'The automotive industry demands high precision, durability, and zero-failure performance. Steel Craft India manufactures high-quality hydraulic fittings and components engineered to meet the rigorous requirements of automotive manufacturing, assembly lines, and testing systems. Our hydraulic solutions are trusted by automotive OEMs, Tier-1 & Tier-2 suppliers, and vehicle component manufacturers for consistent performance in high-pressure and high-cycle applications.',
+      sectionTag: 'Applications',
+      sectionTitle: 'Automotive Applications',
+      sectionDescription: 'Hydraulic systems play a critical role across multiple automotive manufacturing and testing operations.',
+      image: '/automotive.jpeg',
+      alt: 'Automotive Industry',
+      imageCaption: 'Automotive manufacturing and assembly line',
+      equipment: [
+        {
+          id: 'assembly-lines',
+          name: 'Automotive Assembly Lines',
+          hosesUsed: null,
+          applications: [
+            'Hydraulic actuation systems',
+            'Tool positioning',
+            'Assembly automation'
+          ],
+          usage: 'Ensures smooth and reliable hydraulic flow across automated assembly processes.',
+          efficiency: [
+            'High production efficiency',
+            'Consistent assembly quality',
+            'Reduced downtime'
+          ]
+        },
+        {
+          id: 'robotics',
+          name: 'Robotic Arms & Automation Systems',
+          hosesUsed: null,
+          applications: [
+            'Robotic movement control',
+            'Flexible hydraulic connections',
+            'Leak-proof joints'
+          ],
+          usage: 'Supports precision movement and uninterrupted automation.',
+          efficiency: [
+            'Accurate robotic motion',
+            'Improved productivity',
+            'Minimal maintenance'
+          ]
+        },
+        {
+          id: 'presses',
+          name: 'Hydraulic Presses & Stamping Machines',
+          hosesUsed: null,
+          applications: [
+            'Metal forming operations',
+            'High-force transmission',
+            'Continuous press cycles'
+          ],
+          usage: 'Designed for high-pressure and high-load stamping applications.',
+          efficiency: [
+            'Consistent force delivery',
+            'Operational safety',
+            'Long service life'
+          ]
+        },
+        {
+          id: 'testing-systems',
+          name: 'Steering, Braking & Component Testing Systems',
+          hosesUsed: null,
+          applications: [
+            'Pressure testing',
+            'Fluid control systems',
+            'Leak testing'
+          ],
+          usage: 'Ensures accurate testing and reliable system validation.',
+          efficiency: [
+            'Accurate test results',
+            'Improved safety',
+            'Quality assurance'
+          ]
+        },
+        {
+          id: 'molding-handling',
+          name: 'Injection Molding & Material Handling Equipment',
+          hosesUsed: null,
+          applications: [
+            'Injection molding machines',
+            'Hydraulic lifts',
+            'Material transfer systems'
+          ],
+          usage: 'Provides controlled hydraulic power for molding and material handling.',
+          efficiency: [
+            'Efficient workflow',
+            'Safe load handling',
+            'Reduced operational losses'
+          ]
+        }
+      ],
+      benefits: {
+        tag: 'Performance',
+        title: 'Benefits of Hydraulic Fittings in Automotive Industry',
+        description: 'Steel Craft India manufactures hydraulic nuts, nipples, male fittings, and caps that ensure tight sealing, leak-free operation, and long service life in demanding automotive environments.',
+        items: [
+          'Leak-free hydraulic connections',
+          'High precision CNC-machined components',
+          'Resistance to high pressure and vibration',
+          'Improved system efficiency',
+          'Lower maintenance and downtime',
+          'Enhanced operational safety',
+          'Corrosion-resistant surface finishes',
+          'Consistent quality for mass production'
+        ]
+      },
+      ctaText: 'Steel Craft India delivers reliable, high-precision hydraulic solutions that help automotive manufacturers achieve efficiency, safety, and long-term cost savings.'
     }
+    
   ];
