@@ -21,10 +21,10 @@ export default function SubIndustriesPage() {
 
   const firstHalfEquipment = industry.equipment.slice(
     0,
-    Math.ceil(industry.equipment.length / 2)
+    4
   );
   const secondHalfEquipment = industry.equipment.slice(
-    Math.ceil(industry.equipment.length / 2)
+    4
   );
 
   return (
@@ -108,18 +108,20 @@ export default function SubIndustriesPage() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right Images */}
             <div className={styles.rightImage}>
-              <img
-                src={industry.image}
-                alt={industry.alt}
-                className={styles.industryImage}
-              />
-              {industry.imageCaption && (
-                <p className={styles.imageCaption}>
-                  {industry.imageCaption}
-                </p>
-              )}
+              {industry.images.map((image, idx) => (
+                <div key={idx} className={styles.imageContainer}>
+                  <img
+                    src={image.image}
+                    alt={image.alt}
+                    className={styles.industryImage}
+                  />
+                  <p className={styles.imageCaption}>
+                    {image.imageCaption}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

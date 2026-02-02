@@ -9,7 +9,11 @@ export const IndustryData = [
       sectionTag: 'Applications',
       sectionTitle: 'Where Hydraulic Hoses Are Used',
       sectionDescription: null,
-      image: '/construction.jpeg',
+      images: [{
+        image: '/construction.jpeg',
+        alt: "Hydraulic fittings used in construction equipment",
+        imageCaption: 'Heavy construction equipment in operation'
+      }],
       alt: "Hydraulic fittings used in construction equipment",
       imageCaption: 'Heavy construction equipment in operation',
       equipment: [
@@ -118,7 +122,11 @@ export const IndustryData = [
       sectionTag: 'Applications',
       sectionTitle: 'Manufacturing Applications',
       sectionDescription: 'Steel Craft India provides components that ensure safe and efficient fluid transfer across a wide range of industrial applications.',
-      image: '/manufacturing.jpeg',
+      images: [{
+        image: '/manufacturing.jpeg',
+        alt: "Manufacturing",
+        imageCaption: 'Industrial manufacturing equipment'
+      }],
       alt: "Manufacturing",
       imageCaption: 'Industrial manufacturing equipment',
       equipment: [
@@ -220,7 +228,6 @@ export const IndustryData = [
       },
       ctaText: 'Steel Craft India delivers dependable hydraulic solutions that help manufacturing industries operate efficiently, safely, and competitively.'
     },
-
     {
       id: 'automotive',
       name: 'Automotive Industry',
@@ -229,9 +236,11 @@ export const IndustryData = [
       sectionTag: 'Applications',
       sectionTitle: 'Automotive Applications',
       sectionDescription: 'Hydraulic systems play a critical role across multiple automotive manufacturing and testing operations.',
-      image: '/automotive.jpeg',
-      alt: 'Automotive Industry',
-      imageCaption: 'Automotive manufacturing and assembly line',
+      images: [{
+        image: '/automotive.jpeg',
+        alt: 'Automotive Industry',
+        imageCaption: 'Automotive manufacturing and assembly line'
+      }],
       equipment: [
         {
           id: 'assembly-lines',
@@ -330,6 +339,319 @@ export const IndustryData = [
         ]
       },
       ctaText: 'Steel Craft India delivers reliable, high-precision hydraulic solutions that help automotive manufacturers achieve efficiency, safety, and long-term cost savings.'
+    },
+    {
+      id: 'agriculture',
+      name: 'Agriculture Industry',
+      description: 'DIN and OEM hydraulic hose fittings engineered for high-pressure agricultural and farm machinery applications.',
+      introText: 'Modern agriculture relies heavily on hydraulic systems for efficiency, productivity, and reliability. Steel Craft India manufactures DIN-standard and OEM-compatible hydraulic hose fittings designed to perform under continuous pressure, vibration, and harsh outdoor conditions. Our hydraulic solutions are widely used in tractors, harvesters, irrigation systems, and agricultural equipment across domestic and export markets.',
+      sectionTag: 'Applications',
+      sectionTitle: 'Agricultural Applications',
+      sectionDescription: 'Hydraulic fittings play a vital role in powering and protecting agricultural machinery and water management systems.',
+      images: [
+        {
+          image: '/agriculture1.jpeg',
+          alt: 'Agricultural Tractors',
+          imageCaption: 'Hydraulic fittings in irrigation and water management systems'
+        },
+        {
+          image: '/agriculture2.jpeg',
+          alt: 'Irrigation Systems',
+          imageCaption: 'Hydraulic systems used in tractors and farm machinery'
+        },
+        {
+          image: '/agriculture3.jpeg',
+          alt: 'Spray Pumps and Fertilizer Equipment',
+          imageCaption: 'Hydraulic connections in spray pumps and fertilizer equipment'
+        }
+      ],
+      equipment: [
+        {
+          id: 'tractors',
+          name: 'Tractors & Farm Machinery',
+          hosesUsed: null,
+          applications: [
+            'Tractor hydraulic systems',
+            'Hydraulic lifts and loaders',
+            'Ploughing, tilling, and harvesting equipment'
+          ],
+          usage: 'Ensures secure hydraulic connections under constant vibration and heavy load conditions.',
+          efficiency: [
+            'Reliable field operations',
+            'Reduced hydraulic failures',
+            'Long service life'
+          ]
+        },
+        {
+          id: 'irrigation',
+          name: 'Irrigation & Water Management Systems',
+          hosesUsed: null,
+          applications: [
+            'Drip irrigation systems',
+            'Sprinkler irrigation',
+            'High-pressure water transfer lines'
+          ],
+          usage: 'Provides leak-free hydraulic flow and protects hose ends from contamination.',
+          efficiency: [
+            'Efficient water distribution',
+            'Lower maintenance',
+            'Improved system durability'
+          ]
+        },
+        {
+          id: 'spray-equipment',
+          name: 'Spray Pumps & Fertilizer Equipment',
+          hosesUsed: null,
+          applications: [
+            'Pesticide spraying systems',
+            'Fertilizer application equipment',
+            'Chemical transfer hoses'
+          ],
+          usage: 'Designed for tight sealing and chemical resistance in agricultural spraying operations.',
+          efficiency: [
+            'Safe chemical handling',
+            'Consistent spraying performance',
+            'Reduced leakage risk'
+          ]
+        }
+      ],
+      benefits: {
+        tag: 'Performance',
+        title: 'Benefits of Hydraulic Fittings in Agriculture',
+        description: 'Steel Craft India manufactures DIN hydraulic nuts, OEM hydraulic nipples, hose caps, and connectors that ensure high-pressure performance and durability in agricultural environments.',
+        items: [
+          'DIN-standard manufacturing',
+          'OEM-compatible hydraulic fittings',
+          'Leak-free and secure connections',
+          'High pressure and vibration resistance',
+          'Corrosion-resistant finishes',
+          'Reduced breakdowns and downtime',
+          'Suitable for harsh outdoor conditions',
+          'Long operational life'
+        ]
+      },
+      ctaText: 'Steel Craft India supports mechanized and modern agriculture by delivering durable DIN and OEM hydraulic hose fittings that improve efficiency, reliability, and equipment performance.'
+    },
+    {
+      id: 'hose-pipes',
+      name: 'Hose Pipe Industry',
+      description: 'High-performance hydraulic hoses designed for manufacturing, testing, and material handling operations in hose pipe industries.',
+      introText: 'Hydraulic hoses play a critical role in hose pipe industries by supporting fluid power systems used in production, testing, automation, and maintenance. Designed to safely transfer high-pressure hydraulic fluids, these hoses ensure efficient, reliable, and uninterrupted industrial operations.',
+      sectionTag: 'Applications',
+      sectionTitle: 'Industrial Applications',
+      sectionDescription: 'Hydraulic hoses are widely used across multiple stages of hose pipe manufacturing and plant operations.',
+      images: [
+        {
+          image: '/hosepipe1.jpeg',
+          alt: 'Hydraulic Hoses in Hose Pipe Manufacturing',
+          imageCaption: 'Hydraulic hoses used in hose pipe production machinery'
+        },
+        {
+          image: '/hosepipe2.jpeg',
+          alt: 'Hydraulic Pressure Testing Systems',
+          imageCaption: 'Hydraulic hoses in pressure testing and quality control systems'
+        }
+      ],
+      equipment: [
+        {
+          id: 'production-machinery',
+          name: 'Production Machinery & Equipment',
+          hosesUsed: 'High-pressure hydraulic hoses',
+          applications: [
+            'Extrusion machines',
+            'Rubber and thermoplastic molding machines',
+            'Hose crimping and assembly units'
+          ],
+          usage: 'Powers heavy-duty machinery used for shaping, cutting, and forming hose pipes with precision.',
+          efficiency: [
+            'Accurate production output',
+            'Stable machine performance',
+            'Reduced operational errors'
+          ]
+        },
+        {
+          id: 'testing-quality',
+          name: 'Pressure Testing & Quality Control',
+          hosesUsed: 'Reinforced hydraulic testing hoses',
+          applications: [
+            'Hydrostatic pressure testing rigs',
+            'Burst testing systems',
+            'Leak detection setups'
+          ],
+          usage: 'Ensures hose pipes meet safety, durability, and performance standards before dispatch.',
+          efficiency: [
+            'Improved product reliability',
+            'Compliance with industry standards',
+            'Enhanced safety'
+          ]
+        },
+        {
+          id: 'material-handling',
+          name: 'Material Handling & Automation',
+          hosesUsed: 'Flexible hydraulic hoses',
+          applications: [
+            'Conveyor systems',
+            'Hydraulic lifts and presses',
+            'Robotic handling equipment'
+          ],
+          usage: 'Supports smooth material flow and automated handling within the plant.',
+          efficiency: [
+            'Higher productivity',
+            'Reduced manual labor',
+            'Efficient workflow'
+          ]
+        },
+        {
+          id: 'maintenance-utility',
+          name: 'Maintenance & Utility Operations',
+          hosesUsed: 'Standard utility hydraulic hoses',
+          applications: [
+            'Cleaning and flushing systems',
+            'Oil circulation units',
+            'Hydraulic power packs'
+          ],
+          usage: 'Maintains continuous plant operations and enables quick maintenance cycles.',
+          efficiency: [
+            'Reduced downtime',
+            'Smooth utility operations',
+            'Improved equipment lifespan'
+          ]
+        }
+      ],
+      benefits: {
+        tag: 'Performance',
+        title: 'Benefits of Hydraulic Hoses in Hose Pipe Industry',
+        description: 'Using high-quality hydraulic hoses ensures safety, durability, and consistent performance in demanding industrial environments.',
+        items: [
+          'High pressure resistance',
+          'Long service life under extreme conditions',
+          'Leak-proof performance',
+          'Flexibility for complex machinery layouts',
+          'Reduced downtime and maintenance costs',
+          'Improved operational safety',
+          'Consistent production efficiency'
+        ]
+      },
+      ctaText: 'High-quality hydraulic hoses form the backbone of reliable hose pipe manufacturing, testing, and material handling operations.'
+    },
+    {
+      id: 'heavy-equipment',
+      name: 'Heavy Equipment Industry',
+      description: 'High-precision hydraulic hose end fittings engineered for extreme pressure, vibration, and harsh operating conditions in heavy equipment.',
+      introText: 'In the heavy equipment and construction industry, hydraulic hose end fittings play a mission-critical role in power transmission and safe machine operation. Steel Craft India manufactures OEM-compatible, precision-machined hydraulic hose end fittings designed to withstand high pressure, shock loads, vibration, and demanding outdoor environments.',
+      sectionTag: 'Applications',
+      sectionTitle: 'Heavy Equipment Applications',
+      sectionDescription: 'Hydraulic hose end fittings are essential across excavation, earthmoving, lifting, mining, and construction machinery.',
+      images: [
+        {
+          image: '/heavy1.jpeg',
+          alt: 'Excavator Hydraulic Systems',
+          imageCaption: 'Hydraulic hose end fittings used in excavators and backhoe loaders'
+        },
+        {
+          image: '/heavy2.jpeg',
+          alt: 'Heavy Construction Equipment',
+          imageCaption: 'Hydraulic fittings in construction and earthmoving machinery'
+        }
+      ],
+      equipment: [
+        {
+          id: 'excavators',
+          name: 'Excavators & Backhoe Loaders',
+          hosesUsed: 'Hydraulic hose end fittings',
+          applications: [
+            'Boom, arm, and bucket cylinders',
+            'Swing motors and hydraulic pumps',
+            'Track drive systems'
+          ],
+          usage: 'Ensures secure crimping and reliable hydraulic power transmission in excavation operations.',
+          efficiency: [
+            'High pressure tolerance',
+            'Vibration resistance',
+            'Extended service life'
+          ]
+        },
+        {
+          id: 'earthmoving',
+          name: 'Bulldozers & Earthmoving Equipment',
+          hosesUsed: 'Heavy-duty hydraulic hose fittings',
+          applications: [
+            'Blade lift and tilt cylinders',
+            'Steering and braking systems',
+            'Power transmission lines'
+          ],
+          usage: 'Designed to withstand heavy impact loads and continuous pressure cycles.',
+          efficiency: [
+            'Stable machine performance',
+            'Reduced hydraulic failures',
+            'Lower maintenance costs'
+          ]
+        },
+        {
+          id: 'cranes',
+          name: 'Cranes & Lifting Equipment',
+          hosesUsed: 'Precision-engineered hose end fittings',
+          applications: [
+            'Telescopic boom movement',
+            'Load lifting cylinders',
+            'Stabilizers and outriggers'
+          ],
+          usage: 'Maintains smooth lifting operations and improves operator safety.',
+          efficiency: [
+            'Controlled lifting performance',
+            'Enhanced safety',
+            'Reliable load handling'
+          ]
+        },
+        {
+          id: 'mining',
+          name: 'Mining Equipment',
+          hosesUsed: 'Abrasion-resistant hydraulic fittings',
+          applications: [
+            'Drilling rigs',
+            'Rock breakers',
+            'Hydraulic shovels and loaders'
+          ],
+          usage: 'Built for extreme mining conditions involving high pressure and temperature variations.',
+          efficiency: [
+            'High durability',
+            'Resistance to abrasion and heat',
+            'Long operational life'
+          ]
+        },
+        {
+          id: 'construction-road',
+          name: 'Construction Machinery & Road Equipment',
+          hosesUsed: 'Industrial hydraulic nuts, nipples, males, and caps',
+          applications: [
+            'Concrete pumps',
+            'Pavers and compactors',
+            'Road rollers and graders'
+          ],
+          usage: 'Supports continuous-duty construction operations with reliable hydraulic connections.',
+          efficiency: [
+            'Leak-free operation',
+            'Consistent hydraulic flow',
+            'Reduced downtime'
+          ]
+        }
+      ],
+      benefits: {
+        tag: 'Performance',
+        title: 'Benefits of Hydraulic Hose End Fittings in Heavy Equipment',
+        description: 'Steel Craft India manufactures hydraulic hose end fittings that ensure reliability, safety, and efficiency in demanding heavy equipment applications.',
+        items: [
+          'OEM-compatible precision manufacturing',
+          'Leak-free hydraulic connections',
+          'High pressure and shock load resistance',
+          'Excellent vibration performance',
+          'Suitable for harsh outdoor environments',
+          'Reduced maintenance and downtime',
+          'Improved machine safety',
+          'Long service life'
+        ]
+      },
+      ctaText: 'Steel Craft India delivers robust and reliable hydraulic hose end fittings that keep heavy equipment operating safely and efficiently in the toughest conditions.'
     }
     
   ];

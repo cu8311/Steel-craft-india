@@ -108,6 +108,10 @@ export default function ManufacturingProcess() {
 		{
 			id: 6,
 			videoUrl: "/Video6.webm"
+		},
+		{
+			id: 7,
+			videoUrl: "/Video7.webm"
 		}
 	];
 
