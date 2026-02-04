@@ -12,6 +12,7 @@ import IndustriesPage from './components/Industries/IndustriesPage'
 import SubIndustriesPage from './components/Industries/SubIndustiresPage'
 import NotFoundPage from './components/NotFound/NotFoundPage'
 import ContactUsPage from './components/Contact/ContactUsPage'
+import BestHydraulicHoseManufacturer from './components/BestHydraulic/BestHydraulicHoseManufacturer'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/industries/:id" element={<SubIndustriesPage />} />
+        <Route path='/best-hydraulic-hose-manufacturer-india' element={<BestHydraulicHoseManufacturer />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
