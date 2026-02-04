@@ -1,20 +1,59 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './footer.module.css';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Manufacturing', href: '#manufacturing' },
-    { name: 'Industries', href: '#industries' },
-    { name: 'Quality Assurance', href: '#quality' },
-    { name: 'Buyer Information', href: '#buyer-information' },
-    { name: 'Request Quote', href: '#request-quote' }
+    { name: 'Home', type: 'route', to: '/' },
+    { name: 'Products', type: 'hash', href: '#products' },
+    { name: 'Industries', type: 'route', to: '/industries' },
+    { name: 'Buyer Information', type: 'route', to: '/buyer' },
+    { name: 'Manufacturing Process', type: 'route', to: '/manufacturing' },
+    { name: 'About Us', type: 'route', to: '/about' },
+    { name: 'Certificates', type: 'route', to: '/certificates' },
+    { name: 'Request Quote', type: 'hash', href: '#request-quote' }
   ];
+
+  const scrollToHash = (hash) => {
+    const target = document.querySelector(hash);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    // Check for hash in URL on initial load
+    const hash = location.hash;
+    if (hash && hash !== '#') {
+      setTimeout(() => {
+        scrollToHash(hash);
+      }, 100);
+    }
+  }, [location.pathname, location.hash]);
+
+  const handleHashClick = (href, e) => {
+    e.preventDefault();
+
+    const hash = href.includes('#') ? href.substring(href.indexOf('#')) : href;
+
+    // If we're already on the home page, just scroll
+    if (pathname === '/' && href.startsWith('#')) {
+      scrollToHash(hash);
+    } else {
+      // Navigate to the home page first, then scroll
+      navigate('/');
+      // Use setTimeout to ensure navigation completes before scrolling
+      setTimeout(() => {
+        scrollToHash(hash);
+      }, 150);
+    }
+  };
 
   return (
     <footer className={styles.footer}>
@@ -59,17 +98,19 @@ export default function Footer() {
             <ul className={styles.footerLinks}>
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .querySelector(link.href)
-                        ?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    {link.name}
-                  </a>
+                  {link.type === 'route' ? (
+                    <Link to={link.to} className={styles.footerLink}>
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className={styles.footerLink}
+                      onClick={(e) => handleHashClick(link.href, e)}
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

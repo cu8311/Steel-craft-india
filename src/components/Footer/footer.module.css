@@ -152,8 +152,17 @@
   transform: translateX(5px);
 }
 
-/* Contact */
-.footerContact {}
+.footerLink {
+  font-family: 'Work Sans', sans-serif;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footerLink:hover {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
 
 .contactList {
   list-style: none;
