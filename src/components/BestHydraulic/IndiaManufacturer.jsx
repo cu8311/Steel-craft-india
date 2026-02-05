@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import styles from './best-hydraulic.module.css';
+import styles from './india-manufacturer.module.css';
 import { Link } from 'react-router-dom';
 
-export default function BestHydraulicHoseManufacturer() {
+export default function IndiaManufacturer() {
   return (
     <>
       <Helmet>

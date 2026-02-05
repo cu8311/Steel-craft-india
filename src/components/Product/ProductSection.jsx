@@ -427,12 +427,6 @@ export default function ProductsSection() {
                   </div>
                 </div>
 
-                {/* <div className={styles.productFeaturesPreview}>
-                  {product.features.slice(0, 2).map((feature, idx) => (
-                    <span key={idx} className={styles.featureTag}>{feature}</span>
-                  ))}
-                </div> */}
-
                 <button className={styles.viewDetailsBtn}>
                   Learn More
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
