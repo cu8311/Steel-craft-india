@@ -1,0 +1,520 @@
+/* Hero Section */
+.delhiHero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 5rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroMain {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.heroIntro {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroLink {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+.heroLink:hover {
+    text-decoration: underline;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.heroBenefits {
+  background: rgba(140, 226, 74, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(140, 226, 74, 0.2);
+}
+
+.heroBenefitsTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.heroBenefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.heroBenefitsList li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.heroCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heroCTAText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.heroCTAText strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Content Sections */
+.contentSection {
+  padding: 4rem 2rem;
+}
+
+.contentSection:nth-child(even) {
+  background: var(--background-primary);
+}
+
+.contentSection:nth-child(odd) {
+  background: var(--background-secondary);
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Why Choose Grid */
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.whyChooseItem {
+  background: var(--background-secondary);
+  padding: 2rem;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.contentSection:nth-child(even) .whyChooseItem {
+  background: var(--background-primary);
+}
+
+.whyChooseItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+}
+
+.whyChooseText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.whyChooseText::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Products List */
+.productsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.productItem {
+  background: var(--background-secondary);
+  padding: 2rem;
+  text-align: center;
+  border-top: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.contentSection:nth-child(odd) .productItem {
+  background: var(--background-primary);
+}
+
+.productItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(45, 80, 22, 0.12);
+}
+
+.productName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Benefits Grid */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.benefitCard {
+  background: var(--background-primary);
+  padding: 2.5rem;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  border-left-color: var(--accent-color);
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+}
+
+.benefitTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.benefitDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* Dealer Network Section */
+.dealerNetwork {
+  background: var(--background-primary);
+  padding: 3rem;
+  margin: 3rem 0;
+  border: 3px solid var(--accent-color);
+  text-align: center;
+}
+
+.dealerTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.dealerText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.15rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.dealerText strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.ctaText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--background-dark);
+  background: var(--accent-color);
+  border: none;
+  padding: 1.4rem 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaButton:hover {
+  background: #7dd13a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(140, 226, 74, 0.4);
+}
+
+.ctaButton svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+}
+
+.ctaButtonSecondary:hover {
+  background: var(--text-primary);
+  color: var(--primary-color);
+}
+
+/* Contact Info */
+.contactInfo {
+  background: rgba(140, 226, 74, 0.1);
+  padding: 2rem;
+  margin-top: 2.5rem;
+  border-radius: 4px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contactItem {
+  text-align: center;
+}
+
+.contactLabel {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contactValue {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.contactValue a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactValue a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .whyChooseGrid,
+  .benefitsGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .productsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .delhiHero {
+    padding: 4rem 2rem;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroIntro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroBenefits,
+  .heroCTA {
+    min-height: auto;
+  }
+
+  .contentSection {
+    padding: 5rem 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .productsList {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaButton {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .delhiHero {
+    padding: 3rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroIntro {
+    font-size: 1rem;
+  }
+
+  .heroBenefits,
+  .heroCTA {
+    padding: 1.5rem;
+  }
+
+  .heroBenefitsTitle {
+    font-size: 1.1rem;
+  }
+
+  .heroBenefitsList li {
+    font-size: 0.95rem;
+  }
+
+  .heroCTAText {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .benefitCard,
+  .whyChooseItem,
+  .productItem {
+    padding: 1.75rem;
+  }
+
+  .dealerNetwork {
+    padding: 2rem 1.5rem;
+  }
+}

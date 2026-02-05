@@ -82,34 +82,6 @@ export default function LudhianaManufacturer() {
           name="description" 
           content="Steel Craft India is a hydraulic fittings manufacturer in Ludhiana. Hose end fittings, nuts, nipples, caps & custom orders. Fast dispatch & bulk supply." 
         />
-        <meta name="keywords" content="hydraulic fittings manufacturer Ludhiana, hydraulic nuts Ludhiana, hydraulic nipples, hydraulic fittings Punjab, Steel Craft India" />
-        <link rel="canonical" href="https://www.steelcraftsindia.in/hydraulic-fittings-manufacturer-ludhiana" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Hydraulic Fittings Manufacturer in Ludhiana | Steel Craft India" />
-        <meta property="og:description" content="Steel Craft India is a hydraulic fittings manufacturer in Ludhiana. Hose end fittings, nuts, nipples, caps & custom orders. Fast dispatch & bulk supply." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.steelcraftsindia.in/hydraulic-fittings-manufacturer-ludhiana" />
-        
-        {/* Local Business Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Steel Craft India",
-            "image": "https://www.steelcraftsindia.in/logo.jpeg",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Ludhiana",
-              "addressRegion": "Punjab",
-              "addressCountry": "IN"
-            },
-            "telephone": "+919356854656",
-            "email": "steelcraft80@gmail.com",
-            "priceRange": "$$",
-            "description": "Hydraulic fittings manufacturer in Ludhiana"
-          })}
-        </script>
       </Helmet>
 
 

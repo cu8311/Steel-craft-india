@@ -14,6 +14,7 @@ import NotFoundPage from './components/NotFound/NotFoundPage'
 import ContactUsPage from './components/Contact/ContactUsPage'
 import IndiaManufacturer from './components/BestHydraulic/IndiaManufacturer'
 import LudhianaManufacturer from './components/BestHydraulic/LudhianaManufacturer'
+import DelhiSupplier from './components/BestHydraulic/DelhiSupplier'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/industries/:id" element={<SubIndustriesPage />} />
         <Route path='/best-hydraulic-hose-manufacturer-india' element={<IndiaManufacturer />} />
         <Route path='/hydraulic-fittings-manufacturer-ludhiana' element={<LudhianaManufacturer />} />
+        <Route path='/hydraulic-hose-fittings-supplier-in-delhi' element={<DelhiSupplier />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
