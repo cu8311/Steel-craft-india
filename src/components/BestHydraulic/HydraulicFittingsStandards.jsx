@@ -154,7 +154,7 @@ export default function HydraulicFittingsStandards() {
       {/* Hero Section */}
       <section className={styles.standardsHero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Hydraulic Fittings Standards – Explained</h1>
+          <h1 className={styles.heroTitle}>Hydraulic Fittings Standards</h1>
           <p className={styles.heroDescription}>
             Hydraulic systems operate under high pressure, making standardisation critical for safety, reliability,
             and interchangeability. Hydraulic fittings standards define thread type, sealing method, pressure rating,

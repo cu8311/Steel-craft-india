@@ -210,8 +210,8 @@ export default function SubIndustriesPage() {
             {industry.ctaText ||
               'Choosing the right hydraulic solutions ensures maximum output, reduced downtime, and long-term reliability.'}
           </p>
-          <Link to="/request" className={styles.ctaButton}>
-            Request a Quote
+          <Link to="/contact" className={styles.ctaButton}>
+            Contact Us
           </Link>
         </div>
       </section>
