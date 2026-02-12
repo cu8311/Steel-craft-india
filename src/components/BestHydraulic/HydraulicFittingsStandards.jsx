@@ -156,12 +156,12 @@ export default function HydraulicFittingsStandards() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Hydraulic Fittings Standards</h1>
           <p className={styles.heroDescription}>
-            Hydraulic systems operate under high pressure, making standardisation critical for safety, reliability,
-            and interchangeability. Hydraulic fittings standards define thread type, sealing method, pressure rating,
+            Hydraulic systems operate under high pressure, making standardisation critical for safety, reliability, 
+            and interchangeability. Hydraulic fittings standards define thread type, sealing method, pressure rating, 
             and dimensional accuracy, ensuring compatibility across machines and industries.
           </p>
           <p className={styles.heroFooter}>
-            At Steel Craft India, we manufacture hydraulic fittings strictly adhering to international and Indian
+            At Steel Craft India, we manufacture hydraulic fittings strictly adhering to international and Indian 
             standards, ensuring leak-proof performance and long service life.
           </p>
         </div>
@@ -204,7 +204,7 @@ export default function HydraulicFittingsStandards() {
               ))}
             </ul>
             <p className={styles.warningText}>
-              <strong>Warning:</strong> Using non-standard fittings can cause thread mismatch, seal failure,
+              <strong>Warning:</strong> Using non-standard fittings can cause thread mismatch, seal failure, 
               and catastrophic breakdowns.
             </p>
           </div>
@@ -234,11 +234,11 @@ export default function HydraulicFittingsStandards() {
             <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
             <div className={styles.faqList}>
               {faqs.map((faq, index) => (
-                <div
-                  key={index}
+                <div 
+                  key={index} 
                   className={`${styles.faqItem} ${activeFAQ === index ? styles.active : ''}`}
                 >
-                  <div
+                  <div 
                     className={styles.faqQuestion}
                     onClick={() => toggleFAQ(index)}
                   >
@@ -265,7 +265,7 @@ export default function HydraulicFittingsStandards() {
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>Need Standard-Compliant Hydraulic Fittings?</h2>
           <p className={styles.ctaText}>
-            Contact Steel Craft India for DIN, ISO, BSP, JIC, ORFS, and SAE standard hydraulic fittings
+            Contact Steel Craft India for DIN, ISO, BSP, JIC, ORFS, and SAE standard hydraulic fittings 
             manufactured with precision and quality assurance.
           </p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform?embedded=true" target='_blank' className={styles.ctaButton}>
