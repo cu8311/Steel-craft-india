@@ -277,13 +277,41 @@ export default function WhatAreHydraulicFittings() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ */}
+            <div className={styles.faqBlock}>
+              <h3 className={styles.sectionH3}>
+                Frequently Asked Questions
+              </h3>
+
+              {faqs.map((faq, i) => (
+                <div key={i} className={`${styles.faqItem} ${activeFAQ === i ? styles.faqItemActive : ''}`}>
+                  <div className={styles.faqQuestion} onClick={() => toggleFAQ(i)}>
+                    <span className={styles.faqQText}>
+                      {faq.question}
+                    </span>
+                    <div className={styles.faqIcon}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className={styles.faqAnswer}>
+                    <p className={styles.faqAText}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
-      </div>
+      </div >
 
       {/* CTA Section */}
-      <section className={styles.ctaSection}>
+      < section className={styles.ctaSection} >
         <div>
           <h2 className={styles.ctaTitle}>Need Hydraulic Fittings for Your Application?</h2>
           <p className={styles.ctaText}>
@@ -298,7 +326,7 @@ export default function WhatAreHydraulicFittings() {
             </svg>
           </Link>
         </div>
-      </section>
+      </section >
 
     </>
   );
