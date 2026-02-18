@@ -4,14 +4,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-.blogBanner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('/mnt/user-data/uploads/footer-bg.jpeg') center/cover;
-    opacity: 0.1;
+    margin-top: 5rem;
 }
 
 .blogBannerInner {
