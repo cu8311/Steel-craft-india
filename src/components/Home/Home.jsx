@@ -4,6 +4,7 @@ import ProductsSection from '../Product/ProductSection'
 import Slider from '../Slider/Slider'
 import Posters from '../Background/Posters'
 import MiniAbout from '../About/MiniAbout'
+import BlogSection from '../Blogs/BlogSection'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <Slider />
         <MiniAbout />
         <ProductsSection />
+        <BlogSection />
         <Posters />
     </main>
   )
