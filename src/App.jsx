@@ -17,6 +17,9 @@ import LudhianaManufacturer from './components/BestHydraulic/LudhianaManufacture
 import DelhiSupplier from './components/BestHydraulic/DelhiSupplier'
 import HydraulicFittingsStandards from './components/BestHydraulic/HydraulicFittingsStandards'
 import WhatAreHydraulicFittings from './components/BestHydraulic/WhatAreHydraulicFittings'
+import HowToChooseHydraulicFittingBlog from './components/Blogs/HowToChooseHydraulicFittingsBlog'
+import HydraulicFittingsMaterialsBlog from './components/Blogs/HydraulicFittingsMaterialsBlog'
+import HydraulicManufacturingIndiaBlog from './components/Blogs/HydraulicManufacturingIndiaBlog'
 
 const App = () => {
   return (
@@ -37,6 +40,9 @@ const App = () => {
         <Route path='/hydraulic-hose-fittings-supplier-in-delhi' element={<DelhiSupplier />} />
         <Route path='/hydraulic-fittings-standards' element={<HydraulicFittingsStandards />} />
         <Route path='/hydraulic-fittings' element={<WhatAreHydraulicFittings />} />
+        <Route path='/blog/how-to-choose-hydraulic-fitting' element={<HowToChooseHydraulicFittingBlog />} />
+        <Route path='/blog/hydraulic-fittings-materials' element={<HydraulicFittingsMaterialsBlog />} />
+        <Route path='/blog/hydraulic-manufacturing-india' element={<HydraulicManufacturingIndiaBlog />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
