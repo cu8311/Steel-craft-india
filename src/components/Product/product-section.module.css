@@ -1,6 +1,6 @@
 .productsSection {
-  background: var(--off-white);
-  padding: 6rem 2rem;
+  background: var(--background-primary);
+  padding: 3rem 2rem;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--cream-accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 .productsContainer {
@@ -22,7 +22,7 @@
 /* Header */
 .productsHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,7 +37,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -47,7 +47,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -58,7 +58,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--steel-gray);
+  color: var(--text-color);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
@@ -66,11 +66,11 @@
 
 /* Filters */
 .filtersContainer {
-  background: var(--pure-white);
-  padding: 2.5rem;
+  background: var(--background-secondary);
+  padding: 1.5rem 2.5rem;
   border-radius: 4px;
-  margin-bottom: 4rem;
-  border: 2px solid var(--cream-accent);
+  margin-bottom: 2rem;
+  border: 2px solid var(--primary-color);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,7 +83,7 @@
 }
 
 .filterGroup {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .filterGroup:last-child {
@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .filterLabel {
@@ -104,7 +104,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -119,9 +119,9 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   background: transparent;
-  border: 1px solid var(--light-steel);
+  border: 1px solid var(--text-light);
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -129,9 +129,9 @@
 }
 
 .clearButton:hover {
-  background: var(--off-white);
-  border-color: var(--cream-accent);
-  color: var(--deep-forest);
+  background: var(--background-primary);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .filterOptions {
@@ -144,9 +144,9 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--steel-gray);
-  background: var(--pure-white);
-  border: 2px solid var(--light-steel);
+  color: var(--text-color);
+  background: var(--background-secondary);
+  border: 2px solid var(--text-light);
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -154,14 +154,14 @@
 }
 
 .filterOption:hover {
-  border-color: var(--cream-accent);
-  color: var(--deep-forest);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .filterOption.active {
-  background: var(--deep-forest);
-  color: var(--cream-accent);
-  border-color: var(--deep-forest);
+  background: var(--secondary-color);
+  color: var(--text-primary);
+  border-color: var(--secondary-color);
 }
 
 /* Results */
@@ -169,7 +169,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -183,8 +183,8 @@
 
 /* Card */
 .productCard {
-  background: var(--pure-white);
-  border: 2px solid transparent;
+  background: var(--background-secondary);
+  border: 2px solid var(--primary-color);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -203,11 +203,11 @@
 .productsSection:global(.visible) .productCard:nth-child(4) { transition-delay: 0.6s; }
 .productsSection:global(.visible) .productCard:nth-child(5) { transition-delay: 0.7s; }
 .productsSection:global(.visible) .productCard:nth-child(6) { transition-delay: 0.8s; }
+.productsSection:global(.visible) .productCard:nth-child(6) { transition-delay: 0.9s; }
 
 .productCard:hover {
-  border-color: var(--cream-accent);
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(26, 58, 46, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
 .productImageWrapper {
@@ -215,7 +215,7 @@
   width: 100%;
   height: 300px;
   overflow: hidden;
-  background: var(--off-white);
+  background: var(--background-primary);
 }
 
 .productImage {
@@ -231,16 +231,16 @@
 
 .productOverlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(26, 58, 46, 0.9) 100%);
+  height: 50%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
   display: flex;
   align-items: flex-end;
   padding: 2rem;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .productCard:hover .productOverlay {
@@ -251,8 +251,8 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--deep-forest);
-  background: var(--cream-accent);
+  color: var(--text-color);
+  background: var(--primary-color);
   border: none;
   padding: 0.75rem 1.5rem;
   letter-spacing: 1.5px;
@@ -263,7 +263,8 @@
 }
 
 .overlayButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
+  color: var(--text-primary);
 }
 
 .productInfo {
@@ -274,7 +275,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   line-height: 1.3;
   margin-bottom: 1rem;
@@ -285,7 +286,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -300,14 +301,14 @@
 .metaItem {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
-  color: var(--steel-gray);
+  color: var(--text-color);
   display: flex;
   gap: 0.5rem;
 }
 
 .metaLabel {
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
 }
 
 .productFeaturesPreview {
@@ -321,8 +322,8 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--steel-gray);
-  background: var(--off-white);
+  color: var(--text-color);
+  background: var(--background-primary);
   padding: 0.4rem 0.85rem;
   border-radius: 2px;
 }
@@ -331,9 +332,9 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   background: transparent;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
   padding: 0.75rem 1.5rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -347,7 +348,8 @@
 }
 
 .viewDetailsBtn:hover {
-  background: var(--cream-accent);
+  background: var(--accent-color);
+  color: var(--text-primary);
 }
 
 .viewDetailsBtn svg {
@@ -388,7 +390,7 @@
   position: relative;
   max-width: 1200px;
   width: 100%;
-  background: var(--pure-white);
+  background: var(--background-secondary);
   transform: scale(0.9);
   transition: transform 0.3s ease;
   max-height: 90vh;
@@ -403,7 +405,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--deep-forest);
+  background: var(--secondary-color);
   border: none;
   width: 50px;
   height: 50px;
@@ -416,19 +418,19 @@
 }
 
 .modalClose:hover {
-  background: var(--cream-accent);
+  background: var(--primary-color);
   transform: rotate(90deg);
 }
 
 .modalClose svg {
   width: 28px;
   height: 28px;
-  stroke: var(--cream-accent);
+  stroke: var(--text-color);
   transition: stroke 0.3s ease;
 }
 
 .modalClose:hover svg {
-  stroke: var(--deep-forest);
+  stroke: var(--text-primary);
 }
 
 .modalLayout {
@@ -437,7 +439,7 @@
 }
 
 .modalImageSection {
-  background: var(--off-white);
+  background: var(--background-primary);
   padding: 3rem;
   display: flex;
   align-items: center;
@@ -459,7 +461,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -470,7 +472,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.05rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -483,11 +485,11 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--cream-accent);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
 }
 
@@ -501,7 +503,7 @@
 .featuresList li {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
-  color: var(--steel-gray);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -509,7 +511,7 @@
 
 .featuresList li::before {
   content: '✓';
-  color: var(--cream-accent);
+  color: var(--primary-color);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -524,14 +526,14 @@
   grid-template-columns: 150px 1fr;
   gap: 1rem;
   padding: 0.75rem;
-  background: var(--off-white);
+  background: var(--background-primary);
 }
 
 .specLabel {
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -539,7 +541,7 @@
 .specValue {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
-  color: var(--steel-gray);
+  color: var(--text-color);
 }
 
 .applicationsTags {
@@ -552,10 +554,10 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--deep-forest);
-  background: var(--off-white);
+  color: var(--secondary-color);
+  background: var(--background-primary);
   padding: 0.6rem 1.25rem;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
 }
 
 .modalCta {
@@ -578,25 +580,26 @@
 }
 
 .modalButton.primary {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
+  background: var(--primary-color);
+  color: var(--text-color);
 }
 
 .modalButton.primary:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .modalButton.secondary {
   background: transparent;
-  color: var(--deep-forest);
-  border: 2px solid var(--deep-forest);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
 .modalButton.secondary:hover {
-  background: var(--deep-forest);
-  color: var(--cream-accent);
+  background: var(--secondary-color);
+  color: var(--text-color);
 }
 
 /* Responsive */

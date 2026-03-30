@@ -1,14 +1,20 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
 import ProductsSection from '../Product/ProductSection'
-import IndustriesSection from '../Industries/IndustriesSection'
+import Slider from '../Slider/Slider'
+import Posters from '../Background/Posters'
+import MiniAbout from '../About/MiniAbout'
+import BlogSection from '../Blogs/BlogSection'
 
 const Home = () => {
   return (
     <main>
         <Hero />
+        <Slider />
+        <MiniAbout />
         <ProductsSection />
-        <IndustriesSection />
+        <BlogSection />
+        <Posters />
     </main>
   )
 }

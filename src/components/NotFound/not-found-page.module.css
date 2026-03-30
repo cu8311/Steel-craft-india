@@ -1,0 +1,275 @@
+.notFoundPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-primary);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+/* Decorative Circles */
+.circleDecoration {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.circle1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary-color);
+    top: -100px;
+    left: -100px;
+}
+
+.circle2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent-color);
+    bottom: -80px;
+    right: -80px;
+}
+
+.circle3 {
+    width: 200px;
+    height: 200px;
+    background: var(--secondary-color);
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+/* Content */
+.notFoundContent {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.errorCode {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(45, 80, 22, 0.1);
+    position: relative;
+}
+
+.errorCode::after {
+    content: '404';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-color);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.errorTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.errorDescription {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.15rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+/* Action Buttons */
+.actionButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.25rem 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+}
+
+.btnPrimary {
+    background: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.btnPrimary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(45, 80, 22, 0.3);
+}
+
+.btnSecondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btnSecondary:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Quick Links */
+.quickLinks {
+    margin-top: 3rem;
+}
+
+.quickLinksTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.linksGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quickLink {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem;
+    background: var(--background-secondary);
+    border-left: 3px solid var(--accent-color);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.quickLink:hover {
+    background: var(--background-primary);
+    color: var(--primary-color);
+    transform: translateX(5px);
+    border-left-color: var(--primary-color);
+}
+
+/* Logo */
+.errorLogo {
+    margin-bottom: 2rem;
+}
+
+.logoImage {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .errorCode {
+        font-size: 8rem;
+    }
+
+    .errorTitle {
+        font-size: 2rem;
+    }
+
+    .errorDescription {
+        font-size: 1rem;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .linksGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .circle1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle3 {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .notFoundPage {
+        padding: 1.5rem;
+    }
+
+    .errorCode {
+        font-size: 6rem;
+    }
+
+    .errorTitle {
+        font-size: 1.75rem;
+    }
+
+    .errorDescription {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 1.1rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .quickLinksTitle {
+        font-size: 1rem;
+    }
+
+    .quickLink {
+        font-size: 0.9rem;
+        padding: 0.85rem;
+    }
+}

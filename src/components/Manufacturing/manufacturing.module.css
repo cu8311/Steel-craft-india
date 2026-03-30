@@ -1,6 +1,6 @@
 /* Header */
 .manufacturingHeader {
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a1a 100%);
   margin-top: 4rem;
   padding: 6rem 2rem 4rem;
   text-align: center;
@@ -15,13 +15,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
+      rgba(255, 255, 255, 0.01) 50px,
+      rgba(255, 255, 255, 0.01) 100px
     );
 }
 
@@ -36,7 +36,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--text-primary);
   letter-spacing: 3px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   letter-spacing: 2px;
 }
 
@@ -77,7 +77,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 3rem;
@@ -114,8 +114,8 @@
 .stepNumber {
   width: 50px;
   height: 50px;
-  background: var(--deep-forest);
-  color: var(--cream-accent);
+  background: var(--secondary-color);
+  color: var(--text-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -124,14 +124,14 @@
   font-size: 1.2rem;
   font-weight: 600;
   flex-shrink: 0;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
 }
 
 .stepTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -140,7 +140,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -155,9 +155,9 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--steel-gray);
+  color: var(--text-color);
   background: transparent;
-  border: 1px solid var(--cream-accent);
+  border: 1px solid var(--primary-color);
   padding: 0.4rem 1rem;
   border-radius: 2px;
 }
@@ -209,13 +209,13 @@
   overflow: hidden;
   transition: all 0.4s ease;
   border: 2px solid transparent;
-  background: var(--steel-gray);
+  background: var(--text-color);
 }
 
 .videoContainer:hover {
-  border-color: var(--cream-accent);
+  border-color: var(--primary-color);
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(26, 58, 46, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .videoElement {
@@ -249,7 +249,7 @@
 .playButton {
   width: 80px;
   height: 80px;
-  background: var(--cream-accent);
+  background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -266,14 +266,14 @@
 }
 
 .playButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
   transform: translate(-50%, -50%) scale(1.1);
 }
 
 .playIcon {
   width: 0;
   height: 0;
-  border-left: 25px solid var(--deep-forest);
+  border-left: 25px solid var(--text-color);
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   margin-left: 5px;
@@ -284,8 +284,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(26, 58, 46, 0.95) 0%, transparent 100%);
-  color: var(--cream-accent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+  color: var(--text-primary);
   padding: 2.5rem 1.5rem 1.5rem;
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
@@ -307,7 +307,7 @@
 .videoControlBtn {
   width: 36px;
   height: 36px;
-  background: var(--cream-accent);
+  background: var(--primary-color);
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -318,13 +318,13 @@
 }
 
 .videoControlBtn:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
 }
 
 .videoControlIcon {
   width: 18px;
   height: 18px;
-  stroke: var(--deep-forest);
+  stroke: var(--text-color);
   fill: none;
 }
 
@@ -332,14 +332,14 @@
 .documentarySection {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--pure-white);
+  background: var(--background-secondary);
 }
 
 .documentaryTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -352,122 +352,28 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--deep-forest);
-  background: var(--cream-accent);
+  color: var(--text-color);
+  background: var(--primary-color);
   border: none;
   padding: 1.25rem 3rem;
   cursor: pointer;
   transition: all 0.4s ease;
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 6px 20px rgba(201, 184, 149, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .documentaryButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .documentaryButton svg {
   width: 22px;
   height: 22px;
-  fill: var(--deep-forest);
-}
-
-/* CTA Section */
-.manufacturingCta {
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #2d4a3e 100%);
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.manufacturingCta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
-    );
-}
-
-.ctaContent {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.ctaTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: var(--cream-accent);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-.ctaSubtitle {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: var(--light-steel);
-  line-height: 1.8;
-  margin-bottom: 3rem;
-}
-
-.ctaButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.ctaButton {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 1.25rem 3rem;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  border: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.ctaButton:global(.primary) {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
-}
-
-.ctaButton:global(.primary):hover {
-  background: #d4c4a8;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 184, 149, 0.4);
-}
-
-.ctaButton:global(.secondary) {
-  background: transparent;
-  color: var(--cream-accent);
-  border: 2px solid var(--cream-accent);
-}
-
-.ctaButton:global(.secondary):hover {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
+  fill: var(--text-color);
 }
 
 /* Responsive Design */

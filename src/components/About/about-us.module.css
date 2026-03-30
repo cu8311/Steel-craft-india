@@ -5,7 +5,7 @@
 /* Hero About */
 .aboutHero {
   position: relative;
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #2d4a3e 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 6rem 2rem 4rem;
   overflow: hidden;
 }
@@ -22,8 +22,8 @@
       45deg,
       transparent,
       transparent 50px,
-      rgba(201, 184, 149, 0.02) 50px,
-      rgba(201, 184, 149, 0.02) 100px
+      rgba(255, 255, 255, 0.01) 50px,
+      rgba(255, 255, 255, 0.01) 100px
     );
   pointer-events: none;
 }
@@ -39,7 +39,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--cream-accent);
+  color: var(--text-light);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -57,7 +57,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--text-primary);
   letter-spacing: 3px;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -67,7 +67,25 @@
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
+.aboutHeroSubTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; 
+}
+
 .aboutHero[data-section].visible .aboutHeroTitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+.aboutHero[data-section].visible .aboutHeroSubTitle {
   opacity: 1;
   transform: translateY(0);
 }
@@ -76,7 +94,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.4rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   line-height: 1.8;
   max-width: 900px;
   opacity: 0;
@@ -91,9 +109,9 @@
 
 /* Stats Section */
 .statsSection {
-  background: var(--deep-forest);
+  background: var(--secondary-color);
   padding: 4rem 2rem;
-  border-top: 3px solid var(--cream-accent);
+  border-top: 3px solid var(--primary-color);
 }
 
 .statsContainer {
@@ -125,7 +143,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--cream-accent);
+  color: var(--text-primary);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -134,7 +152,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--light-steel);
+  color: var(--text-light);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -142,7 +160,7 @@
 /* Story Section */
 .storySection {
   padding: 6rem 2rem;
-  background: var(--pure-white);
+  background: var(--background-secondary);
 }
 
 .storyContainer {
@@ -169,7 +187,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -180,17 +198,17 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.9;
   margin-bottom: 1.5rem;
 }
 
 .storyHighlight {
-  background: var(--cream-accent);
-  color: var(--deep-forest);
+  background: var(--primary-color);
+  color: var(--text-color);
   padding: 2rem;
   margin-top: 2rem;
-  border-left: 4px solid var(--deep-forest);
+  border-left: 4px solid var(--secondary-color);
 }
 
 .storyHighlightText {
@@ -214,9 +232,9 @@
 }
 
 .founderCard {
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #2d4a3e 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 3rem;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
   position: relative;
 }
 
@@ -227,7 +245,7 @@
   right: -10px;
   width: 100%;
   height: 100%;
-  border: 2px solid var(--cream-accent);
+  border: 2px solid var(--primary-color);
   opacity: 0.3;
   z-index: -1;
 }
@@ -236,7 +254,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--text-primary);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
@@ -245,7 +263,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -255,17 +273,17 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.15rem;
   font-weight: 400;
-  color: var(--off-white);
+  color: var(--background-secondary);
   line-height: 1.8;
   font-style: italic;
-  border-left: 3px solid var(--cream-accent);
+  border-left: 3px solid var(--primary-color);
   padding-left: 1.5rem;
 }
 
 /* Values Section */
 .valuesSection {
   padding: 6rem 2rem;
-  background: var(--off-white);
+  background: var(--background-primary);
 }
 
 .valuesContainer {
@@ -290,7 +308,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -300,7 +318,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--steel-gray);
+  color: var(--text-color);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -312,7 +330,7 @@
 }
 
 .valueCard {
-  background: var(--pure-white);
+  background: var(--background-secondary);
   padding: 2.5rem;
   border: 2px solid transparent;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -331,9 +349,9 @@
 .valuesSection[data-section].visible .valueCard:nth-child(4) { transition-delay: 0.4s; }
 
 .valueCard:hover {
-  border-color: var(--cream-accent);
+  border-color: var(--primary-color);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(26, 58, 46, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .valueIcon {
@@ -346,7 +364,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -356,14 +374,14 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.7;
 }
 
 /* Timeline Section */
 .timelineSection {
   padding: 6rem 2rem;
-  background: var(--pure-white);
+  background: var(--background-secondary);
   position: relative;
 }
 
@@ -374,7 +392,7 @@
   top: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--cream-accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 .timelineContainer {
@@ -399,7 +417,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -418,7 +436,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--cream-accent) 0%, var(--light-steel) 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--text-light) 100%);
   z-index: 0;
 }
 
@@ -443,8 +461,8 @@
 .milestoneDot {
   width: 80px;
   height: 80px;
-  background: var(--deep-forest);
-  border: 4px solid var(--cream-accent);
+  background: var(--secondary-color);
+  border: 4px solid var(--primary-color);
   border-radius: 50%;
   margin: 0 auto 1.5rem;
   display: flex;
@@ -456,7 +474,7 @@
 }
 
 .milestone:hover .milestoneDot {
-  background: var(--cream-accent);
+  background: var(--primary-color);
   transform: scale(1.1);
 }
 
@@ -464,19 +482,19 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cream-accent);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .milestone:hover .milestoneYear {
-  color: var(--deep-forest);
+  color: var(--secondary-color);
 }
 
 .milestoneTitle {
   font-family: 'Oswald', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--deep-forest);
+  color: var(--secondary-color);
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
@@ -486,13 +504,13 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
-  color: var(--steel-gray);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .aboutCta {
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #2d4a3e 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -535,7 +553,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--cream-accent);
+  color: var(--text-primary);
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -545,7 +563,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--light-steel);
+  color: var(--text-light);
   line-height: 1.8;
   margin-bottom: 2.5rem;
 }
@@ -557,22 +575,23 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--deep-forest);
-  background: var(--cream-accent);
+  color: var(--text-color);
+  background: var(--primary-color);
   border: none;
   padding: 1.25rem 3rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 24px rgba(201, 184, 149, 0.4);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
 .ctaButton:hover {
-  background: #d4c4a8;
+  background: var(--accent-color);
+  color: var(--text-primary);
   transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(201, 184, 149, 0.5);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
 }
 
 .ctaButton svg {

@@ -1,0 +1,171 @@
+/* Slider/Showcase Section */
+.showcaseSection {
+  background: var(--background-primary);
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.scrollWrapper {
+  position: relative;
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 2rem;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.productCard {
+  flex: 0 0 320px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: var(--background-primary);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .cardImage {
+  transform: scale(1.1);
+}
+
+.cardCategory {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Gradient Overlays */
+.gradientLeft,
+.gradientRight {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gradientLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--background-primary) 0%, transparent 100%);
+}
+
+.gradientRight {
+  right: 0;
+  background: linear-gradient(to left, var(--background-primary) 0%, transparent 100%);
+}
+
+/* View All Button */
+.viewAllContainer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .showcaseSection {
+    padding: 4rem 0;
+  }
+
+  .showcaseTitle {
+    font-size: 2.5rem;
+  }
+
+  .showcaseSubtitle {
+    font-size: 1rem;
+  }
+
+  .productCard {
+    flex: 0 0 280px;
+  }
+
+  .cardImageWrapper {
+    height: 200px;
+  }
+
+  .scrollContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcaseSection {
+    padding: 3rem 0;
+  }
+
+  .showcaseHeader {
+    margin-bottom: 2rem;
+  }
+
+  .showcaseTitle {
+    font-size: 2rem;
+  }
+
+  .productCard {
+    flex: 0 0 250px;
+  }
+
+  .cardImageWrapper {
+    height: 180px;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .gradientLeft,
+  .gradientRight {
+    width: 80px;
+  }
+}

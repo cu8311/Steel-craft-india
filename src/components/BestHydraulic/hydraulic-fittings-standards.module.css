@@ -1,0 +1,559 @@
+.blogBanner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.blogBannerInner {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blogTag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.blogH1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+}
+
+.blogBannerDesc {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blogBannerNote {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    line-height: 1.7;
+}
+
+.blogBody {
+    background: var(--background-secondary);
+    padding: 4rem 2rem 6rem;
+}
+
+.blogInner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blogDivider {
+    height: 2px;
+    background: var(--background-primary);
+    margin: 3.5rem 0;
+    border: none;
+}
+
+.blogBlock {
+    margin-bottom: 4rem;
+}
+
+.blogH2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.blogH3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blogSubhead {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.blogP {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+.blogP strong {
+    color: var(--primary-color);
+}
+
+/* Standards table */
+
+.stdTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.stdTable thead {
+    background: var(--primary-color);
+}
+
+.stdTable thead th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.stdTable tbody tr:nth-child(odd) {
+    background: var(--background-secondary);
+}
+
+.stdTable tbody tr:nth-child(even) {
+    background: var(--background-primary);
+}
+
+.stdTable tbody tr {
+    border-bottom: 1px solid var(--background-primary);
+}
+
+.stdTable tbody td {
+    padding: 1rem 1.25rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    vertical-align: top;
+}
+
+.stdTable tbody td:first-child {
+    font-weight: 700;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.stdTable .noteRow td {
+    background: var(--background-primary);
+    font-style: italic;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.25rem 1rem;
+    border-bottom: 2px solid var(--background-primary);
+    color: var(--text-color);
+}
+
+/* Standard detail blocks */
+
+.stdDetail {
+    margin-bottom: 2.5rem;
+}
+
+.stdNameRow {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--background-primary);
+}
+
+.stdName {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.stdSubtitle {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.stdTwoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Row list */
+
+.rowList {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+}
+
+.rowList li {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    padding: 0.9rem 1.25rem 0.9rem 2.5rem;
+    position: relative;
+    border-bottom: 1px solid var(--background-primary);
+}
+
+.rowList li:nth-child(odd) {
+    background: var(--background-primary);
+}
+
+.rowList li:nth-child(even) {
+    background: var(--background-secondary);
+    border-left: 2px solid var(--background-primary);
+}
+
+.rowList li::before {
+    content: '»';
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Note panel */
+
+.notePanel {
+    background: var(--background-primary);
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.notePanel p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Warning */
+
+.warnBlock {
+    background: #fffbf0;
+    border-left: 5px solid var(--accent-color);
+    padding: 1.25rem 1.75rem;
+    margin: 2rem 0;
+}
+
+.warnBlock p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* SCI box */
+
+.sciBox {
+    background: var(--background-primary);
+    border-top: 4px solid var(--primary-color);
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.sciBoxTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.sciTwoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.sciColHead {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.checkList {
+    list-style: none;
+    padding: 0;
+}
+
+.checkList li {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+
+.checkList li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* FAQ */
+.faqItem {
+    border-bottom: 1px solid var(--background-primary);
+}
+
+.faqQ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.4rem 0;
+    cursor: pointer;
+}
+
+.faqQText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--black);
+    flex: 1;
+}
+
+.faqIcon {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.active {
+    background: var(--accent-color);
+    transform: rotate(45deg);
+}
+
+.faqIcon svg {
+    width: 14px;
+    height: 14px;
+    stroke: #fff;
+    stroke-width: 3;
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faqAnswerActive {
+    max-height: 200px;
+    padding-bottom: 1.25rem;
+}
+
+.faqAText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* CTA */
+.blogCta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.blogCtaTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.blogCtaText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blogCtaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--background-dark);
+    background: var(--accent-color);
+    padding: 1.3rem 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blogCtaBtn:hover {
+    background: #7dd13a;
+    transform: translateY(-3px);
+}
+
+.blogCtaBtn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:900px) {
+
+    .stdTwoCol,
+    .sciTwoCol {
+        grid-template-columns: 1fr;
+    }
+
+    .stdTable {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width:900px) {
+
+    .stdTwoCol,
+    .sciTwoCol {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stdTable {
+        font-size: 0.9rem;
+    }
+
+    .stdTable thead th,
+    .stdTable tbody td {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .blogH1 {
+        font-size: 2.2rem;
+    }
+
+    .blogBanner {
+        padding: 4rem 1.5rem;
+    }
+
+    .blogBody {
+        padding: 3rem 1.5rem 5rem;
+    }
+
+    .blogH2 {
+        font-size: 1.4rem;
+    }
+
+    .sciBox {
+        padding: 2rem;
+    }
+
+    .blogCtaTitle {
+        font-size: 2rem;
+    }
+
+    .stdName {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:640px) {
+    .blogH1 {
+        font-size: 1.8rem;
+    }
+
+    .blogBannerDesc {
+        font-size: 1rem;
+    }
+
+    .blogH2 {
+        font-size: 1.3rem;
+    }
+
+    .stdTable thead {
+        display: none;
+    }
+
+    .stdTable tbody td {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .stdTable tbody td:first-child {
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.75rem 1rem;
+    }
+
+    .stdTable tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+    }
+
+    .blogCtaBtn {
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem 2rem;
+    }
+}

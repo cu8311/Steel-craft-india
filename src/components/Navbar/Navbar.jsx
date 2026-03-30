@@ -12,7 +12,16 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', type: 'route', to: '/' },
     { name: 'Products', type: 'hash', href: '#products' },
-    { name: 'Industries', type: 'hash', href: '#industries' },
+    {
+      name: 'Industries', type: 'route', to: '/industries', sub: [
+        { name: "Construction Industry", to: "/industries/construction" },
+        { name: "Manufacturing Industry", to: "/industries/manufacturing" },
+        { name: "Automotive Industry", to: "/industries/automotive" },
+        { name: "Agriculture Industry", to: "/industries/agriculture" },
+        { name: "Hose Pipes Industry", to: "/industries/hose-pipes" },
+        { name: "Heavy Equipment Industry", to: "/industries/heavy-equipment" },
+      ]
+    },
     { name: 'Buyer Information', type: 'route', to: '/buyer' },
     { name: 'Manufacturing Process', type: 'route', to: '/manufacturing' },
     { name: 'About Us', type: 'route', to: '/about' },
@@ -64,7 +73,7 @@ const Navbar = () => {
           <div className={styles.logoSection} onClick={() => navigate('/')}>
             <img
               src="/logo.jpeg"
-              alt="Steel Craft India Logo"
+              alt="Steel Craft India hydraulic fittings manufacturer logo"
               className={styles.logoImage}
             />
             <div className={styles.companyInfo}>
@@ -75,31 +84,44 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className={styles.navDesktop}>
-            {navItems.slice(0, -1).map((item, index) =>
-              item.type === 'route' ? (
-                <Link
-                  key={index}
-                  to={item.to}
-                  className={styles.navLink}
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <a
-                  key={index}
-                  href={item.href}
-                  className={styles.navLink}
-                  onClick={(e) => handleHashClick(item.href, e)}
-                >
-                  {item.name}
-                </a>
-              )
-            )}
+            {navItems.map((item, index) => (
+              <div key={index} className={styles.navItem}>
+                {item.type === 'route' ? (
+                  <Link to={item.to} className={styles.navLink}>
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={styles.navLink}
+                    onClick={(e) => handleHashClick(item.href, e)}
+                  >
+                    {item.name}
+                  </a>
+                )}
+
+                {/* Dropdown */}
+                {item.sub && (
+                  <div className={styles.dropdown}>
+                    {item.sub.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={subItem.to}
+                        className={styles.dropdownItem}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
             <button
               className={styles.ctaButton}
-              onClick={() => navigate('/request')}
+              onClick={() => navigate('/contact')}
             >
-              Request Quote
+              Contact Us
             </button>
           </nav>
 
@@ -153,14 +175,9 @@ const Navbar = () => {
           ))}
           <button
             className={`${styles.ctaButton} ${styles.mobileCta}`}
-            onClick={() => {
-              setMobileMenuOpen(false);
-              setTimeout(() => {
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }, 300);
-            }}
+            onClick={() => navigate('/contact')}
           >
-            Request Quote
+            Contact Us
           </button>
         </div>
       </nav>

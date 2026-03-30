@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './about-us.module.css';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function AboutUs() {
   const [isVisible, setIsVisible] = useState({});
@@ -62,6 +64,18 @@ export default function AboutUs() {
 
   return (
     <>
+      <Helmet>
+        <title>Hydraulic Hose Fittings Manufacturer in Ludhiana | Steel Craft India</title>
+        <meta
+          name="description"
+          content="Steel Craft India is a hydraulic hose fittings manufacturer in Ludhiana, Punjab. OEM & bulk supply of hydraulic nuts, nipples, males and caps."
+        />
+        <link
+          rel="canonical"
+          href="https://www.steelcraftsindia.in/hydraulic-hose-fittings-ludhiana"
+        />
+      </Helmet>
+
       <section className={styles.aboutSection} id="about">
         {/* Hero Section */}
         <div
@@ -70,9 +84,11 @@ export default function AboutUs() {
         >
           <div className={styles.aboutHeroContent}>
             <div className={styles.sectionLabel}>About Steel Craft India</div>
-            <h1 className={styles.aboutHeroTitle}>Crafting Excellence Since 2001</h1>
+            <h1 className={styles.aboutHeroTitle}>Hydraulic Hose Fittings Manufacturer in Ludhiana</h1>
+            <h2 className={styles.aboutHeroSubTitle}>Crafting Excellence Since 2001</h2>
             <p className={styles.aboutHeroDescription}>
-              A trusted manufacturer of precision-engineered hydraulic hose fittings, serving India's transport, industrial, and hydraulic systems sectors with unwavering commitment to quality and reliability.
+              Steel Craft India is a <strong>hydraulic hose fittings manufacturer in Ludhiana</strong>,
+              supplying OEM and bulk hydraulic fittings across Punjab and India.
             </p>
           </div>
         </div>
@@ -99,7 +115,7 @@ export default function AboutUs() {
         >
           <div className={styles.storyContainer}>
             <div className={styles.storyContent}>
-              <h2 className={styles.storyTitle}>Our Journey</h2>
+              <h2 className={styles.storyTitle}>Our Journey as a Hydraulic Hose Fittings Manufacturer</h2>
               <p className={styles.storyText}>
                 Founded in 2001 by Ankur Gupta, Steel Craft India began with a clear vision: to manufacture hydraulic hose fittings that set new standards for precision, durability, and performance. What started as a commitment to quality has evolved into a legacy of excellence spanning over two decades.
               </p>
@@ -142,7 +158,7 @@ export default function AboutUs() {
             </div>
             <div className={styles.valuesGrid}>
               {values.map((value, index) => (
-                  <div key={index} className={styles.valueCard}>
+                <div key={index} className={styles.valueCard}>
                   <span className={styles.valueIcon}>{value.icon}</span>
                   <h3 className={styles.valueTitle}>{value.title}</h3>
                   <p className={styles.valueDescription}>{value.description}</p>
@@ -185,13 +201,13 @@ export default function AboutUs() {
             <p className={styles.ctaDescription}>
               As a rapidly growing company, we are continuously expanding our manufacturing capacity and market reach. Our long-term vision is to establish a strong global presence, taking Indian-manufactured hydraulic hose fittings to international markets.
             </p>
-            <a href="#contact" className={styles.ctaButton}>
+            <Link to="/contact" className={styles.ctaButton}>
               Partner With Us
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

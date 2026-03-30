@@ -7,17 +7,28 @@
 }
 
 :root {
-  --deep-forest: #1a3a2e;
-  --steel-gray: #4a5859;
-  --light-steel: #a8b3b5;
-  --cream-accent: #c9b895;
-  --off-white: #f4f4f2;
-  --pure-white: #ffffff;
-  --dark-overlay: rgba(26, 58, 46, 0.85);
-  --dark-bg: #0a0a0a;
+  --primary-color: #2d5016;        /* Deep forest green - trust and stability */
+  --secondary-color: #1a4d2e;      /* Dark pine green - reliability */
+  --accent-color: #8ce24a;         /* Professional blue accent - security */
+  --text-primary: #ffffff;         /* Primary text for headings on dark backgrounds */
+  --text-color: #000000;           /* Dark green text - trust */
+  --text-light: #bfbfbf;            /* Muted green text */
+  --background-primary: #f0f8f0;   /* Very light green bg - freshness */
+  --background-secondary: #ffffff; /* White */
+  --background-dark: #0f2814;      /* Very dark green - security */
+  --overlay-dark: rgba(13, 40, 20, 0.9); /* Dark green overlay */
+  --text-muted: #666;
+  --text-tertiary: #999;
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  --bg-muted: #f5f5f5;
+  --text-secondary: #333;
+  --text-body: #444;
+  --bg-subtle: #f9f9f9;
+  --bg-related: #fafafa;
 }
 
 body {
   font-family: 'Work Sans', sans-serif;
-  background: var(--off-white);
+  background: var(--background-primary);
 }

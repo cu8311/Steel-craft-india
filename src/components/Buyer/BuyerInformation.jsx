@@ -1,187 +1,132 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './buyer-information.module.css';
+import { Link } from 'react-router-dom';
+import BuyerFAQ from './BuyerFAQ';
 
 export default function BuyerInformation() {
-  const [isVisible, setIsVisible] = useState({});
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(prev => ({ ...prev, [entry.target.dataset.section]: true }));
-          }
-        });
-      },
-      { threshold: 0 }
-    );
-
-    const sections = document.querySelectorAll('[data-section]');
-    sections.forEach(section => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
-
-  const processSteps = [
-    {
-      id: 1,
-      number: "01",
-      title: "Share Requirements",
-      description: "Share your hydraulic fitting requirement or technical drawing with specifications"
-    },
-    {
-      id: 2,
-      number: "02",
-      title: "Receive Quotation",
-      description: "Receive the hydraulic fittings rate list and detailed quotation for your review"
-    },
-    {
-      id: 3,
-      number: "03",
-      title: "Sample Approval",
-      description: "Sample approval process (if required) to ensure quality and specifications"
-    },
-    {
-      id: 4,
-      number: "04",
-      title: "Bulk Manufacturing",
-      description: "Bulk manufacturing and dispatch with quality assurance at every stage"
-    }
-  ];
-
-  const features = [
-    {
-      icon: "🎨",
-      title: "Fully Customizable",
-      description: "All hydraulic fittings are fully customizable as per drawings or specifications provided by the buyer"
-    },
-    {
-      icon: "🏭",
-      title: "High-Grade Material",
-      description: "Manufactured using high-grade MS steel, ensuring strength, durability, and pressure resistance"
-    },
-    {
-      icon: "🌍",
-      title: "Global Supply",
-      description: "We offer global supply of hydraulic hose fittings with buyer-arranged transportation options"
-    },
-    {
-      icon: "✓",
-      title: "Sample Approval",
-      description: "Samples available for approval prior to bulk production to ensure compliance"
-    },
-    {
-      icon: "📋",
-      title: "Transparent Pricing",
-      description: "Complete rate list shared before order confirmation for transparency and ease of selection"
-    },
-    {
-      icon: "✨",
-      title: "Plating Options",
-      description: "Fittings available in plated and non-plated finishes based on application requirements"
-    }
-  ];
 
   return (
-    <>
+    <section className={styles.buyerSection} id="buyer-information">
+      <div className={styles.buyerContainer}>
 
-      <section className={styles.buyerSection} id="buyer-information">
-        {/* Hero */}
-        <div className={styles.buyerHero}>
-          <div className={styles.heroContent}>
-            <div className={styles.heroLabel}>For Traders & Manufacturers</div>
-            <h1 className={styles.heroTitle}>Buyer Information</h1>
-            <p className={styles.heroSubtitle}>
-              Steel Craft is a reliable manufacturer and supplier of hydraulic hose fittings,
-              catering to traders, hose manufacturers, and bulk buyers across India and worldwide.
+        {/* Header */}
+        <div className={styles.buyerHeader}>
+          <div className={styles.buyerTag}>For Buyers & Traders</div>
+          <h2 className={styles.buyerTitle}>Buying Process</h2>
+          <p className={styles.buyerSubtitle}>
+            If you want to purchase hydraulic fittings from Steel Craft India, our process is simple, fast, and customer-focused.
+          </p>
+        </div>
+
+        {/* Process Steps */}
+        <div className={styles.processSteps}>
+
+          <div className={styles.processStep}>
+            <div className={styles.stepNumber}>1</div>
+            <h3 className={styles.stepTitle}>Send Us the Sample</h3>
+            <p className={styles.stepDescription}>
+              Share your physical sample or technical details of the hydraulic fitting you require.
+            </p>
+          </div>
+
+          <div className={styles.processStep}>
+            <div className={styles.stepNumber}>2</div>
+            <h3 className={styles.stepTitle}>Design & Size Approval</h3>
+            <p className={styles.stepDescription}>Our technical team will:</p>
+            <div className={styles.stepFeatures}>
+              <div className={styles.stepFeature}>Analyze the design</div>
+              <div className={styles.stepFeature}>Confirm size and specifications</div>
+              <div className={styles.stepFeature}>Discuss custom requirements</div>
+            </div>
+          </div>
+
+          <div className={styles.processStep}>
+            <div className={styles.stepNumber}>3</div>
+            <h3 className={styles.stepTitle}>Custom Manufacturing</h3>
+            <p className={styles.stepDescription}>
+              Once approved, we manufacture exactly as per your needs, ensuring:
+            </p>
+            <div className={styles.stepFeatures}>
+              <div className={styles.stepFeature}>High quality</div>
+              <div className={styles.stepFeature}>Precise dimensions</div>
+              <div className={styles.stepFeature}>Industry standards compliance</div>
+            </div>
+          </div>
+
+          <div className={styles.processStep}>
+            <div className={styles.stepNumber}>4</div>
+            <h3 className={styles.stepTitle}>Dispatch</h3>
+            <p className={styles.stepDescription}>
+              After quality inspection, the products are safely packed and dispatched on time.
             </p>
           </div>
         </div>
 
-        {/* Features */}
-        <div className={`${styles.featuresSection} ${isVisible['features'] ? 'visible' : ''}`}>
-          <div className={styles.sectionHeader}>
-            <div className={styles.sectionLabel}>Why Choose Steel Craft</div>
-            <h2 className={styles.sectionTitle}>Our Capabilities</h2>
-            <p className={styles.sectionDescription}>
-              Comprehensive manufacturing solutions tailored to your specific requirements
-            </p>
-          </div>
-
-          <div className={styles.featuresGrid}>
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={styles.featureCard}
-                data-section="features"
-              >
-                <span className={styles.featureIcon}>{feature.icon}</span>
-                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                <p className={styles.featureDescription}>{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Process */}
-        <div className={`${styles.processSection} ${isVisible['process'] ? 'visible' : ''}`}>
-          <div className={styles.processContainer}>
-            <div className={styles.sectionHeader}>
-              <div className={styles.sectionLabel}>Simple & Transparent</div>
-              <h2 className={styles.sectionTitle}>Buying Process</h2>
-              <p className={styles.sectionDescription}>
-                Four easy steps from inquiry to delivery
-              </p>
-            </div>
-
-            <div className={styles.processSteps}>
-              {processSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className={styles.processStep}
-                  data-section="process"
-                >
-                  <div className={styles.stepNumber}>{step.number}</div>
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
-                  <p className={styles.stepDescription}>{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <BuyerFAQ />
 
         {/* Distributor CTA */}
         <div className={styles.distributorCta}>
-          <div className={styles.distributorContent}>
-            <h2 className={styles.distributorTitle}>Become a Distributor</h2>
-            <p className={styles.distributorDescription}>
-              Steel Craft invites serious partners to become authorized distributors of hydraulic
-              hose fittings, enabling long-term business collaboration and growth opportunities.
-            </p>
-            <div className={styles.ctaButtons}>
-              <a
-                href="tel:+919368654656"
-                className={`${styles.ctaButton} ${styles.primary}`}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                Call Now
-              </a>
-              <a
-                href="mailto:steelcraft80@gmail.com"
-                className={`${styles.ctaButton} ${styles.secondary}`}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Email Us
-              </a>
-            </div>
-          </div>
+          <h3 className={styles.distributorTitle}>Become a Distributor</h3>
+          <p className={styles.distributorDescription}>
+            Steel Craft India invites serious partners to become authorized distributors of hydraulic hose fittings.
+          </p>
+
+          <Link
+            to={"/contact"}
+            className={styles.distributorButton}
+          >
+            Apply Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
         </div>
-      </section>
-    </>
+
+        {/* Manufactoring CTA */}
+        <div className={styles.distributorCta}>
+          <h3 className={styles.distributorTitle}>Learn about our Manufactoring Process</h3>
+          <p className={styles.distributorDescription}>
+            Discover how Steel Craft India manufactures precision-engineered hydraulic hose fittings through advanced machining, strict quality control, and industry-certified processes.
+          </p>
+
+
+          <Link
+            to={"/manufacturing"}
+            className={styles.distributorButton}
+          >
+            Manufactoring Process
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Product Enquiry */}
+        <div className={styles.enquirySection}>
+          <div className={styles.enquiryHeader}>
+            <h3 className={styles.enquiryTitle}>Product Enquiry</h3>
+            <p className={styles.enquirySubtitle}>
+              If you would like to enquire about any product, please fill out the form below.
+            </p>
+          </div>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfKElyM_wrT461lyiOAt2eF0M6pgNxAAe-HktFdp73GHUvg0g/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.enquiryButton}
+          >
+            Fill Enquiry Form
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M9 11l3 3L22 4" />
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
   );
 }

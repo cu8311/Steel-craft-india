@@ -1,0 +1,797 @@
+/* Hero Banner */
+.manufacturerHero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.heroDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-light);
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+}
+
+.heroSubdescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Content Sections */
+.contentSection {
+  padding: 2rem 2rem;
+}
+
+.contentSection:nth-child(even) {
+  background: var(--background-primary);
+}
+
+.contentSection:nth-child(odd) {
+  background: var(--background-secondary);
+}
+
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sectionDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.sectionDescription strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Strengths List */
+.strengthsList {
+  list-style: none;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.strengthsList li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.strengthsList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Conditions List */
+.conditionsList {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.conditionsList li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.conditionsList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Applications Grid */
+.applicationsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.applicationItem {
+  background: var(--background-secondary);
+  padding: 2rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.applicationItem:hover {
+  transform: translateY(-5px);
+}
+
+.contentSection:nth-child(even) .applicationItem {
+  background: var(--background-primary);
+}
+
+.applicationTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.applicationDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* Quality Process */
+.qualityProcess {
+  background: var(--background-primary);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.processList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.processList li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.processList li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Choose Us Grid */
+.chooseUsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.chooseUsItem {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.chooseUsItem::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.ctaText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--background-dark);
+  background: var(--accent-color);
+  border: none;
+  padding: 1.4rem 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #7dd13a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(140, 226, 74, 0.4);
+}
+
+.ctaButton svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Why Choose Us */
+.whyChooseUs {
+  padding: 6rem 2rem;
+  background: var(--background-primary);
+}
+
+.whyChooseUsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whyChooseUsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.whyChooseUsTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.whyChooseUsDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  background: var(--background-secondary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+.featureIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.featureTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.featureDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Products */
+.productsSection {
+  padding: 6rem 2rem;
+}
+
+.productsContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.productsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.productsTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.productsDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  background: var(--background-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.productImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.productContent {
+  padding: 2rem;
+}
+
+.productTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.productDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.productSpecs {
+  list-style: none;
+  padding: 0;
+}
+
+.productSpec {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.productSpec::before {
+  content: '✓';
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Applications */
+.applicationsSection {
+  padding: 6rem 2rem;
+  background: var(--background-primary);
+}
+
+.applicationsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.applicationsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.applicationsTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.applicationsDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.industryCard {
+  background: var(--background-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.industryIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.industryTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.industryDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Certifications */
+.certificationsSection {
+  padding: 6rem 2rem;
+}
+
+.certificationsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificationsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.certificationsTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.certificationsDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.certificationItem {
+  text-align: center;
+}
+
+.certificationImage {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.certificationItem:hover .certificationImage {
+  filter: grayscale(0%);
+}
+
+.certificationTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 2rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  text-align: center;
+}
+
+.ctaContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.ctaDescription {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.ctaButton:hover {
+  background: var(--text-primary);
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manufacturerHero {
+    padding: 4rem 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1.1rem;
+  }
+
+  .heroSubdescription {
+    font-size: 1rem;
+  }
+
+  .contentSection {
+    padding: 4rem 1rem;
+  }
+
+  .sectionTitle,
+  .productsTitle,
+  .applicationsTitle,
+  .certificationsTitle,
+  .whyChooseUsTitle,
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .featuresGrid,
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .industriesGrid,
+  .certificationsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .productCard {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturerHero {
+    padding: 3rem 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .contentSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle,
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+
+  .strengthsList,
+  .applicationsGrid,
+  .processList,
+  .chooseUsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .applicationItem,
+  .qualityProcess {
+    padding: 1.75rem;
+  }
+
+  .ctaSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+  }
+}
